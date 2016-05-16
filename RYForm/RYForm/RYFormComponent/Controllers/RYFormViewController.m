@@ -8,8 +8,13 @@
 
 #import "RYFormViewController.h"
 
-@interface RYFormViewController ()
+#define api_aaaaaaaa     @"aaaaaaaa"
+#define api_bbbbbbbb     @"bbbbbbbb"
 
+
+
+
+@interface RYFormViewController ()
 
 
 @end

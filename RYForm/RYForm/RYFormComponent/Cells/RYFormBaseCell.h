@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RYFormInformationCell.h"
 
-@interface RYFormBaseCell : UITableViewCell
+
+@interface RYFormBaseCell : UITableViewCell <RYFormInformationCell>
 
 @end

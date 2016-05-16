@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E3911401CE95F6600223222 /* RYForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E39113F1CE95F6600223222 /* RYForm.m */; };
+		4E3911431CE9858800223222 /* RYFormTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3911421CE9858800223222 /* RYFormTextFieldCell.m */; };
+		4E3911461CE985DD00223222 /* RYFormTextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3911451CE985DD00223222 /* RYFormTextViewCell.m */; };
+		4E3911491CE9860100223222 /* RYFormSwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3911481CE9860100223222 /* RYFormSwitchCell.m */; };
+		4E39114C1CE9862400223222 /* RYFormCheckCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E39114B1CE9862400223222 /* RYFormCheckCell.m */; };
+		4E39114F1CE9863E00223222 /* RYFormDateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E39114E1CE9863E00223222 /* RYFormDateCell.m */; };
+		4E3911521CE9866400223222 /* RYFormDatePickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3911511CE9866400223222 /* RYFormDatePickerCell.m */; };
+		4E3911551CE9868600223222 /* RYFormPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3911541CE9868600223222 /* RYFormPickerCell.m */; };
+		4E3911581CE986A000223222 /* RYFormStepCounterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3911571CE986A000223222 /* RYFormStepCounterCell.m */; };
 		4E54FF2C1CE8295800306D6A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54FF2B1CE8295800306D6A /* main.m */; };
 		4E54FF2F1CE8295800306D6A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54FF2E1CE8295800306D6A /* AppDelegate.m */; };
 		4E54FF321CE8295800306D6A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54FF311CE8295800306D6A /* ViewController.m */; };
@@ -43,6 +52,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E39113E1CE95F6600223222 /* RYForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYForm.h; sourceTree = "<group>"; };
+		4E39113F1CE95F6600223222 /* RYForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYForm.m; sourceTree = "<group>"; };
+		4E3911411CE9858800223222 /* RYFormTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormTextFieldCell.h; sourceTree = "<group>"; };
+		4E3911421CE9858800223222 /* RYFormTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFormTextFieldCell.m; sourceTree = "<group>"; };
+		4E3911441CE985DD00223222 /* RYFormTextViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormTextViewCell.h; sourceTree = "<group>"; };
+		4E3911451CE985DD00223222 /* RYFormTextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFormTextViewCell.m; sourceTree = "<group>"; };
+		4E3911471CE9860100223222 /* RYFormSwitchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormSwitchCell.h; sourceTree = "<group>"; };
+		4E3911481CE9860100223222 /* RYFormSwitchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFormSwitchCell.m; sourceTree = "<group>"; };
+		4E39114A1CE9862400223222 /* RYFormCheckCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormCheckCell.h; sourceTree = "<group>"; };
+		4E39114B1CE9862400223222 /* RYFormCheckCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFormCheckCell.m; sourceTree = "<group>"; };
+		4E39114D1CE9863E00223222 /* RYFormDateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormDateCell.h; sourceTree = "<group>"; };
+		4E39114E1CE9863E00223222 /* RYFormDateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFormDateCell.m; sourceTree = "<group>"; };
+		4E3911501CE9866400223222 /* RYFormDatePickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormDatePickerCell.h; sourceTree = "<group>"; };
+		4E3911511CE9866400223222 /* RYFormDatePickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFormDatePickerCell.m; sourceTree = "<group>"; };
+		4E3911531CE9868600223222 /* RYFormPickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormPickerCell.h; sourceTree = "<group>"; };
+		4E3911541CE9868600223222 /* RYFormPickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFormPickerCell.m; sourceTree = "<group>"; };
+		4E3911561CE986A000223222 /* RYFormStepCounterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormStepCounterCell.h; sourceTree = "<group>"; };
+		4E3911571CE986A000223222 /* RYFormStepCounterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFormStepCounterCell.m; sourceTree = "<group>"; };
+		4E39115B1CE9C4D200223222 /* RYFormInformationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormInformationCell.h; sourceTree = "<group>"; };
 		4E54FF271CE8295700306D6A /* RYForm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RYForm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E54FF2B1CE8295800306D6A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4E54FF2D1CE8295800306D6A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -180,6 +208,22 @@
 			children = (
 				4E54FF6D1CE8843E00306D6A /* RYFormBaseCell.h */,
 				4E54FF6E1CE8843E00306D6A /* RYFormBaseCell.m */,
+				4E3911411CE9858800223222 /* RYFormTextFieldCell.h */,
+				4E3911421CE9858800223222 /* RYFormTextFieldCell.m */,
+				4E3911441CE985DD00223222 /* RYFormTextViewCell.h */,
+				4E3911451CE985DD00223222 /* RYFormTextViewCell.m */,
+				4E3911471CE9860100223222 /* RYFormSwitchCell.h */,
+				4E3911481CE9860100223222 /* RYFormSwitchCell.m */,
+				4E39114A1CE9862400223222 /* RYFormCheckCell.h */,
+				4E39114B1CE9862400223222 /* RYFormCheckCell.m */,
+				4E39114D1CE9863E00223222 /* RYFormDateCell.h */,
+				4E39114E1CE9863E00223222 /* RYFormDateCell.m */,
+				4E3911501CE9866400223222 /* RYFormDatePickerCell.h */,
+				4E3911511CE9866400223222 /* RYFormDatePickerCell.m */,
+				4E3911531CE9868600223222 /* RYFormPickerCell.h */,
+				4E3911541CE9868600223222 /* RYFormPickerCell.m */,
+				4E3911561CE986A000223222 /* RYFormStepCounterCell.h */,
+				4E3911571CE986A000223222 /* RYFormStepCounterCell.m */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -216,12 +260,15 @@
 		4E54FF701CE8B8EA00306D6A /* Information */ = {
 			isa = PBXGroup;
 			children = (
+				4E39113E1CE95F6600223222 /* RYForm.h */,
+				4E39113F1CE95F6600223222 /* RYForm.m */,
 				4E54FF711CE8B90D00306D6A /* RYFormInformation.h */,
 				4E54FF721CE8B90D00306D6A /* RYFormInformation.m */,
 				4E54FF741CE8B92700306D6A /* RYFormRowInformation.h */,
 				4E54FF751CE8B92700306D6A /* RYFormRowInformation.m */,
 				4E54FF771CE8B94100306D6A /* RYFormSectionInformation.h */,
 				4E54FF781CE8B94100306D6A /* RYFormSectionInformation.m */,
+				4E39115B1CE9C4D200223222 /* RYFormInformationCell.h */,
 			);
 			path = Information;
 			sourceTree = "<group>";
@@ -357,16 +404,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E3911551CE9868600223222 /* RYFormPickerCell.m in Sources */,
+				4E3911491CE9860100223222 /* RYFormSwitchCell.m in Sources */,
 				4E54FF321CE8295800306D6A /* ViewController.m in Sources */,
 				4E54FF6F1CE8843E00306D6A /* RYFormBaseCell.m in Sources */,
 				4E54FF2F1CE8295800306D6A /* AppDelegate.m in Sources */,
 				4E54FF731CE8B90D00306D6A /* RYFormInformation.m in Sources */,
+				4E3911431CE9858800223222 /* RYFormTextFieldCell.m in Sources */,
+				4E3911581CE986A000223222 /* RYFormStepCounterCell.m in Sources */,
+				4E39114C1CE9862400223222 /* RYFormCheckCell.m in Sources */,
 				4E54FF6C1CE82ADB00306D6A /* UIView+SDAutoLayout.m in Sources */,
+				4E39114F1CE9863E00223222 /* RYFormDateCell.m in Sources */,
 				4E54FF2C1CE8295800306D6A /* main.m in Sources */,
 				4E54FF641CE82AAC00306D6A /* RYFormViewController.m in Sources */,
 				4E54FF791CE8B94100306D6A /* RYFormSectionInformation.m in Sources */,
 				4E54FF761CE8B92700306D6A /* RYFormRowInformation.m in Sources */,
 				4E54FF6B1CE82ADB00306D6A /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
+				4E3911461CE985DD00223222 /* RYFormTextViewCell.m in Sources */,
+				4E3911521CE9866400223222 /* RYFormDatePickerCell.m in Sources */,
+				4E3911401CE95F6600223222 /* RYForm.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,6 +564,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RYForm/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "--geren.RYForm";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -519,6 +576,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RYForm/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "--geren.RYForm";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -590,6 +648,7 @@
 				4E54FF561CE8295800306D6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4E54FF571CE8295800306D6A /* Build configuration list for PBXNativeTarget "RYFormTests" */ = {
 			isa = XCConfigurationList;
@@ -598,6 +657,7 @@
 				4E54FF591CE8295800306D6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4E54FF5A1CE8295800306D6A /* Build configuration list for PBXNativeTarget "RYFormUITests" */ = {
 			isa = XCConfigurationList;
@@ -606,6 +666,7 @@
 				4E54FF5C1CE8295800306D6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
