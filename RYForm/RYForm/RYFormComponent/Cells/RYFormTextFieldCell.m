@@ -10,6 +10,7 @@
 #import "UIView+SDAutoLayout.h"
 #import "RYForm.h"
 #import "RYFormRowInformation.h"
+#import <Masonry.h>
 
 @interface RYFormTextFieldCell ()<UITextFieldDelegate>
 
@@ -20,6 +21,11 @@
 
 @implementation RYFormTextFieldCell
 
+
+- (void)dealloc
+{
+    NSLog(@"RYFormTextFieldCell dealloc");
+}
 
 
 -(void)configure
@@ -66,6 +72,7 @@
     self.ry_textField.text = self.rowInformation.displayText;
     
     self.ry_textField.enabled = !self.rowInformation.isDisabled;
+//    [self updateAutoLayout];
 }
 
 
@@ -73,9 +80,33 @@
 
 - (void)autoLayoutSubViews
 {
-    self.ry_textLabel.sd_layout.heightIs(20).leftSpaceToView(self.contentView,15).centerYEqualToView(self.contentView);
-    self.ry_textField.sd_layout.heightIs(30).leftSpaceToView(self.ry_textLabel,5).centerYEqualToView(self.contentView).rightSpaceToView(self.contentView,15);
+    // 使用Masonry添加constraints
+    [self.ry_textLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(self.contentView.mas_centerY);
+        make.left.equalTo(self.contentView.mas_left).offset(15);
+        make.right.equalTo(self.ry_textField.mas_left).offset(-10);
+    }];
+    
+    [self.ry_textField mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(self.contentView.mas_centerY);
+        make.left.equalTo(self.ry_textLabel.mas_right).offset(10);
+        make.right.equalTo(self.contentView.mas_right).offset(-15);
+        //宽度为父view的宽度的一半
+        make.width.equalTo(self.contentView.mas_width).multipliedBy(0.6);
+    }];
+    
+//    self.ry_textLabel.sd_layout.heightIs(20).leftSpaceToView(self.contentView,15).centerYEqualToView(self.contentView).rightSpaceToView(self.ry_textField,20);
+//    self.ry_textField.sd_layout.heightIs(30).leftSpaceToView(self.ry_textLabel,20).centerYEqualToView(self.contentView).rightSpaceToView(self.contentView,15);
 }
+
+- (void)updateAutoLayout
+{
+    self.ry_textLabel.sd_layout.heightIs(20).leftSpaceToView(self.contentView,15).centerYEqualToView(self.contentView).rightSpaceToView(self.ry_textField,20);
+    [self.ry_textLabel updateLayout];
+    self.ry_textField.sd_layout.heightIs(30).leftSpaceToView(self.ry_textLabel,20).centerYEqualToView(self.contentView).rightSpaceToView(self.contentView,15);
+    [self.ry_textField updateLayout];
+}
+
 
 #pragma mark - getters
 

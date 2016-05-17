@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E1E193A1CEAAD940053BCCE /* NSObject+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1E192B1CEAAD940053BCCE /* NSObject+MemoryLeak.m */; };
+		4E1E193B1CEAAD940053BCCE /* UIApplication+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1E192D1CEAAD940053BCCE /* UIApplication+MemoryLeak.m */; };
+		4E1E193C1CEAAD940053BCCE /* UINavigationController+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1E192F1CEAAD940053BCCE /* UINavigationController+MemoryLeak.m */; };
+		4E1E193D1CEAAD940053BCCE /* UIPageViewController+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1E19311CEAAD940053BCCE /* UIPageViewController+MemoryLeak.m */; };
+		4E1E193E1CEAAD940053BCCE /* UISplitViewController+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1E19331CEAAD940053BCCE /* UISplitViewController+MemoryLeak.m */; };
+		4E1E193F1CEAAD940053BCCE /* UITabBarController+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1E19351CEAAD940053BCCE /* UITabBarController+MemoryLeak.m */; };
+		4E1E19401CEAAD940053BCCE /* UIView+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1E19371CEAAD940053BCCE /* UIView+MemoryLeak.m */; };
+		4E1E19411CEAAD940053BCCE /* UIViewController+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1E19391CEAAD940053BCCE /* UIViewController+MemoryLeak.m */; };
+		4E1E19451CEAB1160053BCCE /* UIView+RYFormAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1E19441CEAB1160053BCCE /* UIView+RYFormAdditions.m */; };
 		4E3911401CE95F6600223222 /* RYForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E39113F1CE95F6600223222 /* RYForm.m */; };
 		4E3911431CE9858800223222 /* RYFormTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3911421CE9858800223222 /* RYFormTextFieldCell.m */; };
 		4E3911461CE985DD00223222 /* RYFormTextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3911451CE985DD00223222 /* RYFormTextViewCell.m */; };
@@ -34,6 +43,7 @@
 		4E54FF791CE8B94100306D6A /* RYFormSectionInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54FF781CE8B94100306D6A /* RYFormSectionInformation.m */; };
 		4EE84A711CEA87D400E1374E /* TestConfigureForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE84A701CEA87D400E1374E /* TestConfigureForm.m */; };
 		4EE84A771CEA8B7C00E1374E /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE84A761CEA8B7C00E1374E /* TestViewController.m */; };
+		EEE3AAAD91FD5821473FCCB4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 344980ACF6DD3F974B77E3CD /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +64,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		344980ACF6DD3F974B77E3CD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E1E19291CEAAD940053BCCE /* MLeaksFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLeaksFinder.h; sourceTree = "<group>"; };
+		4E1E192A1CEAAD940053BCCE /* NSObject+MemoryLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MemoryLeak.h"; sourceTree = "<group>"; };
+		4E1E192B1CEAAD940053BCCE /* NSObject+MemoryLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MemoryLeak.m"; sourceTree = "<group>"; };
+		4E1E192C1CEAAD940053BCCE /* UIApplication+MemoryLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+MemoryLeak.h"; sourceTree = "<group>"; };
+		4E1E192D1CEAAD940053BCCE /* UIApplication+MemoryLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+MemoryLeak.m"; sourceTree = "<group>"; };
+		4E1E192E1CEAAD940053BCCE /* UINavigationController+MemoryLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+MemoryLeak.h"; sourceTree = "<group>"; };
+		4E1E192F1CEAAD940053BCCE /* UINavigationController+MemoryLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+MemoryLeak.m"; sourceTree = "<group>"; };
+		4E1E19301CEAAD940053BCCE /* UIPageViewController+MemoryLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIPageViewController+MemoryLeak.h"; sourceTree = "<group>"; };
+		4E1E19311CEAAD940053BCCE /* UIPageViewController+MemoryLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIPageViewController+MemoryLeak.m"; sourceTree = "<group>"; };
+		4E1E19321CEAAD940053BCCE /* UISplitViewController+MemoryLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISplitViewController+MemoryLeak.h"; sourceTree = "<group>"; };
+		4E1E19331CEAAD940053BCCE /* UISplitViewController+MemoryLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISplitViewController+MemoryLeak.m"; sourceTree = "<group>"; };
+		4E1E19341CEAAD940053BCCE /* UITabBarController+MemoryLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarController+MemoryLeak.h"; sourceTree = "<group>"; };
+		4E1E19351CEAAD940053BCCE /* UITabBarController+MemoryLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarController+MemoryLeak.m"; sourceTree = "<group>"; };
+		4E1E19361CEAAD940053BCCE /* UIView+MemoryLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MemoryLeak.h"; sourceTree = "<group>"; };
+		4E1E19371CEAAD940053BCCE /* UIView+MemoryLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MemoryLeak.m"; sourceTree = "<group>"; };
+		4E1E19381CEAAD940053BCCE /* UIViewController+MemoryLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MemoryLeak.h"; sourceTree = "<group>"; };
+		4E1E19391CEAAD940053BCCE /* UIViewController+MemoryLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MemoryLeak.m"; sourceTree = "<group>"; };
+		4E1E19431CEAB1160053BCCE /* UIView+RYFormAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RYFormAdditions.h"; sourceTree = "<group>"; };
+		4E1E19441CEAB1160053BCCE /* UIView+RYFormAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RYFormAdditions.m"; sourceTree = "<group>"; };
 		4E39113E1CE95F6600223222 /* RYForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYForm.h; sourceTree = "<group>"; };
 		4E39113F1CE95F6600223222 /* RYForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYForm.m; sourceTree = "<group>"; };
 		4E3911411CE9858800223222 /* RYFormTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormTextFieldCell.h; sourceTree = "<group>"; };
@@ -109,6 +139,8 @@
 		4EE84A701CEA87D400E1374E /* TestConfigureForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestConfigureForm.m; sourceTree = "<group>"; };
 		4EE84A751CEA8B7C00E1374E /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		4EE84A761CEA8B7C00E1374E /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		A8AD892EA49EF1D0CDF7FE83 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		B9066CC930D00CC3203CED00 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +148,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEE3AAAD91FD5821473FCCB4 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +169,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B7739DCE3B050E7D1C1FE26 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B9066CC930D00CC3203CED00 /* Pods.debug.xcconfig */,
+				A8AD892EA49EF1D0CDF7FE83 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4E1E19271CEAAD940053BCCE /* Vender */ = {
+			isa = PBXGroup;
+			children = (
+				4E1E19281CEAAD940053BCCE /* MLeaksFinder */,
+			);
+			path = Vender;
+			sourceTree = "<group>";
+		};
+		4E1E19281CEAAD940053BCCE /* MLeaksFinder */ = {
+			isa = PBXGroup;
+			children = (
+				4E1E19291CEAAD940053BCCE /* MLeaksFinder.h */,
+				4E1E192A1CEAAD940053BCCE /* NSObject+MemoryLeak.h */,
+				4E1E192B1CEAAD940053BCCE /* NSObject+MemoryLeak.m */,
+				4E1E192C1CEAAD940053BCCE /* UIApplication+MemoryLeak.h */,
+				4E1E192D1CEAAD940053BCCE /* UIApplication+MemoryLeak.m */,
+				4E1E192E1CEAAD940053BCCE /* UINavigationController+MemoryLeak.h */,
+				4E1E192F1CEAAD940053BCCE /* UINavigationController+MemoryLeak.m */,
+				4E1E19301CEAAD940053BCCE /* UIPageViewController+MemoryLeak.h */,
+				4E1E19311CEAAD940053BCCE /* UIPageViewController+MemoryLeak.m */,
+				4E1E19321CEAAD940053BCCE /* UISplitViewController+MemoryLeak.h */,
+				4E1E19331CEAAD940053BCCE /* UISplitViewController+MemoryLeak.m */,
+				4E1E19341CEAAD940053BCCE /* UITabBarController+MemoryLeak.h */,
+				4E1E19351CEAAD940053BCCE /* UITabBarController+MemoryLeak.m */,
+				4E1E19361CEAAD940053BCCE /* UIView+MemoryLeak.h */,
+				4E1E19371CEAAD940053BCCE /* UIView+MemoryLeak.m */,
+				4E1E19381CEAAD940053BCCE /* UIViewController+MemoryLeak.h */,
+				4E1E19391CEAAD940053BCCE /* UIViewController+MemoryLeak.m */,
+			);
+			path = MLeaksFinder;
+			sourceTree = "<group>";
+		};
+		4E1E19421CEAB1030053BCCE /* RYFormAdditions */ = {
+			isa = PBXGroup;
+			children = (
+				4E1E19431CEAB1160053BCCE /* UIView+RYFormAdditions.h */,
+				4E1E19441CEAB1160053BCCE /* UIView+RYFormAdditions.m */,
+			);
+			path = RYFormAdditions;
+			sourceTree = "<group>";
+		};
 		4E54FF1E1CE8295700306D6A = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +226,8 @@
 				4E54FF431CE8295800306D6A /* RYFormTests */,
 				4E54FF4E1CE8295800306D6A /* RYFormUITests */,
 				4E54FF281CE8295700306D6A /* Products */,
+				4B7739DCE3B050E7D1C1FE26 /* Pods */,
+				559697909B2A0536D56AE67F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -165,6 +250,7 @@
 				4E54FF301CE8295800306D6A /* ViewController.h */,
 				4E54FF311CE8295800306D6A /* ViewController.m */,
 				4E54FF331CE8295800306D6A /* Main.storyboard */,
+				4E1E19271CEAAD940053BCCE /* Vender */,
 				4EE84A6E1CEA87BB00E1374E /* Test */,
 				4E54FF361CE8295800306D6A /* Assets.xcassets */,
 				4E54FF381CE8295800306D6A /* LaunchScreen.storyboard */,
@@ -249,6 +335,7 @@
 		4E54FF601CE82A3100306D6A /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				4E1E19421CEAB1030053BCCE /* RYFormAdditions */,
 				4E54FF661CE82ADB00306D6A /* SDAutoLayout */,
 			);
 			path = Helpers;
@@ -293,6 +380,14 @@
 			path = Test;
 			sourceTree = "<group>";
 		};
+		559697909B2A0536D56AE67F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				344980ACF6DD3F974B77E3CD /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -300,9 +395,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4E54FF541CE8295800306D6A /* Build configuration list for PBXNativeTarget "RYForm" */;
 			buildPhases = (
+				8F9B452BD08EA34538455DBA /* Check Pods Manifest.lock */,
 				4E54FF231CE8295700306D6A /* Sources */,
 				4E54FF241CE8295700306D6A /* Frameworks */,
 				4E54FF251CE8295700306D6A /* Resources */,
+				1B358F11A7933087F9CAE83F /* Embed Pods Frameworks */,
+				075F3F18E7BEE38C5B97D980 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -419,15 +517,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		075F3F18E7BEE38C5B97D980 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1B358F11A7933087F9CAE83F /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F9B452BD08EA34538455DBA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4E54FF231CE8295700306D6A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				4E3911551CE9868600223222 /* RYFormPickerCell.m in Sources */,
+				4E1E19451CEAB1160053BCCE /* UIView+RYFormAdditions.m in Sources */,
 				4E3911491CE9860100223222 /* RYFormSwitchCell.m in Sources */,
 				4E54FF321CE8295800306D6A /* ViewController.m in Sources */,
 				4E54FF6F1CE8843E00306D6A /* RYFormBaseCell.m in Sources */,
+				4E1E19401CEAAD940053BCCE /* UIView+MemoryLeak.m in Sources */,
 				4EE84A711CEA87D400E1374E /* TestConfigureForm.m in Sources */,
 				4E54FF2F1CE8295800306D6A /* AppDelegate.m in Sources */,
 				4E54FF731CE8B90D00306D6A /* RYFormInformation.m in Sources */,
@@ -435,16 +583,23 @@
 				4E3911581CE986A000223222 /* RYFormStepCounterCell.m in Sources */,
 				4EE84A771CEA8B7C00E1374E /* TestViewController.m in Sources */,
 				4E39114C1CE9862400223222 /* RYFormCheckCell.m in Sources */,
+				4E1E193A1CEAAD940053BCCE /* NSObject+MemoryLeak.m in Sources */,
 				4E54FF6C1CE82ADB00306D6A /* UIView+SDAutoLayout.m in Sources */,
 				4E39114F1CE9863E00223222 /* RYFormDateCell.m in Sources */,
+				4E1E19411CEAAD940053BCCE /* UIViewController+MemoryLeak.m in Sources */,
 				4E54FF2C1CE8295800306D6A /* main.m in Sources */,
 				4E54FF641CE82AAC00306D6A /* RYFormViewController.m in Sources */,
+				4E1E193B1CEAAD940053BCCE /* UIApplication+MemoryLeak.m in Sources */,
+				4E1E193C1CEAAD940053BCCE /* UINavigationController+MemoryLeak.m in Sources */,
+				4E1E193D1CEAAD940053BCCE /* UIPageViewController+MemoryLeak.m in Sources */,
+				4E1E193F1CEAAD940053BCCE /* UITabBarController+MemoryLeak.m in Sources */,
 				4E54FF791CE8B94100306D6A /* RYFormSectionInformation.m in Sources */,
 				4E54FF761CE8B92700306D6A /* RYFormRowInformation.m in Sources */,
 				4E54FF6B1CE82ADB00306D6A /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
 				4E3911461CE985DD00223222 /* RYFormTextViewCell.m in Sources */,
 				4E3911521CE9866400223222 /* RYFormDatePickerCell.m in Sources */,
 				4E3911401CE95F6600223222 /* RYForm.m in Sources */,
+				4E1E193E1CEAAD940053BCCE /* UISplitViewController+MemoryLeak.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +738,7 @@
 		};
 		4E54FF551CE8295800306D6A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9066CC930D00CC3203CED00 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
@@ -596,6 +752,7 @@
 		};
 		4E54FF561CE8295800306D6A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8AD892EA49EF1D0CDF7FE83 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";

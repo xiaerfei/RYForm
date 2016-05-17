@@ -7,10 +7,15 @@
 //
 
 #import "RYFormViewController.h"
+#import "UIView+RYFormAdditions.h"
 #import "RYFormBaseCell.h"
+
+
+
 @interface RYFormViewController ()
 
-
+@property (nonatomic, copy) NSNumber *oldBottomTableContentInset;
+@property (nonatomic, assign) CGRect keyboardFrame;
 @end
 
 @implementation RYFormViewController
@@ -42,14 +47,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self configUI];
     [self configData];
+    [self configUI];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)dealloc
+{
+    NSLog(@"dealloc");
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIContentSizeCategoryDidChangeNotification
+                                                  object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIKeyboardWillShowNotification
+                                                  object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIKeyboardWillHideNotification
+                                                  object:nil];
+    _formInformation = nil;
+}
+
 
 - (void)initializeForm
 {
@@ -65,10 +86,18 @@
 
 - (void)configData
 {
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillShow:)
+                                                 name:UIKeyboardWillShowNotification
+                                               object:nil];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillHide:)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
 }
 
-#pragma mark - UITableViewDelegate,UITableViewDataSource
+#pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -89,6 +118,8 @@
     return [rowDescriptor cellForForm];
 }
 
+#pragma mark UITableViewDelegate
+
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     RYFormRowInformation * rowDescriptor = [self.formInformation formRowAtIndex:indexPath];
@@ -99,18 +130,77 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
-
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 44;
+    RYFormRowInformation * rowDescriptor = [self.formInformation formRowAtIndex:indexPath];
+    return rowDescriptor.rowHeight;
 }
 
-#pragma mark - 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    RYFormSectionInformation *sectionInformation = self.formInformation.formSections[section];
+    return sectionInformation.headerHeight;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    RYFormSectionInformation *sectionInformation = self.formInformation.formSections[section];
+    return sectionInformation.footerHeight;
+}
+
+#pragma mark - event responses
+- (void)keyboardWillShow:(NSNotification *)notification
+{
+    UIView * firstResponderView = [self.formTableView findFirstResponder];
+    UITableViewCell<RYFormInformationCell> * cell = [firstResponderView formInformationCell];
+    if (cell){
+        NSDictionary *keyboardInfo = [notification userInfo];
+        _keyboardFrame = [self.formTableView.window convertRect:[keyboardInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue] toView:self.formTableView.superview];
+        CGFloat newBottomInset = self.formTableView.frame.origin.y + self.formTableView.frame.size.height - _keyboardFrame.origin.y;
+        UIEdgeInsets tableContentInset = self.formTableView.contentInset;
+        UIEdgeInsets tableScrollIndicatorInsets = self.formTableView.scrollIndicatorInsets;
+        _oldBottomTableContentInset = _oldBottomTableContentInset ?: @(tableContentInset.bottom);
+        if (newBottomInset > [_oldBottomTableContentInset floatValue]){
+            tableContentInset.bottom = newBottomInset;
+            tableScrollIndicatorInsets.bottom = tableContentInset.bottom;
+            [UIView beginAnimations:nil context:nil];
+            [UIView setAnimationDuration:[keyboardInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue]];
+            [UIView setAnimationCurve:[keyboardInfo[UIKeyboardAnimationCurveUserInfoKey] intValue]];
+            self.formTableView.contentInset = tableContentInset;
+            self.formTableView.scrollIndicatorInsets = tableScrollIndicatorInsets;
+            NSIndexPath *selectedRow = [self.formTableView indexPathForCell:cell];
+            [self.formTableView scrollToRowAtIndexPath:selectedRow atScrollPosition:UITableViewScrollPositionNone animated:NO];
+            [UIView commitAnimations];
+        }
+    }
+}
+
+- (void)keyboardWillHide:(NSNotification *)notification
+{
+    UIView * firstResponderView = [self.formTableView findFirstResponder];
+    UITableViewCell<RYFormInformationCell> * cell = [firstResponderView formInformationCell];
+    if (cell){
+        _keyboardFrame = CGRectZero;
+        NSDictionary *keyboardInfo = [notification userInfo];
+        UIEdgeInsets tableContentInset = self.formTableView.contentInset;
+        UIEdgeInsets tableScrollIndicatorInsets = self.formTableView.scrollIndicatorInsets;
+        tableContentInset.bottom = [_oldBottomTableContentInset floatValue];
+        tableScrollIndicatorInsets.bottom = tableContentInset.bottom;
+        _oldBottomTableContentInset = nil;
+        [UIView beginAnimations:nil context:nil];
+        [UIView setAnimationDuration:[keyboardInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue]];
+        [UIView setAnimationCurve:[keyboardInfo[UIKeyboardAnimationCurveUserInfoKey] intValue]];
+        self.formTableView.contentInset = tableContentInset;
+        self.formTableView.scrollIndicatorInsets = tableScrollIndicatorInsets;
+        [UIView commitAnimations];
+    }
+}
+
+#pragma mark - private methods
 -(RYFormBaseCell *)updateFormRow:(RYFormRowInformation *)formRow
 {
     RYFormBaseCell * cell = [formRow cellForForm];
     [self configureCell:cell];
-
     return cell;
 }
 
@@ -124,7 +214,7 @@
 - (UITableView *)formTableView
 {
     if (_formTableView == nil) {
-        _formTableView = [[UITableView alloc] init];
+        _formTableView = [[UITableView alloc] initWithFrame:CGRectZero style:self.formInformation.style];
         _formTableView.delegate   = self;
         _formTableView.dataSource = self;
     }

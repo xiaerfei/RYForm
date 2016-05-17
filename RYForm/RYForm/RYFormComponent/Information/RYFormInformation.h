@@ -13,6 +13,8 @@
 @interface RYFormInformation : NSObject
 
 @property (nonatomic, copy, nonnull) NSMutableArray *formSections;
+/// default value is UITableViewStylePlain
+@property (nonatomic, assign) UITableViewStyle style;
 
 - (nullable RYFormRowInformation *)formRowAtIndex:(nonnull NSIndexPath *)indexPath;
 

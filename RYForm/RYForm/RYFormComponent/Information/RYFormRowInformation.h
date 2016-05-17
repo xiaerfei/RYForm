@@ -21,6 +21,8 @@
 @property (nonatomic, copy, nullable)       NSString *displayText;
 @property (nonatomic, copy, nullable)       NSString *placeholderText;
 @property (nonatomic, assign) UITableViewCellStyle cellStyle;
+/// default is 44
+@property (nonatomic, assign) CGFloat rowHeight;
 
 @property (nonatomic, assign) UITableViewCellSelectionStyle   selectionStyle;             // default is UITableViewCellSelectionStyleBlue.
 

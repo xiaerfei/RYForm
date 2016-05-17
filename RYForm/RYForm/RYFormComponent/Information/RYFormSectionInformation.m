@@ -20,4 +20,10 @@
     return self;
 }
 
+
+- (void)dealloc
+{
+    NSLog(@"RYFormSectionInformation--->dealloc");
+}
+
 @end

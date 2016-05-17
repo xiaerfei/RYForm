@@ -15,10 +15,15 @@
     self = [super init];
     if (self) {
         _formSections = [[NSMutableArray alloc] init];
+        _style = UITableViewStylePlain;
     }
     return self;
 }
 
+- (void)dealloc
+{
+    NSLog(@"RYFormInformation--->dealloc");
+}
 
 - (nullable RYFormRowInformation *)formRowAtIndex:(nonnull NSIndexPath *)indexPath
 {

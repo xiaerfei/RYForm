@@ -34,9 +34,15 @@
         _normalColor = [UIColor blackColor];
         _disabledColor = [UIColor blackColor];
         self.cellStyle = UITableViewCellStyleDefault;
+        self.rowHeight = 44;
         
     }
     return self;
+}
+
+- (void)dealloc
+{
+    NSLog(@"RYFormRowInformation--->dealloc");
 }
 
 - (nonnull RYFormBaseCell *)cellForForm

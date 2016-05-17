@@ -6,9 +6,13 @@
 //  Copyright © 2016年 二哥. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface RYFormSectionInformation : NSObject
+/// default is 0
+@property (nonatomic, assign) CGFloat headerHeight;
+/// default is 0
+@property (nonatomic, assign) CGFloat footerHeight;
 
 @property (nonatomic ,copy,readonly, nonnull) NSMutableArray * formRows;
 
