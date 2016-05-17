@@ -7,7 +7,15 @@
 //Information
 
 #import "RYForm.h"
-
+#import "RYFormBaseCell.h"
+#import "RYFormTextFieldCell.h"
+#import "RYFormTextViewCell.h"
+#import "RYFormSwitchCell.h"
+#import "RYFormCheckCell.h"
+#import "RYFormDateCell.h"
+#import "RYFormDatePickerCell.h"
+#import "RYFormPickerCell.h"
+#import "RYFormStepCounterCell.h"
 
 NSString *const RYFormRowInformationTypeText                        = @"text";
 NSString *const RYFormRowInformationTypeName                        = @"name";

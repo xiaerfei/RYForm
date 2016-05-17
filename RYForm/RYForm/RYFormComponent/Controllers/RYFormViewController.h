@@ -8,13 +8,23 @@
 
 #import <UIKit/UIKit.h>
 #import "UIView+SDAutoLayout.h"
-#import "RYFormInformation.h"
+#import "RYFormDataConfigure.h"
 
+
+@protocol RYFormViewControllerDelegate <NSObject>
+
+- (id <RYFormDataConfigure>)configureFormDataClass;
+
+@end
 
 @interface RYFormViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
+
+@property (nonatomic, weak) id<RYFormViewControllerDelegate> child;
 
 @property (nonatomic, strong) UITableView *formTableView;
 
 @property (nonatomic, strong) RYFormInformation *formInformation;
+
+
 
 @end

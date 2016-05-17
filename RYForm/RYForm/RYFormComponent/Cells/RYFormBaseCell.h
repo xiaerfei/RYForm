@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "RYFormInformationCell.h"
 
+@class RYFormRowInformation;
 
 @interface RYFormBaseCell : UITableViewCell <RYFormInformationCell>
+
+@property (nonatomic, weak) RYFormRowInformation * rowInformation;
 
 @end

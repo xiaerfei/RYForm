@@ -8,6 +8,7 @@
 
 #import "RYFormRowInformation.h"
 #import "RYForm.h"
+#import "RYFormBaseCell.h"
 
 @interface RYFormRowInformation ()
 
@@ -30,17 +31,22 @@
         _tag     = [tag copy];
         _rowType = [rowType copy];
         _title   = [title copy];
+        _normalColor = [UIColor blackColor];
+        _disabledColor = [UIColor blackColor];
         self.cellStyle = UITableViewCellStyleDefault;
         
     }
     return self;
 }
 
-- (RYFormBaseCell *)cellForForm
+- (nonnull RYFormBaseCell *)cellForForm
 {
-    id cellClass = [RYForm cellClassesForRowInformationTypes][self.rowType];
-    
-    _baseCell = [[cellClass alloc] initWithStyle:self.cellStyle reuseIdentifier:nil];
+    if (_baseCell == nil) {
+        id cellClass = [RYForm cellClassesForRowInformationTypes][self.rowType];
+        
+        _baseCell = [[cellClass alloc] initWithStyle:self.cellStyle reuseIdentifier:nil];
+        _baseCell.rowInformation = self;        
+    }
     
     return _baseCell;
 }

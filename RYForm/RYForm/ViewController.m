@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "TestViewController.h"
 
 @interface ViewController ()
+
+- (IBAction)testFormAction:(id)sender;
 
 @end
 
@@ -24,4 +27,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)testFormAction:(id)sender {
+    
+    TestViewController *testView = [[TestViewController alloc] init];
+    [self.navigationController pushViewController:testView animated:YES];
+    
+}
 @end

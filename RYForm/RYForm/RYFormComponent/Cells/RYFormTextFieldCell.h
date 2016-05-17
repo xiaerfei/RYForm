@@ -10,4 +10,7 @@
 
 @interface RYFormTextFieldCell : RYFormBaseCell
 
+@property (nonatomic, readonly, strong) UILabel     *ry_textLabel;
+@property (nonatomic, readonly, strong) UITextField *ry_textField;
+
 @end

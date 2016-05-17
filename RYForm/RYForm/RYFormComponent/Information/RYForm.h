@@ -8,48 +8,37 @@
 
 #import <Foundation/Foundation.h>
 
-#import "RYFormBaseCell.h"
-#import "RYFormTextFieldCell.h"
-#import "RYFormTextViewCell.h"
-#import "RYFormSwitchCell.h"
-#import "RYFormCheckCell.h"
-#import "RYFormDateCell.h"
-#import "RYFormDatePickerCell.h"
-#import "RYFormPickerCell.h"
-#import "RYFormStepCounterCell.h"
 
-
-
-extern NSString *const XLFormRowInformationTypeText;
-extern NSString *const XLFormRowInformationTypeName;
-extern NSString *const XLFormRowInformationTypeURL;
-extern NSString *const XLFormRowInformationTypeEmail;
-extern NSString *const XLFormRowInformationTypePassword;
-extern NSString *const XLFormRowInformationTypeNumber;
-extern NSString *const XLFormRowInformationTypePhone;
-extern NSString *const XLFormRowInformationTypeImage;
-extern NSString *const XLFormRowInformationTypeDecimal;
-extern NSString *const XLFormRowInformationTypeTextView;
-extern NSString *const XLFormRowInformationTypeSelectorActionSheet;
-extern NSString *const XLFormRowInformationTypeSelectorAlertView;
-extern NSString *const XLFormRowInformationTypeSelectorPickerView;
-extern NSString *const XLFormRowInformationTypeSelectorPickerViewInline;
-extern NSString *const XLFormRowInformationTypeSelectorLeftRight;
-extern NSString *const XLFormRowInformationTypeSelectorSegmentedControl;
-extern NSString *const XLFormRowInformationTypeDateInline;
-extern NSString *const XLFormRowInformationTypeDateTimeInline;
-extern NSString *const XLFormRowInformationTypeTimeInline;
-extern NSString *const XLFormRowInformationTypeCountDownTimerInline;
-extern NSString *const XLFormRowInformationTypeDate;
-extern NSString *const XLFormRowInformationTypeDateTime;
-extern NSString *const XLFormRowInformationTypeTime;
-extern NSString *const XLFormRowInformationTypeCountDownTimer;
-extern NSString *const XLFormRowInformationTypeDatePicker;
-extern NSString *const XLFormRowInformationTypePicker;
-extern NSString *const XLFormRowInformationTypeSlider;
-extern NSString *const XLFormRowInformationTypeBooleanCheck;
-extern NSString *const XLFormRowInformationTypeBooleanSwitch;
-extern NSString *const XLFormRowInformationTypeStepCounter;
+extern NSString *const RYFormRowInformationTypeText;
+extern NSString *const RYFormRowInformationTypeName;
+extern NSString *const RYFormRowInformationTypeURL;
+extern NSString *const RYFormRowInformationTypeEmail;
+extern NSString *const RYFormRowInformationTypePassword;
+extern NSString *const RYFormRowInformationTypeNumber;
+extern NSString *const RYFormRowInformationTypePhone;
+extern NSString *const RYFormRowInformationTypeImage;
+extern NSString *const RYFormRowInformationTypeDecimal;
+extern NSString *const RYFormRowInformationTypeTextView;
+extern NSString *const RYFormRowInformationTypeSelectorActionSheet;
+extern NSString *const RYFormRowInformationTypeSelectorAlertView;
+extern NSString *const RYFormRowInformationTypeSelectorPickerView;
+extern NSString *const RYFormRowInformationTypeSelectorPickerViewInline;
+extern NSString *const RYFormRowInformationTypeSelectorLeftRight;
+extern NSString *const RYFormRowInformationTypeSelectorSegmentedControl;
+extern NSString *const RYFormRowInformationTypeDateInline;
+extern NSString *const RYFormRowInformationTypeDateTimeInline;
+extern NSString *const RYFormRowInformationTypeTimeInline;
+extern NSString *const RYFormRowInformationTypeCountDownTimerInline;
+extern NSString *const RYFormRowInformationTypeDate;
+extern NSString *const RYFormRowInformationTypeDateTime;
+extern NSString *const RYFormRowInformationTypeTime;
+extern NSString *const RYFormRowInformationTypeCountDownTimer;
+extern NSString *const RYFormRowInformationTypeDatePicker;
+extern NSString *const RYFormRowInformationTypePicker;
+extern NSString *const RYFormRowInformationTypeSlider;
+extern NSString *const RYFormRowInformationTypeBooleanCheck;
+extern NSString *const RYFormRowInformationTypeBooleanSwitch;
+extern NSString *const RYFormRowInformationTypeStepCounter;
 
 
 @interface RYForm : NSObject
