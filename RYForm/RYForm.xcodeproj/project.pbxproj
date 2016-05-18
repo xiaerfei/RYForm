@@ -7,162 +7,160 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4E1E193A1CEAAD940053BCCE /* NSObject+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1E192B1CEAAD940053BCCE /* NSObject+MemoryLeak.m */; };
-		4E1E193B1CEAAD940053BCCE /* UIApplication+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1E192D1CEAAD940053BCCE /* UIApplication+MemoryLeak.m */; };
-		4E1E193C1CEAAD940053BCCE /* UINavigationController+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1E192F1CEAAD940053BCCE /* UINavigationController+MemoryLeak.m */; };
-		4E1E193D1CEAAD940053BCCE /* UIPageViewController+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1E19311CEAAD940053BCCE /* UIPageViewController+MemoryLeak.m */; };
-		4E1E193E1CEAAD940053BCCE /* UISplitViewController+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1E19331CEAAD940053BCCE /* UISplitViewController+MemoryLeak.m */; };
-		4E1E193F1CEAAD940053BCCE /* UITabBarController+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1E19351CEAAD940053BCCE /* UITabBarController+MemoryLeak.m */; };
-		4E1E19401CEAAD940053BCCE /* UIView+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1E19371CEAAD940053BCCE /* UIView+MemoryLeak.m */; };
-		4E1E19411CEAAD940053BCCE /* UIViewController+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1E19391CEAAD940053BCCE /* UIViewController+MemoryLeak.m */; };
-		4E1E19451CEAB1160053BCCE /* UIView+RYFormAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1E19441CEAB1160053BCCE /* UIView+RYFormAdditions.m */; };
-		4E3911401CE95F6600223222 /* RYForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E39113F1CE95F6600223222 /* RYForm.m */; };
-		4E3911431CE9858800223222 /* RYFormTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3911421CE9858800223222 /* RYFormTextFieldCell.m */; };
-		4E3911461CE985DD00223222 /* RYFormTextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3911451CE985DD00223222 /* RYFormTextViewCell.m */; };
-		4E3911491CE9860100223222 /* RYFormSwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3911481CE9860100223222 /* RYFormSwitchCell.m */; };
-		4E39114C1CE9862400223222 /* RYFormCheckCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E39114B1CE9862400223222 /* RYFormCheckCell.m */; };
-		4E39114F1CE9863E00223222 /* RYFormDateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E39114E1CE9863E00223222 /* RYFormDateCell.m */; };
-		4E3911521CE9866400223222 /* RYFormDatePickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3911511CE9866400223222 /* RYFormDatePickerCell.m */; };
-		4E3911551CE9868600223222 /* RYFormPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3911541CE9868600223222 /* RYFormPickerCell.m */; };
-		4E3911581CE986A000223222 /* RYFormStepCounterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3911571CE986A000223222 /* RYFormStepCounterCell.m */; };
-		4E54FF2C1CE8295800306D6A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54FF2B1CE8295800306D6A /* main.m */; };
-		4E54FF2F1CE8295800306D6A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54FF2E1CE8295800306D6A /* AppDelegate.m */; };
-		4E54FF321CE8295800306D6A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54FF311CE8295800306D6A /* ViewController.m */; };
-		4E54FF351CE8295800306D6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E54FF331CE8295800306D6A /* Main.storyboard */; };
-		4E54FF371CE8295800306D6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E54FF361CE8295800306D6A /* Assets.xcassets */; };
-		4E54FF3A1CE8295800306D6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E54FF381CE8295800306D6A /* LaunchScreen.storyboard */; };
-		4E54FF451CE8295800306D6A /* RYFormTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54FF441CE8295800306D6A /* RYFormTests.m */; };
-		4E54FF501CE8295800306D6A /* RYFormUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54FF4F1CE8295800306D6A /* RYFormUITests.m */; };
-		4E54FF641CE82AAC00306D6A /* RYFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54FF621CE82AAC00306D6A /* RYFormViewController.m */; };
-		4E54FF651CE82AAC00306D6A /* RYFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E54FF631CE82AAC00306D6A /* RYFormViewController.xib */; };
-		4E54FF6B1CE82ADB00306D6A /* UITableView+SDAutoTableViewCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54FF681CE82ADB00306D6A /* UITableView+SDAutoTableViewCellHeight.m */; };
-		4E54FF6C1CE82ADB00306D6A /* UIView+SDAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54FF6A1CE82ADB00306D6A /* UIView+SDAutoLayout.m */; };
-		4E54FF6F1CE8843E00306D6A /* RYFormBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54FF6E1CE8843E00306D6A /* RYFormBaseCell.m */; };
-		4E54FF731CE8B90D00306D6A /* RYFormInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54FF721CE8B90D00306D6A /* RYFormInformation.m */; };
-		4E54FF761CE8B92700306D6A /* RYFormRowInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54FF751CE8B92700306D6A /* RYFormRowInformation.m */; };
-		4E54FF791CE8B94100306D6A /* RYFormSectionInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54FF781CE8B94100306D6A /* RYFormSectionInformation.m */; };
-		4EE84A711CEA87D400E1374E /* TestConfigureForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE84A701CEA87D400E1374E /* TestConfigureForm.m */; };
-		4EE84A771CEA8B7C00E1374E /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE84A761CEA8B7C00E1374E /* TestViewController.m */; };
-		4EE84A7B1CEBD8B300E1374E /* RYFormTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE84A7A1CEBD8B300E1374E /* RYFormTextView.m */; };
-		EEE3AAAD91FD5821473FCCB4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 344980ACF6DD3F974B77E3CD /* libPods.a */; };
+		4E5477151CEC4C310049E1B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5477141CEC4C310049E1B4 /* main.m */; };
+		4E5477181CEC4C310049E1B4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5477171CEC4C310049E1B4 /* AppDelegate.m */; };
+		4E54771B1CEC4C310049E1B4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54771A1CEC4C310049E1B4 /* ViewController.m */; };
+		4E54771E1CEC4C310049E1B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E54771C1CEC4C310049E1B4 /* Main.storyboard */; };
+		4E5477201CEC4C310049E1B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E54771F1CEC4C310049E1B4 /* Assets.xcassets */; };
+		4E5477231CEC4C310049E1B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E5477211CEC4C310049E1B4 /* LaunchScreen.storyboard */; };
+		4E54772E1CEC4C310049E1B4 /* RYFormTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54772D1CEC4C310049E1B4 /* RYFormTests.m */; };
+		4E5477391CEC4C310049E1B4 /* RYFormUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5477381CEC4C310049E1B4 /* RYFormUITests.m */; };
+		4E5477911CEC4C890049E1B4 /* RYFormBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54774A1CEC4C890049E1B4 /* RYFormBaseCell.m */; };
+		4E5477921CEC4C890049E1B4 /* RYFormCheckCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54774C1CEC4C890049E1B4 /* RYFormCheckCell.m */; };
+		4E5477931CEC4C890049E1B4 /* RYFormDateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54774E1CEC4C890049E1B4 /* RYFormDateCell.m */; };
+		4E5477941CEC4C890049E1B4 /* RYFormDatePickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5477501CEC4C890049E1B4 /* RYFormDatePickerCell.m */; };
+		4E5477951CEC4C890049E1B4 /* RYFormPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5477521CEC4C890049E1B4 /* RYFormPickerCell.m */; };
+		4E5477961CEC4C890049E1B4 /* RYFormStepCounterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5477541CEC4C890049E1B4 /* RYFormStepCounterCell.m */; };
+		4E5477971CEC4C890049E1B4 /* RYFormSwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5477561CEC4C890049E1B4 /* RYFormSwitchCell.m */; };
+		4E5477981CEC4C890049E1B4 /* RYFormTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5477581CEC4C890049E1B4 /* RYFormTextFieldCell.m */; };
+		4E5477991CEC4C890049E1B4 /* RYFormTextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54775A1CEC4C890049E1B4 /* RYFormTextViewCell.m */; };
+		4E54779A1CEC4C890049E1B4 /* RYFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54775D1CEC4C890049E1B4 /* RYFormViewController.m */; };
+		4E54779B1CEC4C890049E1B4 /* RYFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E54775E1CEC4C890049E1B4 /* RYFormViewController.xib */; };
+		4E54779C1CEC4C890049E1B4 /* UIView+RYFormAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5477621CEC4C890049E1B4 /* UIView+RYFormAdditions.m */; };
+		4E54779D1CEC4C890049E1B4 /* RYFormTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5477651CEC4C890049E1B4 /* RYFormTextView.m */; };
+		4E54779E1CEC4C890049E1B4 /* UITableView+SDAutoTableViewCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5477681CEC4C890049E1B4 /* UITableView+SDAutoTableViewCellHeight.m */; };
+		4E54779F1CEC4C890049E1B4 /* UIView+SDAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54776A1CEC4C890049E1B4 /* UIView+SDAutoLayout.m */; };
+		4E5477A01CEC4C890049E1B4 /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54776D1CEC4C890049E1B4 /* UIViewExt.m */; };
+		4E5477A11CEC4C890049E1B4 /* RYForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5477701CEC4C890049E1B4 /* RYForm.m */; };
+		4E5477A21CEC4C890049E1B4 /* RYFormInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5477731CEC4C890049E1B4 /* RYFormInformation.m */; };
+		4E5477A31CEC4C890049E1B4 /* RYFormRowInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5477761CEC4C890049E1B4 /* RYFormRowInformation.m */; };
+		4E5477A41CEC4C890049E1B4 /* RYFormSectionInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5477781CEC4C890049E1B4 /* RYFormSectionInformation.m */; };
+		4E5477A51CEC4C890049E1B4 /* TestConfigureForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54777B1CEC4C890049E1B4 /* TestConfigureForm.m */; };
+		4E5477A61CEC4C890049E1B4 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54777D1CEC4C890049E1B4 /* TestViewController.m */; };
+		4E5477A71CEC4C890049E1B4 /* NSObject+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5477821CEC4C890049E1B4 /* NSObject+MemoryLeak.m */; };
+		4E5477A81CEC4C890049E1B4 /* UIApplication+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5477841CEC4C890049E1B4 /* UIApplication+MemoryLeak.m */; };
+		4E5477A91CEC4C890049E1B4 /* UINavigationController+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5477861CEC4C890049E1B4 /* UINavigationController+MemoryLeak.m */; };
+		4E5477AA1CEC4C890049E1B4 /* UIPageViewController+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5477881CEC4C890049E1B4 /* UIPageViewController+MemoryLeak.m */; };
+		4E5477AB1CEC4C890049E1B4 /* UISplitViewController+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54778A1CEC4C890049E1B4 /* UISplitViewController+MemoryLeak.m */; };
+		4E5477AC1CEC4C890049E1B4 /* UITabBarController+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54778C1CEC4C890049E1B4 /* UITabBarController+MemoryLeak.m */; };
+		4E5477AD1CEC4C890049E1B4 /* UIView+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54778E1CEC4C890049E1B4 /* UIView+MemoryLeak.m */; };
+		4E5477AE1CEC4C890049E1B4 /* UIViewController+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5477901CEC4C890049E1B4 /* UIViewController+MemoryLeak.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4E54FF411CE8295800306D6A /* PBXContainerItemProxy */ = {
+		4E54772A1CEC4C310049E1B4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 4E54FF1F1CE8295700306D6A /* Project object */;
+			containerPortal = 4E5477081CEC4C310049E1B4 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4E54FF261CE8295700306D6A;
+			remoteGlobalIDString = 4E54770F1CEC4C310049E1B4;
 			remoteInfo = RYForm;
 		};
-		4E54FF4C1CE8295800306D6A /* PBXContainerItemProxy */ = {
+		4E5477351CEC4C310049E1B4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 4E54FF1F1CE8295700306D6A /* Project object */;
+			containerPortal = 4E5477081CEC4C310049E1B4 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4E54FF261CE8295700306D6A;
+			remoteGlobalIDString = 4E54770F1CEC4C310049E1B4;
 			remoteInfo = RYForm;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		344980ACF6DD3F974B77E3CD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E1E19291CEAAD940053BCCE /* MLeaksFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLeaksFinder.h; sourceTree = "<group>"; };
-		4E1E192A1CEAAD940053BCCE /* NSObject+MemoryLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MemoryLeak.h"; sourceTree = "<group>"; };
-		4E1E192B1CEAAD940053BCCE /* NSObject+MemoryLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MemoryLeak.m"; sourceTree = "<group>"; };
-		4E1E192C1CEAAD940053BCCE /* UIApplication+MemoryLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+MemoryLeak.h"; sourceTree = "<group>"; };
-		4E1E192D1CEAAD940053BCCE /* UIApplication+MemoryLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+MemoryLeak.m"; sourceTree = "<group>"; };
-		4E1E192E1CEAAD940053BCCE /* UINavigationController+MemoryLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+MemoryLeak.h"; sourceTree = "<group>"; };
-		4E1E192F1CEAAD940053BCCE /* UINavigationController+MemoryLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+MemoryLeak.m"; sourceTree = "<group>"; };
-		4E1E19301CEAAD940053BCCE /* UIPageViewController+MemoryLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIPageViewController+MemoryLeak.h"; sourceTree = "<group>"; };
-		4E1E19311CEAAD940053BCCE /* UIPageViewController+MemoryLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIPageViewController+MemoryLeak.m"; sourceTree = "<group>"; };
-		4E1E19321CEAAD940053BCCE /* UISplitViewController+MemoryLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISplitViewController+MemoryLeak.h"; sourceTree = "<group>"; };
-		4E1E19331CEAAD940053BCCE /* UISplitViewController+MemoryLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISplitViewController+MemoryLeak.m"; sourceTree = "<group>"; };
-		4E1E19341CEAAD940053BCCE /* UITabBarController+MemoryLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarController+MemoryLeak.h"; sourceTree = "<group>"; };
-		4E1E19351CEAAD940053BCCE /* UITabBarController+MemoryLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarController+MemoryLeak.m"; sourceTree = "<group>"; };
-		4E1E19361CEAAD940053BCCE /* UIView+MemoryLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MemoryLeak.h"; sourceTree = "<group>"; };
-		4E1E19371CEAAD940053BCCE /* UIView+MemoryLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MemoryLeak.m"; sourceTree = "<group>"; };
-		4E1E19381CEAAD940053BCCE /* UIViewController+MemoryLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MemoryLeak.h"; sourceTree = "<group>"; };
-		4E1E19391CEAAD940053BCCE /* UIViewController+MemoryLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MemoryLeak.m"; sourceTree = "<group>"; };
-		4E1E19431CEAB1160053BCCE /* UIView+RYFormAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RYFormAdditions.h"; sourceTree = "<group>"; };
-		4E1E19441CEAB1160053BCCE /* UIView+RYFormAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RYFormAdditions.m"; sourceTree = "<group>"; };
-		4E39113E1CE95F6600223222 /* RYForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYForm.h; sourceTree = "<group>"; };
-		4E39113F1CE95F6600223222 /* RYForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYForm.m; sourceTree = "<group>"; };
-		4E3911411CE9858800223222 /* RYFormTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormTextFieldCell.h; sourceTree = "<group>"; };
-		4E3911421CE9858800223222 /* RYFormTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFormTextFieldCell.m; sourceTree = "<group>"; };
-		4E3911441CE985DD00223222 /* RYFormTextViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormTextViewCell.h; sourceTree = "<group>"; };
-		4E3911451CE985DD00223222 /* RYFormTextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFormTextViewCell.m; sourceTree = "<group>"; };
-		4E3911471CE9860100223222 /* RYFormSwitchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormSwitchCell.h; sourceTree = "<group>"; };
-		4E3911481CE9860100223222 /* RYFormSwitchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFormSwitchCell.m; sourceTree = "<group>"; };
-		4E39114A1CE9862400223222 /* RYFormCheckCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormCheckCell.h; sourceTree = "<group>"; };
-		4E39114B1CE9862400223222 /* RYFormCheckCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFormCheckCell.m; sourceTree = "<group>"; };
-		4E39114D1CE9863E00223222 /* RYFormDateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormDateCell.h; sourceTree = "<group>"; };
-		4E39114E1CE9863E00223222 /* RYFormDateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFormDateCell.m; sourceTree = "<group>"; };
-		4E3911501CE9866400223222 /* RYFormDatePickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormDatePickerCell.h; sourceTree = "<group>"; };
-		4E3911511CE9866400223222 /* RYFormDatePickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFormDatePickerCell.m; sourceTree = "<group>"; };
-		4E3911531CE9868600223222 /* RYFormPickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormPickerCell.h; sourceTree = "<group>"; };
-		4E3911541CE9868600223222 /* RYFormPickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFormPickerCell.m; sourceTree = "<group>"; };
-		4E3911561CE986A000223222 /* RYFormStepCounterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormStepCounterCell.h; sourceTree = "<group>"; };
-		4E3911571CE986A000223222 /* RYFormStepCounterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFormStepCounterCell.m; sourceTree = "<group>"; };
-		4E39115B1CE9C4D200223222 /* RYFormInformationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormInformationCell.h; sourceTree = "<group>"; };
-		4E54FF271CE8295700306D6A /* RYForm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RYForm.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E54FF2B1CE8295800306D6A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4E54FF2D1CE8295800306D6A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		4E54FF2E1CE8295800306D6A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4E54FF301CE8295800306D6A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4E54FF311CE8295800306D6A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		4E54FF341CE8295800306D6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4E54FF361CE8295800306D6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4E54FF391CE8295800306D6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		4E54FF3B1CE8295800306D6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4E54FF401CE8295800306D6A /* RYFormTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RYFormTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E54FF441CE8295800306D6A /* RYFormTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RYFormTests.m; sourceTree = "<group>"; };
-		4E54FF461CE8295800306D6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4E54FF4B1CE8295800306D6A /* RYFormUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RYFormUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E54FF4F1CE8295800306D6A /* RYFormUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RYFormUITests.m; sourceTree = "<group>"; };
-		4E54FF511CE8295800306D6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4E54FF611CE82AAC00306D6A /* RYFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormViewController.h; sourceTree = "<group>"; };
-		4E54FF621CE82AAC00306D6A /* RYFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFormViewController.m; sourceTree = "<group>"; };
-		4E54FF631CE82AAC00306D6A /* RYFormViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RYFormViewController.xib; sourceTree = "<group>"; };
-		4E54FF671CE82ADB00306D6A /* UITableView+SDAutoTableViewCellHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+SDAutoTableViewCellHeight.h"; sourceTree = "<group>"; };
-		4E54FF681CE82ADB00306D6A /* UITableView+SDAutoTableViewCellHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+SDAutoTableViewCellHeight.m"; sourceTree = "<group>"; };
-		4E54FF691CE82ADB00306D6A /* UIView+SDAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDAutoLayout.h"; sourceTree = "<group>"; };
-		4E54FF6A1CE82ADB00306D6A /* UIView+SDAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDAutoLayout.m"; sourceTree = "<group>"; };
-		4E54FF6D1CE8843E00306D6A /* RYFormBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormBaseCell.h; sourceTree = "<group>"; };
-		4E54FF6E1CE8843E00306D6A /* RYFormBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFormBaseCell.m; sourceTree = "<group>"; };
-		4E54FF711CE8B90D00306D6A /* RYFormInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormInformation.h; sourceTree = "<group>"; };
-		4E54FF721CE8B90D00306D6A /* RYFormInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFormInformation.m; sourceTree = "<group>"; };
-		4E54FF741CE8B92700306D6A /* RYFormRowInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormRowInformation.h; sourceTree = "<group>"; };
-		4E54FF751CE8B92700306D6A /* RYFormRowInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFormRowInformation.m; sourceTree = "<group>"; };
-		4E54FF771CE8B94100306D6A /* RYFormSectionInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormSectionInformation.h; sourceTree = "<group>"; };
-		4E54FF781CE8B94100306D6A /* RYFormSectionInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFormSectionInformation.m; sourceTree = "<group>"; };
-		4EE84A6D1CEA86E200E1374E /* RYFormDataConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormDataConfigure.h; sourceTree = "<group>"; };
-		4EE84A6F1CEA87D400E1374E /* TestConfigureForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestConfigureForm.h; sourceTree = "<group>"; };
-		4EE84A701CEA87D400E1374E /* TestConfigureForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestConfigureForm.m; sourceTree = "<group>"; };
-		4EE84A751CEA8B7C00E1374E /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
-		4EE84A761CEA8B7C00E1374E /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
-		4EE84A791CEBD8B300E1374E /* RYFormTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormTextView.h; sourceTree = "<group>"; };
-		4EE84A7A1CEBD8B300E1374E /* RYFormTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFormTextView.m; sourceTree = "<group>"; };
-		A8AD892EA49EF1D0CDF7FE83 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		B9066CC930D00CC3203CED00 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		4E5477101CEC4C310049E1B4 /* RYForm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RYForm.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E5477141CEC4C310049E1B4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4E5477161CEC4C310049E1B4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4E5477171CEC4C310049E1B4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4E5477191CEC4C310049E1B4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4E54771A1CEC4C310049E1B4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4E54771D1CEC4C310049E1B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4E54771F1CEC4C310049E1B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4E5477221CEC4C310049E1B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4E5477241CEC4C310049E1B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E5477291CEC4C310049E1B4 /* RYFormTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RYFormTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E54772D1CEC4C310049E1B4 /* RYFormTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RYFormTests.m; sourceTree = "<group>"; };
+		4E54772F1CEC4C310049E1B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E5477341CEC4C310049E1B4 /* RYFormUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RYFormUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E5477381CEC4C310049E1B4 /* RYFormUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RYFormUITests.m; sourceTree = "<group>"; };
+		4E54773A1CEC4C310049E1B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E5477491CEC4C890049E1B4 /* RYFormBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormBaseCell.h; sourceTree = "<group>"; };
+		4E54774A1CEC4C890049E1B4 /* RYFormBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFormBaseCell.m; sourceTree = "<group>"; };
+		4E54774B1CEC4C890049E1B4 /* RYFormCheckCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormCheckCell.h; sourceTree = "<group>"; };
+		4E54774C1CEC4C890049E1B4 /* RYFormCheckCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFormCheckCell.m; sourceTree = "<group>"; };
+		4E54774D1CEC4C890049E1B4 /* RYFormDateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormDateCell.h; sourceTree = "<group>"; };
+		4E54774E1CEC4C890049E1B4 /* RYFormDateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFormDateCell.m; sourceTree = "<group>"; };
+		4E54774F1CEC4C890049E1B4 /* RYFormDatePickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormDatePickerCell.h; sourceTree = "<group>"; };
+		4E5477501CEC4C890049E1B4 /* RYFormDatePickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFormDatePickerCell.m; sourceTree = "<group>"; };
+		4E5477511CEC4C890049E1B4 /* RYFormPickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormPickerCell.h; sourceTree = "<group>"; };
+		4E5477521CEC4C890049E1B4 /* RYFormPickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFormPickerCell.m; sourceTree = "<group>"; };
+		4E5477531CEC4C890049E1B4 /* RYFormStepCounterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormStepCounterCell.h; sourceTree = "<group>"; };
+		4E5477541CEC4C890049E1B4 /* RYFormStepCounterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFormStepCounterCell.m; sourceTree = "<group>"; };
+		4E5477551CEC4C890049E1B4 /* RYFormSwitchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormSwitchCell.h; sourceTree = "<group>"; };
+		4E5477561CEC4C890049E1B4 /* RYFormSwitchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFormSwitchCell.m; sourceTree = "<group>"; };
+		4E5477571CEC4C890049E1B4 /* RYFormTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormTextFieldCell.h; sourceTree = "<group>"; };
+		4E5477581CEC4C890049E1B4 /* RYFormTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFormTextFieldCell.m; sourceTree = "<group>"; };
+		4E5477591CEC4C890049E1B4 /* RYFormTextViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormTextViewCell.h; sourceTree = "<group>"; };
+		4E54775A1CEC4C890049E1B4 /* RYFormTextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFormTextViewCell.m; sourceTree = "<group>"; };
+		4E54775C1CEC4C890049E1B4 /* RYFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormViewController.h; sourceTree = "<group>"; };
+		4E54775D1CEC4C890049E1B4 /* RYFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFormViewController.m; sourceTree = "<group>"; };
+		4E54775E1CEC4C890049E1B4 /* RYFormViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RYFormViewController.xib; sourceTree = "<group>"; };
+		4E5477611CEC4C890049E1B4 /* UIView+RYFormAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RYFormAdditions.h"; sourceTree = "<group>"; };
+		4E5477621CEC4C890049E1B4 /* UIView+RYFormAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RYFormAdditions.m"; sourceTree = "<group>"; };
+		4E5477641CEC4C890049E1B4 /* RYFormTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormTextView.h; sourceTree = "<group>"; };
+		4E5477651CEC4C890049E1B4 /* RYFormTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFormTextView.m; sourceTree = "<group>"; };
+		4E5477671CEC4C890049E1B4 /* UITableView+SDAutoTableViewCellHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+SDAutoTableViewCellHeight.h"; sourceTree = "<group>"; };
+		4E5477681CEC4C890049E1B4 /* UITableView+SDAutoTableViewCellHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+SDAutoTableViewCellHeight.m"; sourceTree = "<group>"; };
+		4E5477691CEC4C890049E1B4 /* UIView+SDAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDAutoLayout.h"; sourceTree = "<group>"; };
+		4E54776A1CEC4C890049E1B4 /* UIView+SDAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDAutoLayout.m"; sourceTree = "<group>"; };
+		4E54776C1CEC4C890049E1B4 /* UIViewExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewExt.h; sourceTree = "<group>"; };
+		4E54776D1CEC4C890049E1B4 /* UIViewExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewExt.m; sourceTree = "<group>"; };
+		4E54776F1CEC4C890049E1B4 /* RYForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYForm.h; sourceTree = "<group>"; };
+		4E5477701CEC4C890049E1B4 /* RYForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYForm.m; sourceTree = "<group>"; };
+		4E5477711CEC4C890049E1B4 /* RYFormDataConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormDataConfigure.h; sourceTree = "<group>"; };
+		4E5477721CEC4C890049E1B4 /* RYFormInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormInformation.h; sourceTree = "<group>"; };
+		4E5477731CEC4C890049E1B4 /* RYFormInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFormInformation.m; sourceTree = "<group>"; };
+		4E5477741CEC4C890049E1B4 /* RYFormInformationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormInformationCell.h; sourceTree = "<group>"; };
+		4E5477751CEC4C890049E1B4 /* RYFormRowInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormRowInformation.h; sourceTree = "<group>"; };
+		4E5477761CEC4C890049E1B4 /* RYFormRowInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFormRowInformation.m; sourceTree = "<group>"; };
+		4E5477771CEC4C890049E1B4 /* RYFormSectionInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormSectionInformation.h; sourceTree = "<group>"; };
+		4E5477781CEC4C890049E1B4 /* RYFormSectionInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFormSectionInformation.m; sourceTree = "<group>"; };
+		4E54777A1CEC4C890049E1B4 /* TestConfigureForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestConfigureForm.h; sourceTree = "<group>"; };
+		4E54777B1CEC4C890049E1B4 /* TestConfigureForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestConfigureForm.m; sourceTree = "<group>"; };
+		4E54777C1CEC4C890049E1B4 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		4E54777D1CEC4C890049E1B4 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		4E5477801CEC4C890049E1B4 /* MLeaksFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLeaksFinder.h; sourceTree = "<group>"; };
+		4E5477811CEC4C890049E1B4 /* NSObject+MemoryLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MemoryLeak.h"; sourceTree = "<group>"; };
+		4E5477821CEC4C890049E1B4 /* NSObject+MemoryLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MemoryLeak.m"; sourceTree = "<group>"; };
+		4E5477831CEC4C890049E1B4 /* UIApplication+MemoryLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+MemoryLeak.h"; sourceTree = "<group>"; };
+		4E5477841CEC4C890049E1B4 /* UIApplication+MemoryLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+MemoryLeak.m"; sourceTree = "<group>"; };
+		4E5477851CEC4C890049E1B4 /* UINavigationController+MemoryLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+MemoryLeak.h"; sourceTree = "<group>"; };
+		4E5477861CEC4C890049E1B4 /* UINavigationController+MemoryLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+MemoryLeak.m"; sourceTree = "<group>"; };
+		4E5477871CEC4C890049E1B4 /* UIPageViewController+MemoryLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIPageViewController+MemoryLeak.h"; sourceTree = "<group>"; };
+		4E5477881CEC4C890049E1B4 /* UIPageViewController+MemoryLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIPageViewController+MemoryLeak.m"; sourceTree = "<group>"; };
+		4E5477891CEC4C890049E1B4 /* UISplitViewController+MemoryLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISplitViewController+MemoryLeak.h"; sourceTree = "<group>"; };
+		4E54778A1CEC4C890049E1B4 /* UISplitViewController+MemoryLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISplitViewController+MemoryLeak.m"; sourceTree = "<group>"; };
+		4E54778B1CEC4C890049E1B4 /* UITabBarController+MemoryLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarController+MemoryLeak.h"; sourceTree = "<group>"; };
+		4E54778C1CEC4C890049E1B4 /* UITabBarController+MemoryLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarController+MemoryLeak.m"; sourceTree = "<group>"; };
+		4E54778D1CEC4C890049E1B4 /* UIView+MemoryLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MemoryLeak.h"; sourceTree = "<group>"; };
+		4E54778E1CEC4C890049E1B4 /* UIView+MemoryLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MemoryLeak.m"; sourceTree = "<group>"; };
+		4E54778F1CEC4C890049E1B4 /* UIViewController+MemoryLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MemoryLeak.h"; sourceTree = "<group>"; };
+		4E5477901CEC4C890049E1B4 /* UIViewController+MemoryLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MemoryLeak.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4E54FF241CE8295700306D6A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EEE3AAAD91FD5821473FCCB4 /* libPods.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4E54FF3D1CE8295800306D6A /* Frameworks */ = {
+		4E54770D1CEC4C310049E1B4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4E54FF481CE8295800306D6A /* Frameworks */ = {
+		4E5477261CEC4C310049E1B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E5477311CEC4C310049E1B4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -172,248 +170,244 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4B7739DCE3B050E7D1C1FE26 /* Pods */ = {
+		4E5477071CEC4C310049E1B4 = {
 			isa = PBXGroup;
 			children = (
-				B9066CC930D00CC3203CED00 /* Pods.debug.xcconfig */,
-				A8AD892EA49EF1D0CDF7FE83 /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		4E1E19271CEAAD940053BCCE /* Vender */ = {
-			isa = PBXGroup;
-			children = (
-				4E1E19281CEAAD940053BCCE /* MLeaksFinder */,
-			);
-			path = Vender;
-			sourceTree = "<group>";
-		};
-		4E1E19281CEAAD940053BCCE /* MLeaksFinder */ = {
-			isa = PBXGroup;
-			children = (
-				4E1E19291CEAAD940053BCCE /* MLeaksFinder.h */,
-				4E1E192A1CEAAD940053BCCE /* NSObject+MemoryLeak.h */,
-				4E1E192B1CEAAD940053BCCE /* NSObject+MemoryLeak.m */,
-				4E1E192C1CEAAD940053BCCE /* UIApplication+MemoryLeak.h */,
-				4E1E192D1CEAAD940053BCCE /* UIApplication+MemoryLeak.m */,
-				4E1E192E1CEAAD940053BCCE /* UINavigationController+MemoryLeak.h */,
-				4E1E192F1CEAAD940053BCCE /* UINavigationController+MemoryLeak.m */,
-				4E1E19301CEAAD940053BCCE /* UIPageViewController+MemoryLeak.h */,
-				4E1E19311CEAAD940053BCCE /* UIPageViewController+MemoryLeak.m */,
-				4E1E19321CEAAD940053BCCE /* UISplitViewController+MemoryLeak.h */,
-				4E1E19331CEAAD940053BCCE /* UISplitViewController+MemoryLeak.m */,
-				4E1E19341CEAAD940053BCCE /* UITabBarController+MemoryLeak.h */,
-				4E1E19351CEAAD940053BCCE /* UITabBarController+MemoryLeak.m */,
-				4E1E19361CEAAD940053BCCE /* UIView+MemoryLeak.h */,
-				4E1E19371CEAAD940053BCCE /* UIView+MemoryLeak.m */,
-				4E1E19381CEAAD940053BCCE /* UIViewController+MemoryLeak.h */,
-				4E1E19391CEAAD940053BCCE /* UIViewController+MemoryLeak.m */,
-			);
-			path = MLeaksFinder;
-			sourceTree = "<group>";
-		};
-		4E1E19421CEAB1030053BCCE /* RYFormAdditions */ = {
-			isa = PBXGroup;
-			children = (
-				4E1E19431CEAB1160053BCCE /* UIView+RYFormAdditions.h */,
-				4E1E19441CEAB1160053BCCE /* UIView+RYFormAdditions.m */,
-			);
-			path = RYFormAdditions;
-			sourceTree = "<group>";
-		};
-		4E54FF1E1CE8295700306D6A = {
-			isa = PBXGroup;
-			children = (
-				4E54FF291CE8295800306D6A /* RYForm */,
-				4E54FF431CE8295800306D6A /* RYFormTests */,
-				4E54FF4E1CE8295800306D6A /* RYFormUITests */,
-				4E54FF281CE8295700306D6A /* Products */,
-				4B7739DCE3B050E7D1C1FE26 /* Pods */,
-				559697909B2A0536D56AE67F /* Frameworks */,
+				4E5477121CEC4C310049E1B4 /* RYForm */,
+				4E54772C1CEC4C310049E1B4 /* RYFormTests */,
+				4E5477371CEC4C310049E1B4 /* RYFormUITests */,
+				4E5477111CEC4C310049E1B4 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		4E54FF281CE8295700306D6A /* Products */ = {
+		4E5477111CEC4C310049E1B4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4E54FF271CE8295700306D6A /* RYForm.app */,
-				4E54FF401CE8295800306D6A /* RYFormTests.xctest */,
-				4E54FF4B1CE8295800306D6A /* RYFormUITests.xctest */,
+				4E5477101CEC4C310049E1B4 /* RYForm.app */,
+				4E5477291CEC4C310049E1B4 /* RYFormTests.xctest */,
+				4E5477341CEC4C310049E1B4 /* RYFormUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4E54FF291CE8295800306D6A /* RYForm */ = {
+		4E5477121CEC4C310049E1B4 /* RYForm */ = {
 			isa = PBXGroup;
 			children = (
-				4E54FF5D1CE82A3100306D6A /* RYFormComponent */,
-				4E54FF2D1CE8295800306D6A /* AppDelegate.h */,
-				4E54FF2E1CE8295800306D6A /* AppDelegate.m */,
-				4E54FF301CE8295800306D6A /* ViewController.h */,
-				4E54FF311CE8295800306D6A /* ViewController.m */,
-				4E54FF331CE8295800306D6A /* Main.storyboard */,
-				4E1E19271CEAAD940053BCCE /* Vender */,
-				4EE84A6E1CEA87BB00E1374E /* Test */,
-				4E54FF361CE8295800306D6A /* Assets.xcassets */,
-				4E54FF381CE8295800306D6A /* LaunchScreen.storyboard */,
-				4E54FF3B1CE8295800306D6A /* Info.plist */,
-				4E54FF2A1CE8295800306D6A /* Supporting Files */,
+				4E5477461CEC4C890049E1B4 /* Form */,
+				4E5477161CEC4C310049E1B4 /* AppDelegate.h */,
+				4E5477171CEC4C310049E1B4 /* AppDelegate.m */,
+				4E5477191CEC4C310049E1B4 /* ViewController.h */,
+				4E54771A1CEC4C310049E1B4 /* ViewController.m */,
+				4E54771C1CEC4C310049E1B4 /* Main.storyboard */,
+				4E54771F1CEC4C310049E1B4 /* Assets.xcassets */,
+				4E5477211CEC4C310049E1B4 /* LaunchScreen.storyboard */,
+				4E5477241CEC4C310049E1B4 /* Info.plist */,
+				4E5477131CEC4C310049E1B4 /* Supporting Files */,
 			);
 			path = RYForm;
 			sourceTree = "<group>";
 		};
-		4E54FF2A1CE8295800306D6A /* Supporting Files */ = {
+		4E5477131CEC4C310049E1B4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				4E54FF2B1CE8295800306D6A /* main.m */,
+				4E5477141CEC4C310049E1B4 /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		4E54FF431CE8295800306D6A /* RYFormTests */ = {
+		4E54772C1CEC4C310049E1B4 /* RYFormTests */ = {
 			isa = PBXGroup;
 			children = (
-				4E54FF441CE8295800306D6A /* RYFormTests.m */,
-				4E54FF461CE8295800306D6A /* Info.plist */,
+				4E54772D1CEC4C310049E1B4 /* RYFormTests.m */,
+				4E54772F1CEC4C310049E1B4 /* Info.plist */,
 			);
 			path = RYFormTests;
 			sourceTree = "<group>";
 		};
-		4E54FF4E1CE8295800306D6A /* RYFormUITests */ = {
+		4E5477371CEC4C310049E1B4 /* RYFormUITests */ = {
 			isa = PBXGroup;
 			children = (
-				4E54FF4F1CE8295800306D6A /* RYFormUITests.m */,
-				4E54FF511CE8295800306D6A /* Info.plist */,
+				4E5477381CEC4C310049E1B4 /* RYFormUITests.m */,
+				4E54773A1CEC4C310049E1B4 /* Info.plist */,
 			);
 			path = RYFormUITests;
 			sourceTree = "<group>";
 		};
-		4E54FF5D1CE82A3100306D6A /* RYFormComponent */ = {
+		4E5477461CEC4C890049E1B4 /* Form */ = {
 			isa = PBXGroup;
 			children = (
-				4E54FF5F1CE82A3100306D6A /* Controllers */,
-				4E54FF5E1CE82A3100306D6A /* Cells */,
-				4E54FF701CE8B8EA00306D6A /* Information */,
-				4E54FF601CE82A3100306D6A /* Helpers */,
+				4E5477471CEC4C890049E1B4 /* RYFormComponent */,
+				4E5477791CEC4C890049E1B4 /* Test */,
+				4E54777E1CEC4C890049E1B4 /* Vender */,
+			);
+			path = Form;
+			sourceTree = "<group>";
+		};
+		4E5477471CEC4C890049E1B4 /* RYFormComponent */ = {
+			isa = PBXGroup;
+			children = (
+				4E5477481CEC4C890049E1B4 /* Cells */,
+				4E54775B1CEC4C890049E1B4 /* Controllers */,
+				4E54775F1CEC4C890049E1B4 /* Helpers */,
+				4E54776E1CEC4C890049E1B4 /* Information */,
 			);
 			path = RYFormComponent;
 			sourceTree = "<group>";
 		};
-		4E54FF5E1CE82A3100306D6A /* Cells */ = {
+		4E5477481CEC4C890049E1B4 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				4E54FF6D1CE8843E00306D6A /* RYFormBaseCell.h */,
-				4E54FF6E1CE8843E00306D6A /* RYFormBaseCell.m */,
-				4E3911411CE9858800223222 /* RYFormTextFieldCell.h */,
-				4E3911421CE9858800223222 /* RYFormTextFieldCell.m */,
-				4E3911441CE985DD00223222 /* RYFormTextViewCell.h */,
-				4E3911451CE985DD00223222 /* RYFormTextViewCell.m */,
-				4E3911471CE9860100223222 /* RYFormSwitchCell.h */,
-				4E3911481CE9860100223222 /* RYFormSwitchCell.m */,
-				4E39114A1CE9862400223222 /* RYFormCheckCell.h */,
-				4E39114B1CE9862400223222 /* RYFormCheckCell.m */,
-				4E39114D1CE9863E00223222 /* RYFormDateCell.h */,
-				4E39114E1CE9863E00223222 /* RYFormDateCell.m */,
-				4E3911501CE9866400223222 /* RYFormDatePickerCell.h */,
-				4E3911511CE9866400223222 /* RYFormDatePickerCell.m */,
-				4E3911531CE9868600223222 /* RYFormPickerCell.h */,
-				4E3911541CE9868600223222 /* RYFormPickerCell.m */,
-				4E3911561CE986A000223222 /* RYFormStepCounterCell.h */,
-				4E3911571CE986A000223222 /* RYFormStepCounterCell.m */,
+				4E5477491CEC4C890049E1B4 /* RYFormBaseCell.h */,
+				4E54774A1CEC4C890049E1B4 /* RYFormBaseCell.m */,
+				4E54774B1CEC4C890049E1B4 /* RYFormCheckCell.h */,
+				4E54774C1CEC4C890049E1B4 /* RYFormCheckCell.m */,
+				4E54774D1CEC4C890049E1B4 /* RYFormDateCell.h */,
+				4E54774E1CEC4C890049E1B4 /* RYFormDateCell.m */,
+				4E54774F1CEC4C890049E1B4 /* RYFormDatePickerCell.h */,
+				4E5477501CEC4C890049E1B4 /* RYFormDatePickerCell.m */,
+				4E5477511CEC4C890049E1B4 /* RYFormPickerCell.h */,
+				4E5477521CEC4C890049E1B4 /* RYFormPickerCell.m */,
+				4E5477531CEC4C890049E1B4 /* RYFormStepCounterCell.h */,
+				4E5477541CEC4C890049E1B4 /* RYFormStepCounterCell.m */,
+				4E5477551CEC4C890049E1B4 /* RYFormSwitchCell.h */,
+				4E5477561CEC4C890049E1B4 /* RYFormSwitchCell.m */,
+				4E5477571CEC4C890049E1B4 /* RYFormTextFieldCell.h */,
+				4E5477581CEC4C890049E1B4 /* RYFormTextFieldCell.m */,
+				4E5477591CEC4C890049E1B4 /* RYFormTextViewCell.h */,
+				4E54775A1CEC4C890049E1B4 /* RYFormTextViewCell.m */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		4E54FF5F1CE82A3100306D6A /* Controllers */ = {
+		4E54775B1CEC4C890049E1B4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4E54FF611CE82AAC00306D6A /* RYFormViewController.h */,
-				4E54FF621CE82AAC00306D6A /* RYFormViewController.m */,
-				4E54FF631CE82AAC00306D6A /* RYFormViewController.xib */,
+				4E54775C1CEC4C890049E1B4 /* RYFormViewController.h */,
+				4E54775D1CEC4C890049E1B4 /* RYFormViewController.m */,
+				4E54775E1CEC4C890049E1B4 /* RYFormViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		4E54FF601CE82A3100306D6A /* Helpers */ = {
+		4E54775F1CEC4C890049E1B4 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				4EE84A781CEBD89C00E1374E /* RYFormTextView */,
-				4E1E19421CEAB1030053BCCE /* RYFormAdditions */,
-				4E54FF661CE82ADB00306D6A /* SDAutoLayout */,
+				4E5477601CEC4C890049E1B4 /* RYFormAdditions */,
+				4E5477631CEC4C890049E1B4 /* RYFormTextView */,
+				4E5477661CEC4C890049E1B4 /* SDAutoLayout */,
+				4E54776B1CEC4C890049E1B4 /* UIViewExt */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		4E54FF661CE82ADB00306D6A /* SDAutoLayout */ = {
+		4E5477601CEC4C890049E1B4 /* RYFormAdditions */ = {
 			isa = PBXGroup;
 			children = (
-				4E54FF671CE82ADB00306D6A /* UITableView+SDAutoTableViewCellHeight.h */,
-				4E54FF681CE82ADB00306D6A /* UITableView+SDAutoTableViewCellHeight.m */,
-				4E54FF691CE82ADB00306D6A /* UIView+SDAutoLayout.h */,
-				4E54FF6A1CE82ADB00306D6A /* UIView+SDAutoLayout.m */,
+				4E5477611CEC4C890049E1B4 /* UIView+RYFormAdditions.h */,
+				4E5477621CEC4C890049E1B4 /* UIView+RYFormAdditions.m */,
 			);
-			path = SDAutoLayout;
+			path = RYFormAdditions;
 			sourceTree = "<group>";
 		};
-		4E54FF701CE8B8EA00306D6A /* Information */ = {
+		4E5477631CEC4C890049E1B4 /* RYFormTextView */ = {
 			isa = PBXGroup;
 			children = (
-				4E39113E1CE95F6600223222 /* RYForm.h */,
-				4E39113F1CE95F6600223222 /* RYForm.m */,
-				4E54FF711CE8B90D00306D6A /* RYFormInformation.h */,
-				4E54FF721CE8B90D00306D6A /* RYFormInformation.m */,
-				4E54FF741CE8B92700306D6A /* RYFormRowInformation.h */,
-				4E54FF751CE8B92700306D6A /* RYFormRowInformation.m */,
-				4E54FF771CE8B94100306D6A /* RYFormSectionInformation.h */,
-				4E54FF781CE8B94100306D6A /* RYFormSectionInformation.m */,
-				4E39115B1CE9C4D200223222 /* RYFormInformationCell.h */,
-				4EE84A6D1CEA86E200E1374E /* RYFormDataConfigure.h */,
-			);
-			path = Information;
-			sourceTree = "<group>";
-		};
-		4EE84A6E1CEA87BB00E1374E /* Test */ = {
-			isa = PBXGroup;
-			children = (
-				4EE84A6F1CEA87D400E1374E /* TestConfigureForm.h */,
-				4EE84A701CEA87D400E1374E /* TestConfigureForm.m */,
-				4EE84A751CEA8B7C00E1374E /* TestViewController.h */,
-				4EE84A761CEA8B7C00E1374E /* TestViewController.m */,
-			);
-			path = Test;
-			sourceTree = "<group>";
-		};
-		4EE84A781CEBD89C00E1374E /* RYFormTextView */ = {
-			isa = PBXGroup;
-			children = (
-				4EE84A791CEBD8B300E1374E /* RYFormTextView.h */,
-				4EE84A7A1CEBD8B300E1374E /* RYFormTextView.m */,
+				4E5477641CEC4C890049E1B4 /* RYFormTextView.h */,
+				4E5477651CEC4C890049E1B4 /* RYFormTextView.m */,
 			);
 			path = RYFormTextView;
 			sourceTree = "<group>";
 		};
-		559697909B2A0536D56AE67F /* Frameworks */ = {
+		4E5477661CEC4C890049E1B4 /* SDAutoLayout */ = {
 			isa = PBXGroup;
 			children = (
-				344980ACF6DD3F974B77E3CD /* libPods.a */,
+				4E5477671CEC4C890049E1B4 /* UITableView+SDAutoTableViewCellHeight.h */,
+				4E5477681CEC4C890049E1B4 /* UITableView+SDAutoTableViewCellHeight.m */,
+				4E5477691CEC4C890049E1B4 /* UIView+SDAutoLayout.h */,
+				4E54776A1CEC4C890049E1B4 /* UIView+SDAutoLayout.m */,
 			);
-			name = Frameworks;
+			path = SDAutoLayout;
+			sourceTree = "<group>";
+		};
+		4E54776B1CEC4C890049E1B4 /* UIViewExt */ = {
+			isa = PBXGroup;
+			children = (
+				4E54776C1CEC4C890049E1B4 /* UIViewExt.h */,
+				4E54776D1CEC4C890049E1B4 /* UIViewExt.m */,
+			);
+			path = UIViewExt;
+			sourceTree = "<group>";
+		};
+		4E54776E1CEC4C890049E1B4 /* Information */ = {
+			isa = PBXGroup;
+			children = (
+				4E54776F1CEC4C890049E1B4 /* RYForm.h */,
+				4E5477701CEC4C890049E1B4 /* RYForm.m */,
+				4E5477711CEC4C890049E1B4 /* RYFormDataConfigure.h */,
+				4E5477721CEC4C890049E1B4 /* RYFormInformation.h */,
+				4E5477731CEC4C890049E1B4 /* RYFormInformation.m */,
+				4E5477741CEC4C890049E1B4 /* RYFormInformationCell.h */,
+				4E5477751CEC4C890049E1B4 /* RYFormRowInformation.h */,
+				4E5477761CEC4C890049E1B4 /* RYFormRowInformation.m */,
+				4E5477771CEC4C890049E1B4 /* RYFormSectionInformation.h */,
+				4E5477781CEC4C890049E1B4 /* RYFormSectionInformation.m */,
+			);
+			path = Information;
+			sourceTree = "<group>";
+		};
+		4E5477791CEC4C890049E1B4 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				4E54777A1CEC4C890049E1B4 /* TestConfigureForm.h */,
+				4E54777B1CEC4C890049E1B4 /* TestConfigureForm.m */,
+				4E54777C1CEC4C890049E1B4 /* TestViewController.h */,
+				4E54777D1CEC4C890049E1B4 /* TestViewController.m */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		4E54777E1CEC4C890049E1B4 /* Vender */ = {
+			isa = PBXGroup;
+			children = (
+				4E54777F1CEC4C890049E1B4 /* MLeaksFinder */,
+			);
+			path = Vender;
+			sourceTree = "<group>";
+		};
+		4E54777F1CEC4C890049E1B4 /* MLeaksFinder */ = {
+			isa = PBXGroup;
+			children = (
+				4E5477801CEC4C890049E1B4 /* MLeaksFinder.h */,
+				4E5477811CEC4C890049E1B4 /* NSObject+MemoryLeak.h */,
+				4E5477821CEC4C890049E1B4 /* NSObject+MemoryLeak.m */,
+				4E5477831CEC4C890049E1B4 /* UIApplication+MemoryLeak.h */,
+				4E5477841CEC4C890049E1B4 /* UIApplication+MemoryLeak.m */,
+				4E5477851CEC4C890049E1B4 /* UINavigationController+MemoryLeak.h */,
+				4E5477861CEC4C890049E1B4 /* UINavigationController+MemoryLeak.m */,
+				4E5477871CEC4C890049E1B4 /* UIPageViewController+MemoryLeak.h */,
+				4E5477881CEC4C890049E1B4 /* UIPageViewController+MemoryLeak.m */,
+				4E5477891CEC4C890049E1B4 /* UISplitViewController+MemoryLeak.h */,
+				4E54778A1CEC4C890049E1B4 /* UISplitViewController+MemoryLeak.m */,
+				4E54778B1CEC4C890049E1B4 /* UITabBarController+MemoryLeak.h */,
+				4E54778C1CEC4C890049E1B4 /* UITabBarController+MemoryLeak.m */,
+				4E54778D1CEC4C890049E1B4 /* UIView+MemoryLeak.h */,
+				4E54778E1CEC4C890049E1B4 /* UIView+MemoryLeak.m */,
+				4E54778F1CEC4C890049E1B4 /* UIViewController+MemoryLeak.h */,
+				4E5477901CEC4C890049E1B4 /* UIViewController+MemoryLeak.m */,
+			);
+			path = MLeaksFinder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4E54FF261CE8295700306D6A /* RYForm */ = {
+		4E54770F1CEC4C310049E1B4 /* RYForm */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4E54FF541CE8295800306D6A /* Build configuration list for PBXNativeTarget "RYForm" */;
+			buildConfigurationList = 4E54773D1CEC4C310049E1B4 /* Build configuration list for PBXNativeTarget "RYForm" */;
 			buildPhases = (
-				8F9B452BD08EA34538455DBA /* Check Pods Manifest.lock */,
-				4E54FF231CE8295700306D6A /* Sources */,
-				4E54FF241CE8295700306D6A /* Frameworks */,
-				4E54FF251CE8295700306D6A /* Resources */,
-				1B358F11A7933087F9CAE83F /* Embed Pods Frameworks */,
-				075F3F18E7BEE38C5B97D980 /* Copy Pods Resources */,
+				4E54770C1CEC4C310049E1B4 /* Sources */,
+				4E54770D1CEC4C310049E1B4 /* Frameworks */,
+				4E54770E1CEC4C310049E1B4 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -421,69 +415,68 @@
 			);
 			name = RYForm;
 			productName = RYForm;
-			productReference = 4E54FF271CE8295700306D6A /* RYForm.app */;
+			productReference = 4E5477101CEC4C310049E1B4 /* RYForm.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4E54FF3F1CE8295800306D6A /* RYFormTests */ = {
+		4E5477281CEC4C310049E1B4 /* RYFormTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4E54FF571CE8295800306D6A /* Build configuration list for PBXNativeTarget "RYFormTests" */;
+			buildConfigurationList = 4E5477401CEC4C310049E1B4 /* Build configuration list for PBXNativeTarget "RYFormTests" */;
 			buildPhases = (
-				4E54FF3C1CE8295800306D6A /* Sources */,
-				4E54FF3D1CE8295800306D6A /* Frameworks */,
-				4E54FF3E1CE8295800306D6A /* Resources */,
+				4E5477251CEC4C310049E1B4 /* Sources */,
+				4E5477261CEC4C310049E1B4 /* Frameworks */,
+				4E5477271CEC4C310049E1B4 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4E54FF421CE8295800306D6A /* PBXTargetDependency */,
+				4E54772B1CEC4C310049E1B4 /* PBXTargetDependency */,
 			);
 			name = RYFormTests;
 			productName = RYFormTests;
-			productReference = 4E54FF401CE8295800306D6A /* RYFormTests.xctest */;
+			productReference = 4E5477291CEC4C310049E1B4 /* RYFormTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		4E54FF4A1CE8295800306D6A /* RYFormUITests */ = {
+		4E5477331CEC4C310049E1B4 /* RYFormUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4E54FF5A1CE8295800306D6A /* Build configuration list for PBXNativeTarget "RYFormUITests" */;
+			buildConfigurationList = 4E5477431CEC4C310049E1B4 /* Build configuration list for PBXNativeTarget "RYFormUITests" */;
 			buildPhases = (
-				4E54FF471CE8295800306D6A /* Sources */,
-				4E54FF481CE8295800306D6A /* Frameworks */,
-				4E54FF491CE8295800306D6A /* Resources */,
+				4E5477301CEC4C310049E1B4 /* Sources */,
+				4E5477311CEC4C310049E1B4 /* Frameworks */,
+				4E5477321CEC4C310049E1B4 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4E54FF4D1CE8295800306D6A /* PBXTargetDependency */,
+				4E5477361CEC4C310049E1B4 /* PBXTargetDependency */,
 			);
 			name = RYFormUITests;
 			productName = RYFormUITests;
-			productReference = 4E54FF4B1CE8295800306D6A /* RYFormUITests.xctest */;
+			productReference = 4E5477341CEC4C310049E1B4 /* RYFormUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		4E54FF1F1CE8295700306D6A /* Project object */ = {
+		4E5477081CEC4C310049E1B4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
-				ORGANIZATIONNAME = "二哥";
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Rongyu100;
 				TargetAttributes = {
-					4E54FF261CE8295700306D6A = {
-						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 29J22D29N7;
+					4E54770F1CEC4C310049E1B4 = {
+						CreatedOnToolsVersion = 7.2.1;
 					};
-					4E54FF3F1CE8295800306D6A = {
-						CreatedOnToolsVersion = 7.3.1;
-						TestTargetID = 4E54FF261CE8295700306D6A;
+					4E5477281CEC4C310049E1B4 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 4E54770F1CEC4C310049E1B4;
 					};
-					4E54FF4A1CE8295800306D6A = {
-						CreatedOnToolsVersion = 7.3.1;
-						TestTargetID = 4E54FF261CE8295700306D6A;
+					4E5477331CEC4C310049E1B4 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 4E54770F1CEC4C310049E1B4;
 					};
 				};
 			};
-			buildConfigurationList = 4E54FF221CE8295700306D6A /* Build configuration list for PBXProject "RYForm" */;
+			buildConfigurationList = 4E54770B1CEC4C310049E1B4 /* Build configuration list for PBXProject "RYForm" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -491,38 +484,38 @@
 				en,
 				Base,
 			);
-			mainGroup = 4E54FF1E1CE8295700306D6A;
-			productRefGroup = 4E54FF281CE8295700306D6A /* Products */;
+			mainGroup = 4E5477071CEC4C310049E1B4;
+			productRefGroup = 4E5477111CEC4C310049E1B4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4E54FF261CE8295700306D6A /* RYForm */,
-				4E54FF3F1CE8295800306D6A /* RYFormTests */,
-				4E54FF4A1CE8295800306D6A /* RYFormUITests */,
+				4E54770F1CEC4C310049E1B4 /* RYForm */,
+				4E5477281CEC4C310049E1B4 /* RYFormTests */,
+				4E5477331CEC4C310049E1B4 /* RYFormUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4E54FF251CE8295700306D6A /* Resources */ = {
+		4E54770E1CEC4C310049E1B4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E54FF3A1CE8295800306D6A /* LaunchScreen.storyboard in Resources */,
-				4E54FF371CE8295800306D6A /* Assets.xcassets in Resources */,
-				4E54FF351CE8295800306D6A /* Main.storyboard in Resources */,
-				4E54FF651CE82AAC00306D6A /* RYFormViewController.xib in Resources */,
+				4E5477231CEC4C310049E1B4 /* LaunchScreen.storyboard in Resources */,
+				4E5477201CEC4C310049E1B4 /* Assets.xcassets in Resources */,
+				4E54771E1CEC4C310049E1B4 /* Main.storyboard in Resources */,
+				4E54779B1CEC4C890049E1B4 /* RYFormViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4E54FF3E1CE8295800306D6A /* Resources */ = {
+		4E5477271CEC4C310049E1B4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4E54FF491CE8295800306D6A /* Resources */ = {
+		4E5477321CEC4C310049E1B4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -531,137 +524,90 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		075F3F18E7BEE38C5B97D980 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		1B358F11A7933087F9CAE83F /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8F9B452BD08EA34538455DBA /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		4E54FF231CE8295700306D6A /* Sources */ = {
+		4E54770C1CEC4C310049E1B4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E3911551CE9868600223222 /* RYFormPickerCell.m in Sources */,
-				4E1E19451CEAB1160053BCCE /* UIView+RYFormAdditions.m in Sources */,
-				4E3911491CE9860100223222 /* RYFormSwitchCell.m in Sources */,
-				4E54FF321CE8295800306D6A /* ViewController.m in Sources */,
-				4E54FF6F1CE8843E00306D6A /* RYFormBaseCell.m in Sources */,
-				4E1E19401CEAAD940053BCCE /* UIView+MemoryLeak.m in Sources */,
-				4EE84A711CEA87D400E1374E /* TestConfigureForm.m in Sources */,
-				4E54FF2F1CE8295800306D6A /* AppDelegate.m in Sources */,
-				4E54FF731CE8B90D00306D6A /* RYFormInformation.m in Sources */,
-				4E3911431CE9858800223222 /* RYFormTextFieldCell.m in Sources */,
-				4E3911581CE986A000223222 /* RYFormStepCounterCell.m in Sources */,
-				4EE84A771CEA8B7C00E1374E /* TestViewController.m in Sources */,
-				4E39114C1CE9862400223222 /* RYFormCheckCell.m in Sources */,
-				4E1E193A1CEAAD940053BCCE /* NSObject+MemoryLeak.m in Sources */,
-				4EE84A7B1CEBD8B300E1374E /* RYFormTextView.m in Sources */,
-				4E54FF6C1CE82ADB00306D6A /* UIView+SDAutoLayout.m in Sources */,
-				4E39114F1CE9863E00223222 /* RYFormDateCell.m in Sources */,
-				4E1E19411CEAAD940053BCCE /* UIViewController+MemoryLeak.m in Sources */,
-				4E54FF2C1CE8295800306D6A /* main.m in Sources */,
-				4E54FF641CE82AAC00306D6A /* RYFormViewController.m in Sources */,
-				4E1E193B1CEAAD940053BCCE /* UIApplication+MemoryLeak.m in Sources */,
-				4E1E193C1CEAAD940053BCCE /* UINavigationController+MemoryLeak.m in Sources */,
-				4E1E193D1CEAAD940053BCCE /* UIPageViewController+MemoryLeak.m in Sources */,
-				4E1E193F1CEAAD940053BCCE /* UITabBarController+MemoryLeak.m in Sources */,
-				4E54FF791CE8B94100306D6A /* RYFormSectionInformation.m in Sources */,
-				4E54FF761CE8B92700306D6A /* RYFormRowInformation.m in Sources */,
-				4E54FF6B1CE82ADB00306D6A /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
-				4E3911461CE985DD00223222 /* RYFormTextViewCell.m in Sources */,
-				4E3911521CE9866400223222 /* RYFormDatePickerCell.m in Sources */,
-				4E3911401CE95F6600223222 /* RYForm.m in Sources */,
-				4E1E193E1CEAAD940053BCCE /* UISplitViewController+MemoryLeak.m in Sources */,
+				4E5477941CEC4C890049E1B4 /* RYFormDatePickerCell.m in Sources */,
+				4E54771B1CEC4C310049E1B4 /* ViewController.m in Sources */,
+				4E5477951CEC4C890049E1B4 /* RYFormPickerCell.m in Sources */,
+				4E5477A41CEC4C890049E1B4 /* RYFormSectionInformation.m in Sources */,
+				4E5477A51CEC4C890049E1B4 /* TestConfigureForm.m in Sources */,
+				4E5477A21CEC4C890049E1B4 /* RYFormInformation.m in Sources */,
+				4E5477A61CEC4C890049E1B4 /* TestViewController.m in Sources */,
+				4E54779A1CEC4C890049E1B4 /* RYFormViewController.m in Sources */,
+				4E5477A71CEC4C890049E1B4 /* NSObject+MemoryLeak.m in Sources */,
+				4E5477AA1CEC4C890049E1B4 /* UIPageViewController+MemoryLeak.m in Sources */,
+				4E5477A01CEC4C890049E1B4 /* UIViewExt.m in Sources */,
+				4E5477921CEC4C890049E1B4 /* RYFormCheckCell.m in Sources */,
+				4E54779F1CEC4C890049E1B4 /* UIView+SDAutoLayout.m in Sources */,
+				4E5477981CEC4C890049E1B4 /* RYFormTextFieldCell.m in Sources */,
+				4E5477A11CEC4C890049E1B4 /* RYForm.m in Sources */,
+				4E5477971CEC4C890049E1B4 /* RYFormSwitchCell.m in Sources */,
+				4E54779C1CEC4C890049E1B4 /* UIView+RYFormAdditions.m in Sources */,
+				4E5477991CEC4C890049E1B4 /* RYFormTextViewCell.m in Sources */,
+				4E5477A31CEC4C890049E1B4 /* RYFormRowInformation.m in Sources */,
+				4E5477AC1CEC4C890049E1B4 /* UITabBarController+MemoryLeak.m in Sources */,
+				4E5477AD1CEC4C890049E1B4 /* UIView+MemoryLeak.m in Sources */,
+				4E5477931CEC4C890049E1B4 /* RYFormDateCell.m in Sources */,
+				4E5477AE1CEC4C890049E1B4 /* UIViewController+MemoryLeak.m in Sources */,
+				4E54779E1CEC4C890049E1B4 /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
+				4E5477A91CEC4C890049E1B4 /* UINavigationController+MemoryLeak.m in Sources */,
+				4E5477AB1CEC4C890049E1B4 /* UISplitViewController+MemoryLeak.m in Sources */,
+				4E5477A81CEC4C890049E1B4 /* UIApplication+MemoryLeak.m in Sources */,
+				4E5477911CEC4C890049E1B4 /* RYFormBaseCell.m in Sources */,
+				4E5477961CEC4C890049E1B4 /* RYFormStepCounterCell.m in Sources */,
+				4E54779D1CEC4C890049E1B4 /* RYFormTextView.m in Sources */,
+				4E5477181CEC4C310049E1B4 /* AppDelegate.m in Sources */,
+				4E5477151CEC4C310049E1B4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4E54FF3C1CE8295800306D6A /* Sources */ = {
+		4E5477251CEC4C310049E1B4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E54FF451CE8295800306D6A /* RYFormTests.m in Sources */,
+				4E54772E1CEC4C310049E1B4 /* RYFormTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4E54FF471CE8295800306D6A /* Sources */ = {
+		4E5477301CEC4C310049E1B4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E54FF501CE8295800306D6A /* RYFormUITests.m in Sources */,
+				4E5477391CEC4C310049E1B4 /* RYFormUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4E54FF421CE8295800306D6A /* PBXTargetDependency */ = {
+		4E54772B1CEC4C310049E1B4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4E54FF261CE8295700306D6A /* RYForm */;
-			targetProxy = 4E54FF411CE8295800306D6A /* PBXContainerItemProxy */;
+			target = 4E54770F1CEC4C310049E1B4 /* RYForm */;
+			targetProxy = 4E54772A1CEC4C310049E1B4 /* PBXContainerItemProxy */;
 		};
-		4E54FF4D1CE8295800306D6A /* PBXTargetDependency */ = {
+		4E5477361CEC4C310049E1B4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4E54FF261CE8295700306D6A /* RYForm */;
-			targetProxy = 4E54FF4C1CE8295800306D6A /* PBXContainerItemProxy */;
+			target = 4E54770F1CEC4C310049E1B4 /* RYForm */;
+			targetProxy = 4E5477351CEC4C310049E1B4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4E54FF331CE8295800306D6A /* Main.storyboard */ = {
+		4E54771C1CEC4C310049E1B4 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4E54FF341CE8295800306D6A /* Base */,
+				4E54771D1CEC4C310049E1B4 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		4E54FF381CE8295800306D6A /* LaunchScreen.storyboard */ = {
+		4E5477211CEC4C310049E1B4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4E54FF391CE8295800306D6A /* Base */,
+				4E5477221CEC4C310049E1B4 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -669,11 +615,10 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		4E54FF521CE8295800306D6A /* Debug */ = {
+		4E54773B1CEC4C310049E1B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -706,18 +651,17 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
-		4E54FF531CE8295800306D6A /* Release */ = {
+		4E54773C1CEC4C310049E1B4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -744,133 +688,120 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		4E54FF551CE8295800306D6A /* Debug */ = {
+		4E54773E1CEC4C310049E1B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B9066CC930D00CC3203CED00 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RYForm/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = backgroundLocation;
+				PRODUCT_BUNDLE_IDENTIFIER = "---Rongyu100---.RYForm";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
-		4E54FF561CE8295800306D6A /* Release */ = {
+		4E54773F1CEC4C310049E1B4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A8AD892EA49EF1D0CDF7FE83 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RYForm/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = backgroundLocation;
+				PRODUCT_BUNDLE_IDENTIFIER = "---Rongyu100---.RYForm";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
-		4E54FF581CE8295800306D6A /* Debug */ = {
+		4E5477411CEC4C310049E1B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = RYFormTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "--geren.RYFormTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "---Rongyu100---.RYFormTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RYForm.app/RYForm";
 			};
 			name = Debug;
 		};
-		4E54FF591CE8295800306D6A /* Release */ = {
+		4E5477421CEC4C310049E1B4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = RYFormTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "--geren.RYFormTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "---Rongyu100---.RYFormTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RYForm.app/RYForm";
 			};
 			name = Release;
 		};
-		4E54FF5B1CE8295800306D6A /* Debug */ = {
+		4E5477441CEC4C310049E1B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = RYFormUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "--geren.RYFormUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "---Rongyu100---.RYFormUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = RYForm;
+				USES_XCTRUNNER = YES;
 			};
 			name = Debug;
 		};
-		4E54FF5C1CE8295800306D6A /* Release */ = {
+		4E5477451CEC4C310049E1B4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = RYFormUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "--geren.RYFormUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "---Rongyu100---.RYFormUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = RYForm;
+				USES_XCTRUNNER = YES;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4E54FF221CE8295700306D6A /* Build configuration list for PBXProject "RYForm" */ = {
+		4E54770B1CEC4C310049E1B4 /* Build configuration list for PBXProject "RYForm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4E54FF521CE8295800306D6A /* Debug */,
-				4E54FF531CE8295800306D6A /* Release */,
+				4E54773B1CEC4C310049E1B4 /* Debug */,
+				4E54773C1CEC4C310049E1B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4E54FF541CE8295800306D6A /* Build configuration list for PBXNativeTarget "RYForm" */ = {
+		4E54773D1CEC4C310049E1B4 /* Build configuration list for PBXNativeTarget "RYForm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4E54FF551CE8295800306D6A /* Debug */,
-				4E54FF561CE8295800306D6A /* Release */,
+				4E54773E1CEC4C310049E1B4 /* Debug */,
+				4E54773F1CEC4C310049E1B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
-		4E54FF571CE8295800306D6A /* Build configuration list for PBXNativeTarget "RYFormTests" */ = {
+		4E5477401CEC4C310049E1B4 /* Build configuration list for PBXNativeTarget "RYFormTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4E54FF581CE8295800306D6A /* Debug */,
-				4E54FF591CE8295800306D6A /* Release */,
+				4E5477411CEC4C310049E1B4 /* Debug */,
+				4E5477421CEC4C310049E1B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
-		4E54FF5A1CE8295800306D6A /* Build configuration list for PBXNativeTarget "RYFormUITests" */ = {
+		4E5477431CEC4C310049E1B4 /* Build configuration list for PBXNativeTarget "RYFormUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4E54FF5B1CE8295800306D6A /* Debug */,
-				4E54FF5C1CE8295800306D6A /* Release */,
+				4E5477441CEC4C310049E1B4 /* Debug */,
+				4E5477451CEC4C310049E1B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 4E54FF1F1CE8295700306D6A /* Project object */;
+	rootObject = 4E5477081CEC4C310049E1B4 /* Project object */;
 }

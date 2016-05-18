@@ -2,16 +2,15 @@
 //  ViewController.m
 //  RYForm
 //
-//  Created by xiaerfei on 16/5/15.
-//  Copyright © 2016年 二哥. All rights reserved.
+//  Created by xiaerfei on 16/5/18.
+//  Copyright © 2016年 Rongyu100. All rights reserved.
 //
 
 #import "ViewController.h"
 #import "TestViewController.h"
 
 @interface ViewController ()
-
-- (IBAction)testFormAction:(id)sender;
+- (IBAction)formAction:(id)sender;
 
 @end
 
@@ -27,10 +26,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)testFormAction:(id)sender {
-    
+- (IBAction)formAction:(id)sender {
     TestViewController *testView = [[TestViewController alloc] init];
     [self.navigationController pushViewController:testView animated:YES];
-    
 }
 @end

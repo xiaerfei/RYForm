@@ -2,8 +2,8 @@
 //  AppDelegate.m
 //  RYForm
 //
-//  Created by xiaerfei on 16/5/15.
-//  Copyright © 2016年 二哥. All rights reserved.
+//  Created by xiaerfei on 16/5/18.
+//  Copyright © 2016年 Rongyu100. All rights reserved.
 //
 
 #import "AppDelegate.h"
@@ -16,9 +16,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    
-    
+    // Override point for customization after application launch.
     return YES;
 }
 
