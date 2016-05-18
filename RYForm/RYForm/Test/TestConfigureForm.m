@@ -37,30 +37,27 @@
     row2.placeholderText = @"qqqqqqqqqqqqq";
     [section.formRows addObject:row2];
     
-    RYFormRowInformation *row3 = [[RYFormRowInformation alloc] initWithTag:@"" rowType:RYFormRowInformationTypeName title:@"test4"];
-    row3.displayText = @"123456789";
-    row3.placeholderText = @"qqqqqqqqqqqqq";
+    RYFormRowInformation *row3 = [[RYFormRowInformation alloc] initWithTag:@"" rowType:RYFormRowInformationTypeBooleanSwitch title:@"test4"];
+    row3.value = @(NO);
     [section.formRows addObject:row3];
     
     
     RYFormSectionInformation *section1 = [[RYFormSectionInformation alloc] init];
-    RYFormRowInformation *row4 = [[RYFormRowInformation alloc] initWithTag:@"" rowType:RYFormRowInformationTypeName title:@"test4"];
-    row4.displayText = @"123456789";
-    row4.placeholderText = @"qqqqqqqqqqqqq";
+    RYFormRowInformation *row4 = [[RYFormRowInformation alloc] initWithTag:@"" rowType:RYFormRowInformationTypeTextView title:@"test4"];
+    row4.placeholderText = @"请输入您的建议";
+    row4.rowHeight = 88;
     [section1.formRows addObject:row4];
     
     
     
-    RYFormRowInformation *row5 = [[RYFormRowInformation alloc] initWithTag:@"" rowType:RYFormRowInformationTypeName title:@"test4"];
-    row5.displayText = @"123456789";
-    row5.placeholderText = @"qqqqqqqqqqqqq";
+    RYFormRowInformation *row5 = [[RYFormRowInformation alloc] initWithTag:@"" rowType:RYFormRowInformationTypeBooleanCheck title:@"test4"];
+    row5.value = @(YES);
     [section1.formRows addObject:row5];
     
     
     
-    RYFormRowInformation *row6 = [[RYFormRowInformation alloc] initWithTag:@"" rowType:RYFormRowInformationTypeName title:@"test4"];
-    row6.displayText = @"123456789";
-    row6.placeholderText = @"qqqqqqqqqqqqq";
+    RYFormRowInformation *row6 = [[RYFormRowInformation alloc] initWithTag:@"" rowType:RYFormRowInformationTypeStepCounter title:@"test4"];
+    row6.value = @(10);
     [section1.formRows addObject:row6];
     
     
@@ -87,9 +84,9 @@
     row10.placeholderText = @"qqqqqqqqqqqqq";
     [section2.formRows addObject:row10];
     
-    RYFormRowInformation *row11 = [[RYFormRowInformation alloc] initWithTag:@"" rowType:RYFormRowInformationTypeName title:@"test4"];
-    row11.displayText = @"123456789";
-    row11.placeholderText = @"qqqqqqqqqqqqq";
+    RYFormRowInformation *row11 = [[RYFormRowInformation alloc] initWithTag:@"" rowType:RYFormRowInformationTypeTextView title:@"test4"];
+    row11.placeholderText = @"请输入您的建议";
+    row11.rowHeight = 88;
     [section2.formRows addObject:row11];
     
     

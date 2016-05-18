@@ -61,6 +61,7 @@ NSString *const RYFormRowInformationTypeStepCounter                 = @"stepCoun
                                                RYFormRowInformationTypePhone:                   [RYFormTextFieldCell class],
                                                RYFormRowInformationTypeURL:                     [RYFormTextFieldCell class],
                                                RYFormRowInformationTypeEmail:                   [RYFormTextFieldCell class],
+                                               RYFormRowInformationTypeNumber:                  [RYFormTextFieldCell class],
                                                RYFormRowInformationTypeTextView:                [RYFormTextViewCell class],
                                                RYFormRowInformationTypeBooleanSwitch :          [RYFormSwitchCell class],
                                                RYFormRowInformationTypeBooleanCheck :           [RYFormCheckCell class],

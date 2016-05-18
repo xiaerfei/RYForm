@@ -25,6 +25,6 @@
 
 @property (nonatomic, strong) RYFormInformation *formInformation;
 
-
+- (RYFormBaseCell *)updateFormRow:(RYFormRowInformation *)formRow;
 
 @end

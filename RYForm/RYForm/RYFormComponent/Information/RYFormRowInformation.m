@@ -31,10 +31,16 @@
         _tag     = [tag copy];
         _rowType = [rowType copy];
         _title   = [title copy];
-        _normalColor = [UIColor blackColor];
-        _disabledColor = [UIColor blackColor];
-        self.cellStyle = UITableViewCellStyleDefault;
         self.rowHeight = 44;
+        
+        self.cellStyle          = UITableViewCellStyleDefault;
+        self.titleTextAlignment = NSTextAlignmentLeft;
+        self.valueTextAlignment = NSTextAlignmentRight;
+        self.selectionStyle     = UITableViewCellSelectionStyleNone;
+        
+        self.stepCounterValue = 0;
+        self.stepCounterMinimumValue = 0;
+        self.stepCounterMaximumValue = 100;
         
     }
     return self;
@@ -42,6 +48,7 @@
 
 - (void)dealloc
 {
+    _baseCell = nil;
     NSLog(@"RYFormRowInformation--->dealloc");
 }
 

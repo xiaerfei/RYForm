@@ -23,6 +23,7 @@
 
 - (void)dealloc
 {
+    _formRows = nil;
     NSLog(@"RYFormSectionInformation--->dealloc");
 }
 

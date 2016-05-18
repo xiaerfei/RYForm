@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class RYFormViewController;
+
 @protocol RYFormInformationCell <NSObject>
 
 - (void)configure;
@@ -19,5 +21,7 @@
 - (void)highlight;
 
 - (void)unhighlight;
+
+- (void)formInformationCellDidSelectedWithFormController:(RYFormViewController *)controller;
 
 @end

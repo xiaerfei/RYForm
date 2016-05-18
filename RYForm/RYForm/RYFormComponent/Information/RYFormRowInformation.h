@@ -13,21 +13,40 @@
 @interface RYFormRowInformation : NSObject
  
 
-@property (nonatomic, strong, nonnull)     id cellClass;
-@property (nonatomic, readwrite, nullable) NSString * tag;
+@property (nonatomic, strong, nonnull)          id cellClass;
+@property (nonatomic, readwrite, nullable)      NSString * tag;
 @property (nonatomic, readonly, copy,nullable)  NSString * rowType;
-@property (nonatomic, copy, nullable)       NSString * title;
-@property (nonatomic, copy, nullable)       id value;
-@property (nonatomic, copy, nullable)       NSString *displayText;
-@property (nonatomic, copy, nullable)       NSString *placeholderText;
+@property (nonatomic, copy, nullable)           NSString * title;
+@property (nonatomic, copy, nullable)           id value;
+@property (nonatomic, copy, nullable)           NSString *displayText;
+/// 针对于 UITextField
+@property (nonatomic, copy, nullable)           NSString *placeholderText;
+/// default is UITableViewCellStyleDefault
 @property (nonatomic, assign) UITableViewCellStyle cellStyle;
 /// default is 44
 @property (nonatomic, assign) CGFloat rowHeight;
+/// default is UITableViewCellSelectionStyleNone.
+@property (nonatomic, assign) UITableViewCellSelectionStyle   selectionStyle;
+/// default is NSLeftTextAlignment
+@property (nonatomic, assign) NSTextAlignment                 titleTextAlignment;
+/// default is NSTextAlignmentRight
+@property (nonatomic, assign) NSTextAlignment                 valueTextAlignment;
+/// default is blackColor
+@property (nonatomic, strong, nullable) UIColor *normalTitleColor;
+/// default is blackColor
+@property (nonatomic, strong, nullable) UIColor *disabledTitleColor;
+/// default is blackColor
+@property (nonatomic, strong, nullable) UIColor *normalValueColor;
+/// default is blackColor
+@property (nonatomic, strong, nullable) UIColor *disabledValueColor;
 
-@property (nonatomic, assign) UITableViewCellSelectionStyle   selectionStyle;             // default is UITableViewCellSelectionStyleBlue.
+// default is 0. sends UIControlEventValueChanged. clamped to min/max
+@property(nonatomic, assign) double stepCounterValue;
+// default 0. must be less than maximumValue
+@property(nonatomic, assign) double stepCounterMinimumValue;
+// default 100. must be greater than minimumValue
+@property(nonatomic, assign) double stepCounterMaximumValue;
 
-@property (nonatomic, strong, nullable) UIColor *normalColor;
-@property (nonatomic, strong, nullable) UIColor *disabledColor;
 
 @property (nonatomic, assign) BOOL isDisabled;
 @property (nonatomic, assign) BOOL isHidden;

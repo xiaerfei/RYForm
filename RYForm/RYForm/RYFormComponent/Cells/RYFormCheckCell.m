@@ -7,15 +7,40 @@
 //
 
 #import "RYFormCheckCell.h"
+#import "RYFormRowInformation.h"
+#import "RYFormViewController.h"
 
 @implementation RYFormCheckCell
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (void)configure
+{
+    [super configure];
+    self.accessoryType = UITableViewCellAccessoryCheckmark;
+    self.editingAccessoryType = self.accessoryType;
 }
-*/
+
+- (void)update
+{
+    [super update];
+    self.textLabel.text = self.rowInformation.title;
+    self.accessoryType = [self.rowInformation.value boolValue] ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
+    self.editingAccessoryType =  self.accessoryType;
+    CGFloat red, green, blue, alpha;
+    [self.tintColor getRed:&red green:&green blue:&blue alpha:&alpha];
+    self.selectionStyle = UITableViewCellSelectionStyleDefault;
+    if (self.rowInformation.isDisabled){
+        [self setTintColor:[UIColor colorWithRed:red green:green blue:blue alpha:0.3]];
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
+    else{
+        [self setTintColor:[UIColor colorWithRed:red green:green blue:blue alpha:1]];
+    }
+}
+
+-(void)formInformationCellDidSelectedWithFormController:(RYFormViewController *)controller
+{
+    self.rowInformation.value = [NSNumber numberWithBool:![self.rowInformation.value boolValue]];
+    [controller updateFormRow:self.rowInformation];
+}
 
 @end

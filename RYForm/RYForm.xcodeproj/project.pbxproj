@@ -43,6 +43,7 @@
 		4E54FF791CE8B94100306D6A /* RYFormSectionInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54FF781CE8B94100306D6A /* RYFormSectionInformation.m */; };
 		4EE84A711CEA87D400E1374E /* TestConfigureForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE84A701CEA87D400E1374E /* TestConfigureForm.m */; };
 		4EE84A771CEA8B7C00E1374E /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE84A761CEA8B7C00E1374E /* TestViewController.m */; };
+		4EE84A7B1CEBD8B300E1374E /* RYFormTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE84A7A1CEBD8B300E1374E /* RYFormTextView.m */; };
 		EEE3AAAD91FD5821473FCCB4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 344980ACF6DD3F974B77E3CD /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -139,6 +140,8 @@
 		4EE84A701CEA87D400E1374E /* TestConfigureForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestConfigureForm.m; sourceTree = "<group>"; };
 		4EE84A751CEA8B7C00E1374E /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		4EE84A761CEA8B7C00E1374E /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		4EE84A791CEBD8B300E1374E /* RYFormTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormTextView.h; sourceTree = "<group>"; };
+		4EE84A7A1CEBD8B300E1374E /* RYFormTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFormTextView.m; sourceTree = "<group>"; };
 		A8AD892EA49EF1D0CDF7FE83 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B9066CC930D00CC3203CED00 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -335,6 +338,7 @@
 		4E54FF601CE82A3100306D6A /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				4EE84A781CEBD89C00E1374E /* RYFormTextView */,
 				4E1E19421CEAB1030053BCCE /* RYFormAdditions */,
 				4E54FF661CE82ADB00306D6A /* SDAutoLayout */,
 			);
@@ -378,6 +382,15 @@
 				4EE84A761CEA8B7C00E1374E /* TestViewController.m */,
 			);
 			path = Test;
+			sourceTree = "<group>";
+		};
+		4EE84A781CEBD89C00E1374E /* RYFormTextView */ = {
+			isa = PBXGroup;
+			children = (
+				4EE84A791CEBD8B300E1374E /* RYFormTextView.h */,
+				4EE84A7A1CEBD8B300E1374E /* RYFormTextView.m */,
+			);
+			path = RYFormTextView;
 			sourceTree = "<group>";
 		};
 		559697909B2A0536D56AE67F /* Frameworks */ = {
@@ -458,6 +471,7 @@
 				TargetAttributes = {
 					4E54FF261CE8295700306D6A = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 29J22D29N7;
 					};
 					4E54FF3F1CE8295800306D6A = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -584,6 +598,7 @@
 				4EE84A771CEA8B7C00E1374E /* TestViewController.m in Sources */,
 				4E39114C1CE9862400223222 /* RYFormCheckCell.m in Sources */,
 				4E1E193A1CEAAD940053BCCE /* NSObject+MemoryLeak.m in Sources */,
+				4EE84A7B1CEBD8B300E1374E /* RYFormTextView.m in Sources */,
 				4E54FF6C1CE82ADB00306D6A /* UIView+SDAutoLayout.m in Sources */,
 				4E39114F1CE9863E00223222 /* RYFormDateCell.m in Sources */,
 				4E1E19411CEAAD940053BCCE /* UIViewController+MemoryLeak.m in Sources */,
@@ -742,11 +757,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RYForm/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "--geren.RYForm";
+				PRODUCT_BUNDLE_IDENTIFIER = backgroundLocation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -756,11 +774,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RYForm/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "--geren.RYForm";
+				PRODUCT_BUNDLE_IDENTIFIER = backgroundLocation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

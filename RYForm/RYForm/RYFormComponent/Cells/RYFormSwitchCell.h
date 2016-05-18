@@ -10,4 +10,6 @@
 
 @interface RYFormSwitchCell : RYFormBaseCell
 
+@property (nonatomic, strong, readonly) UISwitch *switchControl;
+
 @end

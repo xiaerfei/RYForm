@@ -7,7 +7,10 @@
 //
 
 #import "RYFormBaseCell.h"
+#import "RYFormTextView.h"
 
 @interface RYFormTextViewCell : RYFormBaseCell
+
+@property (nonatomic, readonly, strong) RYFormTextView * textView;
 
 @end

@@ -129,6 +129,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    RYFormRowInformation * row = [self.formInformation formRowAtIndex:indexPath];
+    if (row.isDisabled) {
+        return;
+    }
+    [self didSelectFormRow:row];
+    
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -146,6 +153,22 @@
 {
     RYFormSectionInformation *sectionInformation = self.formInformation.formSections[section];
     return sectionInformation.footerHeight;
+}
+
+#pragma mark - UIScrollViewDelegate
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    //dismiss keyboard
+    [self.formTableView endEditing:YES];
+}
+
+#pragma mark - RYFormInformationCell
+-(void)didSelectFormRow:(RYFormRowInformation *)formRow
+{
+    if ([[formRow cellForForm] respondsToSelector:@selector(formInformationCellDidSelectedWithFormController:)]){
+        [[formRow cellForForm] formInformationCellDidSelectedWithFormController:self];
+    }
 }
 
 #pragma mark - event responses

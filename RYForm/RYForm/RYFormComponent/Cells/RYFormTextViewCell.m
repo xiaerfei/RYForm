@@ -7,15 +7,56 @@
 //
 
 #import "RYFormTextViewCell.h"
+#import "RYFormRowInformation.h"
+#import "UIView+SDAutoLayout.h"
+
+@interface RYFormTextViewCell () <UITextViewDelegate>
+
+@property (nonatomic, readwrite, strong) RYFormTextView * textView;
+
+@end
 
 @implementation RYFormTextViewCell
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+-(void)configure
+{
+    [super configure];
+    [self setSelectionStyle:UITableViewCellSelectionStyleNone];
+    [self.contentView addSubview:self.textView];
+    [self autoLayoutSubViews];
 }
-*/
+
+-(void)update
+{
+    [super update];
+    self.textView.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+    self.textView.placeHolderLabel.font = self.textView.font;
+    self.textView.delegate      = self;
+    self.textView.keyboardType  = UIKeyboardTypeDefault;
+    self.textView.text          = self.rowInformation.value;
+    self.textView.placeholder   = self.rowInformation.placeholderText;
+    [self.textView setEditable:!self.rowInformation.isDisabled];
+    self.textView.textColor     = self.rowInformation.isDisabled ? [UIColor grayColor] : [UIColor blackColor];
+}
+
+#pragma mark - private methods
+
+- (void)autoLayoutSubViews
+{
+    self.textView.sd_layout.leftSpaceToView(self.contentView,15)
+    .topSpaceToView(self.contentView,5)
+    .rightSpaceToView(self.contentView,15)
+    .bottomSpaceToView(self.contentView,5);
+}
+
+#pragma mark - getters
+
+- (RYFormTextView *)textView
+{
+    if (_textView == nil) {
+        _textView = [[RYFormTextView alloc] init];
+    }
+    return _textView;
+}
 
 @end

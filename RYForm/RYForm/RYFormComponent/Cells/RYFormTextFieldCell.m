@@ -27,7 +27,6 @@
     NSLog(@"RYFormTextFieldCell dealloc");
 }
 
-
 -(void)configure
 {
     [super configure];
@@ -35,6 +34,7 @@
     [self.contentView addSubview:self.ry_textLabel];
     [self.contentView addSubview:self.ry_textField];
     [self autoLayoutSubViews];
+    [self.ry_textField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
 }
 
 - (void)update
@@ -60,22 +60,37 @@
         self.ry_textField.keyboardType = UIKeyboardTypeEmailAddress;
         self.ry_textField.autocorrectionType = UITextAutocorrectionTypeNo;
         self.ry_textField.autocapitalizationType = UITextAutocapitalizationTypeNone;
+    } else if ([self.rowInformation.rowType isEqualToString:RYFormRowInformationTypeNumber]) {
+        self.ry_textField.keyboardType = UIKeyboardTypeNumberPad;
     }
-    
+
     if (self.rowInformation.isRequired) {
         
     } else {
         self.ry_textLabel.text = self.rowInformation.title;
+        self.ry_textLabel.textAlignment = self.rowInformation.titleTextAlignment;
     }
     
     self.ry_textField.text = self.rowInformation.placeholderText;
     self.ry_textField.text = self.rowInformation.displayText;
-    
+    self.ry_textField.textAlignment = self.rowInformation.valueTextAlignment;
     self.ry_textField.enabled = !self.rowInformation.isDisabled;
-//    [self updateAutoLayout];
+    if (self.rowInformation.isDisabled) {
+        if (self.rowInformation.disabledTitleColor) {
+            self.ry_textLabel.textColor = self.rowInformation.disabledTitleColor;
+        }
+        if (self.rowInformation.disabledValueColor) {
+            self.ry_textField.textColor = self.rowInformation.disabledValueColor;
+        }
+    } else {
+        if (self.rowInformation.normalTitleColor) {
+            self.ry_textLabel.textColor = self.rowInformation.normalTitleColor;
+        }
+        if (self.rowInformation.normalValueColor) {
+            self.ry_textField.textColor = self.rowInformation.normalValueColor;
+        }
+    }
 }
-
-
 #pragma mark - private methods
 
 - (void)autoLayoutSubViews
@@ -107,6 +122,19 @@
     [self.ry_textField updateLayout];
 }
 
+- (void)textFieldDidChange:(UITextField *)textField{
+    if([self.ry_textField.text length] > 0) {
+        if ([self.rowInformation.rowType isEqualToString:RYFormRowInformationTypeNumber]){
+            self.rowInformation.value =  @([self.ry_textField.text doubleValue]);
+        } else {
+            self.rowInformation.value = self.ry_textField.text;
+        }
+        self.rowInformation.displayText = self.ry_textField.text;
+    } else {
+        self.rowInformation.value = nil;
+    }
+}
+
 
 #pragma mark - getters
 
@@ -130,11 +158,5 @@
     }
     return _ry_textField;
 }
-
-
-
-
-
-
 
 @end
