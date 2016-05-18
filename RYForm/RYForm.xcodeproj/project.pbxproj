@@ -700,6 +700,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RYForm/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "---Rongyu100---.RYForm";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -711,6 +712,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RYForm/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "---Rongyu100---.RYForm";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -784,6 +786,7 @@
 				4E54773F1CEC4C310049E1B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4E5477401CEC4C310049E1B4 /* Build configuration list for PBXNativeTarget "RYFormTests" */ = {
 			isa = XCConfigurationList;
@@ -792,6 +795,7 @@
 				4E5477421CEC4C310049E1B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4E5477431CEC4C310049E1B4 /* Build configuration list for PBXNativeTarget "RYFormUITests" */ = {
 			isa = XCConfigurationList;
@@ -800,6 +804,7 @@
 				4E5477451CEC4C310049E1B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

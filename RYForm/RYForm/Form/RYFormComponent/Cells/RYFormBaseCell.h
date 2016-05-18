@@ -15,4 +15,6 @@
 
 @property (nonatomic, weak) RYFormRowInformation * rowInformation;
 
+@property (nonatomic, readonly, strong) UILabel     *ry_textLabel;
+
 @end

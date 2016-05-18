@@ -7,6 +7,14 @@
 //
 
 #import "RYFormBaseCell.h"
+#import "RYFormRowInformation.h"
+#import "RYForm.h"
+
+@interface RYFormBaseCell ()
+
+@property (nonatomic, readwrite, strong) UILabel     *ry_textLabel;
+
+@end
 
 @implementation RYFormBaseCell
 
@@ -34,12 +42,19 @@
 
 - (void)configure
 {
-    
+    self.ry_textLabel.frame = CGRectMake(15,(44 - 20)/2.0f , 100, 20);
+    [self.contentView addSubview:self.ry_textLabel];
 }
 
 - (void)update
 {
-
+    NSDictionary *attributes = @{NSFontAttributeName:[UIFont systemFontOfSize:15]};
+    CGSize size = [RYForm boundingWith:self.rowInformation.title attributes:attributes size:CGSizeMake(MAXFLOAT, 20)];
+    CGFloat tTop = (self.rowInformation.rowHeight - 20)/2.0f;
+    self.ry_textLabel.frame = CGRectMake(15,tTop , size.width, 20);
+    
+    self.accessoryType = self.rowInformation.accessoryType;
+    
 }
 
 -(void)highlight
@@ -50,6 +65,17 @@
 -(void)unhighlight
 {
     
+}
+
+- (UILabel *)ry_textLabel
+{
+    if (_ry_textLabel == nil) {
+        _ry_textLabel = [[UILabel alloc] init];
+        _ry_textLabel.textColor = [UIColor blackColor];
+        _ry_textLabel.font = [UIFont systemFontOfSize:15];
+//        _ry_textLabel.backgroundColor = [UIColor lightGrayColor];
+    }
+    return _ry_textLabel;
 }
 
 

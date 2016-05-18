@@ -8,7 +8,8 @@
 
 #import "RYFormStepCounterCell.h"
 #import "RYFormRowInformation.h"
-
+#import "UIViewExt.h"
+#import "RYForm.h"
 
 @interface RYFormStepCounterCell ()
 
@@ -29,12 +30,13 @@
     // Add subviews
     [self.contentView addSubview:self.stepControl];
     [self.contentView addSubview:self.currentStepValue];
+    [self autoLayoutSubViews];
 }
 
 - (void)update
 {
     [super update];
-    self.textLabel.text = self.rowInformation.title;
+    self.ry_textLabel.text = self.rowInformation.title;
     self.stepControl.value = [self.rowInformation.value doubleValue];
     self.stepControl.maximumValue = self.rowInformation.stepCounterMaximumValue;
     self.stepControl.minimumValue = self.rowInformation.stepCounterMinimumValue;
@@ -56,9 +58,11 @@
 
 - (void)autoLayoutSubViews
 {
-
+    self.stepControl.center = CGPointMake(0, 44/2.0);
+    self.stepControl.right  = [UIScreen mainScreen].bounds.size.width - 20;
+    self.currentStepValue.frame = CGRectMake(0, (44 - 20)/2.0f, 50, 20);
+    self.currentStepValue.right = self.stepControl.left-1;
 }
-
 
 #pragma mark - event responses
 
@@ -87,7 +91,8 @@
     if (_currentStepValue == nil) {
         _currentStepValue = [[UILabel alloc] init];
         _currentStepValue.font = [UIFont systemFontOfSize:15];
-        _currentStepValue.textAlignment = NSTextAlignmentRight;
+        _currentStepValue.textAlignment = NSTextAlignmentCenter;
+//        _currentStepValue.backgroundColor = [UIColor lightGrayColor];
     }
     return _currentStepValue;
 }

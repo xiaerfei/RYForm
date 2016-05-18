@@ -37,7 +37,7 @@
         self.titleTextAlignment = NSTextAlignmentLeft;
         self.valueTextAlignment = NSTextAlignmentRight;
         self.selectionStyle     = UITableViewCellSelectionStyleNone;
-        
+        self.accessoryType      = UITableViewCellAccessoryNone;
         self.stepCounterValue = 0;
         self.stepCounterMinimumValue = 0;
         self.stepCounterMaximumValue = 100;

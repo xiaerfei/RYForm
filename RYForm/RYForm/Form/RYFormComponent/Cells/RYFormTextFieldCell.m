@@ -13,7 +13,6 @@
 
 @interface RYFormTextFieldCell ()<UITextFieldDelegate>
 
-@property (nonatomic, readwrite, strong) UILabel     *ry_textLabel;
 @property (nonatomic, readwrite, strong) UITextField *ry_textField;
 
 @end
@@ -30,10 +29,9 @@
 {
     [super configure];
     [self setSelectionStyle:UITableViewCellSelectionStyleNone];
-    [self.contentView addSubview:self.ry_textLabel];
     [self.contentView addSubview:self.ry_textField];
 //    [self autoLayoutSubViews];
-    [self updateAutoLayoutWithTitleWidth:100];
+    [self updateAutoLayout];
     [self.ry_textField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
 }
 
@@ -91,10 +89,7 @@
         }
     }
     
-
-    NSDictionary *attributes = @{NSFontAttributeName:[UIFont systemFontOfSize:15]};
-    CGSize size = [RYForm boundingWith:self.rowInformation.title attributes:attributes size:CGSizeMake(MAXFLOAT, 20)];
-    [self updateAutoLayoutWithTitleWidth:size.width];
+    [self updateAutoLayout];
 }
 #pragma mark - private methods
 
@@ -103,16 +98,14 @@
     CGFloat top = (self.rowInformation.rowHeight - 20)/2.0f;
     CGFloat pad = 5;
     self.ry_textLabel.frame = CGRectMake(15,top , 100, 20);
-    self.ry_textField.frame = CGRectMake(self.ry_textLabel.right + pad, top, ([UIScreen mainScreen].bounds.size.width - 20 - self.ry_textLabel.width - pad - 20), 30);
+    self.ry_textField.frame = CGRectMake(self.ry_textLabel.right + pad, top, ([UIScreen mainScreen].bounds.size.width - 20 - self.ry_textLabel.width - pad - 25), 30);
 }
 
-- (void)updateAutoLayoutWithTitleWidth:(CGFloat)titleWidth
+- (void)updateAutoLayout
 {
-    CGFloat tTop = (self.rowInformation.rowHeight - 20)/2.0f;
     CGFloat vTop = (self.rowInformation.rowHeight - 30)/2.0f;
     CGFloat pad = 5;
-    self.ry_textLabel.frame = CGRectMake(15,tTop , titleWidth, 20);
-    self.ry_textField.frame = CGRectMake(self.ry_textLabel.right + pad, vTop, ([UIScreen mainScreen].bounds.size.width - 20 - self.ry_textLabel.width - pad - 20), 30);
+    self.ry_textField.frame = CGRectMake(self.ry_textLabel.right + pad, vTop, ([UIScreen mainScreen].bounds.size.width - 20 - self.ry_textLabel.width - pad - 25), 30);
 }
 
 - (void)textFieldDidChange:(UITextField *)textField{
@@ -131,16 +124,6 @@
 
 #pragma mark - getters
 
-- (UILabel *)ry_textLabel
-{
-    if (_ry_textLabel == nil) {
-        _ry_textLabel = [[UILabel alloc] init];
-        _ry_textLabel.textColor = [UIColor blackColor];
-        _ry_textLabel.font = [UIFont systemFontOfSize:15];
-        _ry_textLabel.backgroundColor = [UIColor lightGrayColor];
-    }
-    return _ry_textLabel;
-}
 
 - (UITextField *)ry_textField
 {
@@ -148,7 +131,7 @@
         _ry_textField = [[UITextField alloc] init];
         _ry_textField.textColor = [UIColor blackColor];
         _ry_textField.font = [UIFont systemFontOfSize:13];
-        _ry_textField.backgroundColor = [UIColor lightGrayColor];
+//        _ry_textField.backgroundColor = [UIColor lightGrayColor];
     }
     return _ry_textField;
 }

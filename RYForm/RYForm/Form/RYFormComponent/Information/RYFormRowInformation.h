@@ -23,6 +23,8 @@
 @property (nonatomic, copy, nullable)           NSString *placeholderText;
 /// default is UITableViewCellStyleDefault
 @property (nonatomic, assign) UITableViewCellStyle cellStyle;
+// default is UITableViewCellAccessoryNone. use to set standard type
+@property (nonatomic) UITableViewCellAccessoryType    accessoryType;
 /// default is 44
 @property (nonatomic, assign) CGFloat rowHeight;
 /// default is UITableViewCellSelectionStyleNone.
@@ -47,6 +49,8 @@
 // default 100. must be greater than minimumValue
 @property(nonatomic, assign) double stepCounterMaximumValue;
 
+/// 正则表达式
+@property (nonatomic, copy, nullable) NSString *regularExpression;
 
 @property (nonatomic, assign) BOOL isDisabled;
 @property (nonatomic, assign) BOOL isHidden;

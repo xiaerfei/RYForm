@@ -31,7 +31,7 @@
 - (void)update
 {
     [super update];
-    self.textLabel.text = self.rowInformation.title;
+    self.ry_textLabel.text = self.rowInformation.title;
     self.switchControl.on = [self.rowInformation.value boolValue];
     self.switchControl.enabled = !self.rowInformation.isDisabled;
 }
