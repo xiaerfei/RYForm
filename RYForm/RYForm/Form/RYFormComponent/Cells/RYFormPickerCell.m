@@ -88,6 +88,12 @@
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
 //    NSLog(@"%@",self.rowInformation.pickerViewDataSourceArray[component][row]);
+    if (component == 0) {
+        
+        
+        
+        [pickerView reloadComponent:1];
+    }
 }
 #pragma mark - RYFormInformationCell
 -(void)formInformationCellDidSelectedWithFormController:(RYFormViewController *)controller
