@@ -22,7 +22,7 @@
 - (void)update
 {
     [super update];
-    self.ry_textLabel.text = self.rowInformation.title;
+    
     self.accessoryType = [self.rowInformation.value boolValue] ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
     self.editingAccessoryType =  self.accessoryType;
     CGFloat red, green, blue, alpha;

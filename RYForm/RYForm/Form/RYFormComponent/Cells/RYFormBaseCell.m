@@ -52,8 +52,8 @@
     CGSize size = [RYForm boundingWith:self.rowInformation.title attributes:attributes size:CGSizeMake(MAXFLOAT, 20)];
     CGFloat tTop = (self.rowInformation.rowHeight - 20)/2.0f;
     self.ry_textLabel.frame = CGRectMake(15,tTop , size.width, 20);
-    
     self.accessoryType = self.rowInformation.accessoryType;
+    self.ry_textLabel.text = self.rowInformation.title;
     
 }
 
@@ -66,6 +66,26 @@
 {
     
 }
+
+-(BOOL)becomeFirstResponder
+{
+    BOOL result = [super becomeFirstResponder];
+    if (result){
+        
+    }
+    return result;
+}
+
+-(BOOL)resignFirstResponder
+{
+    BOOL result = [super resignFirstResponder];
+    if (result){
+        
+    }
+    return result;
+}
+
+
 
 - (UILabel *)ry_textLabel
 {

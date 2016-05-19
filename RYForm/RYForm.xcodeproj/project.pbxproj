@@ -45,6 +45,7 @@
 		4E5477AC1CEC4C890049E1B4 /* UITabBarController+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54778C1CEC4C890049E1B4 /* UITabBarController+MemoryLeak.m */; };
 		4E5477AD1CEC4C890049E1B4 /* UIView+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54778E1CEC4C890049E1B4 /* UIView+MemoryLeak.m */; };
 		4E5477AE1CEC4C890049E1B4 /* UIViewController+MemoryLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5477901CEC4C890049E1B4 /* UIViewController+MemoryLeak.m */; };
+		4EE84A7E1CED2AC200E1374E /* RYFormActionSheetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE84A7D1CED2AC200E1374E /* RYFormActionSheetCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +144,8 @@
 		4E54778E1CEC4C890049E1B4 /* UIView+MemoryLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MemoryLeak.m"; sourceTree = "<group>"; };
 		4E54778F1CEC4C890049E1B4 /* UIViewController+MemoryLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MemoryLeak.h"; sourceTree = "<group>"; };
 		4E5477901CEC4C890049E1B4 /* UIViewController+MemoryLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MemoryLeak.m"; sourceTree = "<group>"; };
+		4EE84A7C1CED2AC200E1374E /* RYFormActionSheetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormActionSheetCell.h; sourceTree = "<group>"; };
+		4EE84A7D1CED2AC200E1374E /* RYFormActionSheetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFormActionSheetCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,6 +270,8 @@
 				4E5477501CEC4C890049E1B4 /* RYFormDatePickerCell.m */,
 				4E5477511CEC4C890049E1B4 /* RYFormPickerCell.h */,
 				4E5477521CEC4C890049E1B4 /* RYFormPickerCell.m */,
+				4EE84A7C1CED2AC200E1374E /* RYFormActionSheetCell.h */,
+				4EE84A7D1CED2AC200E1374E /* RYFormActionSheetCell.m */,
 				4E5477531CEC4C890049E1B4 /* RYFormStepCounterCell.h */,
 				4E5477541CEC4C890049E1B4 /* RYFormStepCounterCell.m */,
 				4E5477551CEC4C890049E1B4 /* RYFormSwitchCell.h */,
@@ -559,6 +564,7 @@
 				4E5477911CEC4C890049E1B4 /* RYFormBaseCell.m in Sources */,
 				4E5477961CEC4C890049E1B4 /* RYFormStepCounterCell.m in Sources */,
 				4E54779D1CEC4C890049E1B4 /* RYFormTextView.m in Sources */,
+				4EE84A7E1CED2AC200E1374E /* RYFormActionSheetCell.m in Sources */,
 				4E5477181CEC4C310049E1B4 /* AppDelegate.m in Sources */,
 				4E5477151CEC4C310049E1B4 /* main.m in Sources */,
 			);

@@ -19,7 +19,7 @@
 @property (nonatomic, copy, nullable)           NSString * title;
 @property (nonatomic, copy, nullable)           id value;
 @property (nonatomic, copy, nullable)           NSString *displayText;
-/// 针对于 UITextField
+/// default UITextField use
 @property (nonatomic, copy, nullable)           NSString *placeholderText;
 /// default is UITableViewCellStyleDefault
 @property (nonatomic, assign) UITableViewCellStyle cellStyle;
@@ -48,7 +48,10 @@
 @property(nonatomic, assign) double stepCounterMinimumValue;
 // default 100. must be greater than minimumValue
 @property(nonatomic, assign) double stepCounterMaximumValue;
-
+/// default UIActionSheet use
+@property (nonatomic, copy, nullable) NSArray *actionSheetArray;
+/// default UIPickerView use
+@property (nonatomic, copy, nullable) NSArray *pickerViewDataSourceArray;
 /// 正则表达式
 @property (nonatomic, copy, nullable) NSString *regularExpression;
 

@@ -16,6 +16,7 @@
 #import "RYFormDatePickerCell.h"
 #import "RYFormPickerCell.h"
 #import "RYFormStepCounterCell.h"
+#import "RYFormActionSheetCell.h"
 
 NSString *const RYFormRowInformationTypeText                        = @"text";
 NSString *const RYFormRowInformationTypeName                        = @"name";
@@ -56,26 +57,28 @@ NSString *const RYFormRowInformationTypeStepCounter                 = @"stepCoun
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _cellClassesForRowInformationTypes = [@{RYFormRowInformationTypeText:                   [RYFormTextFieldCell class],
-                                               RYFormRowInformationTypeName:                    [RYFormTextFieldCell class],
-                                               RYFormRowInformationTypePhone:                   [RYFormTextFieldCell class],
-                                               RYFormRowInformationTypeURL:                     [RYFormTextFieldCell class],
-                                               RYFormRowInformationTypeEmail:                   [RYFormTextFieldCell class],
-                                               RYFormRowInformationTypeNumber:                  [RYFormTextFieldCell class],
-                                               RYFormRowInformationTypeTextView:                [RYFormTextViewCell class],
-                                               RYFormRowInformationTypeBooleanSwitch :          [RYFormSwitchCell class],
-                                               RYFormRowInformationTypeBooleanCheck :           [RYFormCheckCell class],
-                                               RYFormRowInformationTypeDate:                    [RYFormDateCell class],
-                                               RYFormRowInformationTypeTime:                    [RYFormDateCell class],
-                                               RYFormRowInformationTypeDateTime :               [RYFormDateCell class],
-                                               RYFormRowInformationTypeCountDownTimer :         [RYFormDateCell class],
-                                               RYFormRowInformationTypeDateInline:              [RYFormDateCell class],
-                                               RYFormRowInformationTypeTimeInline:              [RYFormDateCell class],
-                                               RYFormRowInformationTypeDateTimeInline:          [RYFormDateCell class],
-                                               RYFormRowInformationTypeCountDownTimerInline :   [RYFormDateCell class],
-                                               RYFormRowInformationTypeDatePicker :             [RYFormDatePickerCell class],
-                                               RYFormRowInformationTypePicker :                 [RYFormPickerCell class],
-                                               RYFormRowInformationTypeStepCounter:             [RYFormStepCounterCell class]
+        _cellClassesForRowInformationTypes = [@{RYFormRowInformationTypeText:                    [RYFormTextFieldCell class],
+                                                RYFormRowInformationTypeName:                    [RYFormTextFieldCell class],
+                                                RYFormRowInformationTypePhone:                   [RYFormTextFieldCell class],
+                                                RYFormRowInformationTypeURL:                     [RYFormTextFieldCell class],
+                                                RYFormRowInformationTypeEmail:                   [RYFormTextFieldCell class],
+                                                RYFormRowInformationTypeNumber:                  [RYFormTextFieldCell class],
+                                                RYFormRowInformationTypeDecimal:                 [RYFormTextFieldCell class],
+                                                RYFormRowInformationTypeTextView:                [RYFormTextViewCell class],
+                                                RYFormRowInformationTypeBooleanSwitch :          [RYFormSwitchCell class],
+                                                RYFormRowInformationTypeBooleanCheck :           [RYFormCheckCell class],
+                                                RYFormRowInformationTypeDate:                    [RYFormDateCell class],
+                                                RYFormRowInformationTypeTime:                    [RYFormDateCell class],
+                                                RYFormRowInformationTypeDateTime :               [RYFormDateCell class],
+                                                RYFormRowInformationTypeCountDownTimer :         [RYFormDateCell class],
+                                                RYFormRowInformationTypeDateInline:              [RYFormDateCell class],
+                                                RYFormRowInformationTypeTimeInline:              [RYFormDateCell class],
+                                                RYFormRowInformationTypeDateTimeInline:          [RYFormDateCell class],
+                                                RYFormRowInformationTypeCountDownTimerInline :   [RYFormDateCell class],
+                                                RYFormRowInformationTypeDatePicker :             [RYFormDatePickerCell class],
+                                                RYFormRowInformationTypePicker :                 [RYFormPickerCell class],
+                                                RYFormRowInformationTypeStepCounter:             [RYFormStepCounterCell class],
+                                                RYFormRowInformationTypeSelectorActionSheet:     [RYFormActionSheetCell class]
                                                } mutableCopy];
     });
     return _cellClassesForRowInformationTypes;
