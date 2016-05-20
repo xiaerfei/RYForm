@@ -23,7 +23,13 @@
 
 - (void)dealloc
 {
+    NSArray *array = self.formRows;
     _formRows = nil;
+    
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        [array class];
+    });
+    
     NSLog(@"RYFormSectionInformation--->dealloc");
 }
 

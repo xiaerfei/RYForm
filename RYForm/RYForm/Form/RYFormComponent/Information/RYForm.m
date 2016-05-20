@@ -13,7 +13,6 @@
 #import "RYFormSwitchCell.h"
 #import "RYFormCheckCell.h"
 #import "RYFormDateCell.h"
-#import "RYFormDatePickerCell.h"
 #import "RYFormPickerCell.h"
 #import "RYFormStepCounterCell.h"
 #import "RYFormActionSheetCell.h"
@@ -31,18 +30,7 @@ NSString *const RYFormRowInformationTypeTextView                    = @"textView
 NSString *const RYFormRowInformationTypeSelectorActionSheet         = @"selectorActionSheet";
 NSString *const RYFormRowInformationTypeSelectorAlertView           = @"selectorAlertView";
 NSString *const RYFormRowInformationTypeSelectorPickerView          = @"selectorPickerView";
-NSString *const RYFormRowInformationTypeSelectorPickerViewInline    = @"selectorPickerViewInline";
-NSString *const RYFormRowInformationTypeSelectorLeftRight           = @"selectorLeftRight";
-NSString *const RYFormRowInformationTypeSelectorSegmentedControl    = @"selectorSegmentedControl";
-NSString *const RYFormRowInformationTypeDateInline                  = @"dateInline";
-NSString *const RYFormRowInformationTypeDateTimeInline              = @"datetimeInline";
-NSString *const RYFormRowInformationTypeTimeInline                  = @"timeInline";
-NSString *const RYFormRowInformationTypeCountDownTimerInline        = @"countDownTimerInline";
 NSString *const RYFormRowInformationTypeDate                        = @"date";
-NSString *const RYFormRowInformationTypeDateTime                    = @"datetime";
-NSString *const RYFormRowInformationTypeTime                        = @"time";
-NSString *const RYFormRowInformationTypeCountDownTimer              = @"countDownTimer";
-NSString *const RYFormRowInformationTypeDatePicker                  = @"datePicker";
 NSString *const RYFormRowInformationTypePicker                      = @"picker";
 NSString *const RYFormRowInformationTypeSlider                      = @"slider";
 NSString *const RYFormRowInformationTypeBooleanCheck                = @"booleanCheck";
@@ -68,14 +56,6 @@ NSString *const RYFormRowInformationTypeStepCounter                 = @"stepCoun
                                                 RYFormRowInformationTypeBooleanSwitch :          [RYFormSwitchCell class],
                                                 RYFormRowInformationTypeBooleanCheck :           [RYFormCheckCell class],
                                                 RYFormRowInformationTypeDate:                    [RYFormDateCell class],
-                                                RYFormRowInformationTypeTime:                    [RYFormDateCell class],
-                                                RYFormRowInformationTypeDateTime :               [RYFormDateCell class],
-                                                RYFormRowInformationTypeCountDownTimer :         [RYFormDateCell class],
-                                                RYFormRowInformationTypeDateInline:              [RYFormDateCell class],
-                                                RYFormRowInformationTypeTimeInline:              [RYFormDateCell class],
-                                                RYFormRowInformationTypeDateTimeInline:          [RYFormDateCell class],
-                                                RYFormRowInformationTypeCountDownTimerInline :   [RYFormDateCell class],
-                                                RYFormRowInformationTypeDatePicker :             [RYFormDatePickerCell class],
                                                 RYFormRowInformationTypePicker :                 [RYFormPickerCell class],
                                                 RYFormRowInformationTypeStepCounter:             [RYFormStepCounterCell class],
                                                 RYFormRowInformationTypeSelectorActionSheet:     [RYFormActionSheetCell class]

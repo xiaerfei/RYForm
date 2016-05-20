@@ -12,7 +12,17 @@
 
 @protocol RYFormViewControllerDelegate <NSObject>
 
+@required
 - (id <RYFormDataConfigure>)configureFormDataClass;
+
+@optional
+- (void)didSelectFormRow:(RYFormRowInformation *)formRow;
+
+- (void)formRowInformationValueHasChanged:(RYFormRowInformation *)formRow oldValue:(id)oldValue newValue:(id)newValue;
+
+- (void)allFormRowInformationValueNotValidator:(NSArray *)notValidatorArray;
+
+
 
 @end
 
@@ -25,5 +35,7 @@
 @property (nonatomic, strong) RYFormInformation *formInformation;
 
 - (RYFormBaseCell *)updateFormRow:(RYFormRowInformation *)formRow;
+
+- (void)formRowValueHasChanged:(RYFormRowInformation *)formRow oldValue:(id)oldValue newValue:(id)newValue;
 
 @end

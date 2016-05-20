@@ -40,6 +40,7 @@
 #pragma mark - event responses
 - (void)valueChanged
 {
+    [self.rowInformation.currentController formRowValueHasChanged:self.rowInformation oldValue:self.rowInformation.value newValue:@(self.switchControl.on)];
     self.rowInformation.value = @(self.switchControl.on);
 }
 

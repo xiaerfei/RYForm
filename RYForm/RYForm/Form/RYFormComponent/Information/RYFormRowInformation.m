@@ -41,6 +41,7 @@
         self.stepCounterValue = 0;
         self.stepCounterMinimumValue = 0;
         self.stepCounterMaximumValue = 100;
+        self.formRowValidatorType = RYFormRowValidatorTypeNotNull;
         
     }
     return self;
@@ -48,7 +49,13 @@
 
 - (void)dealloc
 {
+    UITableViewCell *cell = self.baseCell;
     _baseCell = nil;
+    
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        [cell class];
+    });
+    
     NSLog(@"RYFormRowInformation--->dealloc");
 }
 
@@ -63,5 +70,51 @@
     
     return _baseCell;
 }
+
+#pragma mark - validation
+- (BOOL)valueIsEmpty
+{
+    return self.value == nil || [self.value isKindOfClass:[NSNull class]] || ([self.value respondsToSelector:@selector(length)] && [self.value length]==0);
+}
+
+- (BOOL)formRowValidatorValue
+{
+    BOOL result = NO;
+    switch (self.formRowValidatorType) {
+        case RYFormRowValidatorTypeNone:
+            result = YES;
+            break;
+        case RYFormRowValidatorTypeNotNull:
+            return ![self valueIsEmpty];
+            break;
+        case RYFormRowValidatorTypeRegex:
+        {
+            /// 验证是否为空
+            if ([self valueIsEmpty]) {
+                result = NO;
+                break;
+            }
+            
+            id value = self.value;
+            if ([value isKindOfClass:[NSNumber class]]){
+                value = [value stringValue];
+            }
+            if ([value isKindOfClass:[NSString class]] && [value length] > 0) {
+                result = [[NSPredicate predicateWithFormat:@"SELF MATCHES %@", self.regularExpression] evaluateWithObject:[value stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]];
+            } else {
+                result = NO;
+            }
+        }
+            break;
+        default:
+            result = NO;
+            break;
+    }
+    self.isvalidator = result;
+    return result;
+    
+}
+
+
 
 @end

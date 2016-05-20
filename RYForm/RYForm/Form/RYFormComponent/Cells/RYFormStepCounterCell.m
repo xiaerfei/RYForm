@@ -69,7 +69,7 @@
 - (void)valueChanged:(id)sender
 {
     UIStepper *stepper = self.stepControl;
-    
+    [self.rowInformation.currentController formRowValueHasChanged:self.rowInformation oldValue:self.rowInformation.value newValue:@(stepper.value)];
     self.rowInformation.value  = @(stepper.value);
     self.currentStepValue.text = [NSString stringWithFormat:@"%.f", stepper.value];
 }

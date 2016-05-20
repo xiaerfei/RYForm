@@ -50,6 +50,7 @@
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     if (buttonIndex > 0) {
+        [self.rowInformation.currentController formRowValueHasChanged:self.rowInformation oldValue:self.rowInformation.value newValue:@(buttonIndex - 1)];
         self.rowInformation.value = @(buttonIndex - 1);
         self.rowInformation.displayText = self.rowInformation.actionSheetArray[buttonIndex - 1];
         self.ry_valueTextLabel.text  = self.rowInformation.displayText;        

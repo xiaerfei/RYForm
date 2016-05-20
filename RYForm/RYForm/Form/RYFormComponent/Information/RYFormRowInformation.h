@@ -8,11 +8,23 @@
 
 #import <UIKit/UIKit.h>
 
+
+
+typedef NS_ENUM(NSInteger,RYFormRowValidatorType) {
+    /// 不验证
+    RYFormRowValidatorTypeNone    = 1,
+    /// 验证不为空
+    RYFormRowValidatorTypeNotNull = 2,
+    /// 正则验证
+    RYFormRowValidatorTypeRegex   = 3,
+};
+
+
 @class RYFormBaseCell;
 
 @interface RYFormRowInformation : NSObject
  
-
+@property (nonatomic, weak,   nullable)         id currentController;
 @property (nonatomic, strong, nonnull)          id cellClass;
 @property (nonatomic, readwrite, nullable)      NSString * tag;
 @property (nonatomic, readonly, copy,nullable)  NSString * rowType;
@@ -52,15 +64,22 @@
 @property (nonatomic, copy, nullable) NSArray *actionSheetArray;
 /// default UIPickerView use
 @property (nonatomic, copy, nullable) NSArray *pickerViewDataSourceArray;
-/// 正则表达式
-@property (nonatomic, copy, nullable) NSString *regularExpression;
 
 @property (nonatomic, assign) BOOL isDisabled;
 @property (nonatomic, assign) BOOL isHidden;
 @property (nonatomic, assign) BOOL isRequired;
 
+@property (nonatomic, assign) BOOL isvalidator;
+
+/// 正则表达式
+@property (nonatomic, copy, nullable) NSString *regularExpression;
+/// default is RYFormRowValidatorTypeNotNull
+@property (nonatomic, assign) RYFormRowValidatorType formRowValidatorType;
+
 -(nonnull instancetype)initWithTag:(nullable NSString *)tag rowType:(nonnull NSString *)rowType title:(nullable NSString *)title;
 
 -(nonnull RYFormBaseCell *)cellForForm;
+
+- (BOOL)formRowValidatorValue;
 
 @end

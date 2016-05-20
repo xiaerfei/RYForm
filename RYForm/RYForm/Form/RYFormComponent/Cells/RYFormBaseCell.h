@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "RYFormInformationCell.h"
+#import "RYFormViewController.h"
 
 @class RYFormRowInformation;
 

@@ -60,6 +60,8 @@
         self.ry_textField.autocapitalizationType = UITextAutocapitalizationTypeNone;
     } else if ([self.rowInformation.rowType isEqualToString:RYFormRowInformationTypeNumber]) {
         self.ry_textField.keyboardType = UIKeyboardTypeNumberPad;
+    } else if ([self.rowInformation.rowType isEqualToString:RYFormRowInformationTypeDecimal]) {
+        self.ry_textField.keyboardType = UIKeyboardTypeDecimalPad;
     }
 
     if (self.rowInformation.isRequired) {
@@ -74,16 +76,10 @@
     self.ry_textField.textAlignment = self.rowInformation.valueTextAlignment;
     self.ry_textField.enabled = !self.rowInformation.isDisabled;
     if (self.rowInformation.isDisabled) {
-        if (self.rowInformation.disabledTitleColor) {
-            self.ry_textLabel.textColor = self.rowInformation.disabledTitleColor;
-        }
         if (self.rowInformation.disabledValueColor) {
             self.ry_textField.textColor = self.rowInformation.disabledValueColor;
         }
     } else {
-        if (self.rowInformation.normalTitleColor) {
-            self.ry_textLabel.textColor = self.rowInformation.normalTitleColor;
-        }
         if (self.rowInformation.normalValueColor) {
             self.ry_textField.textColor = self.rowInformation.normalValueColor;
         }
@@ -110,13 +106,17 @@
 
 - (void)textFieldDidChange:(UITextField *)textField{
     if([self.ry_textField.text length] > 0) {
+        
         if ([self.rowInformation.rowType isEqualToString:RYFormRowInformationTypeNumber]){
+            [self.rowInformation.currentController formRowValueHasChanged:self.rowInformation oldValue:self.rowInformation.value newValue:@([self.ry_textField.text doubleValue])];
             self.rowInformation.value =  @([self.ry_textField.text doubleValue]);
         } else {
+            [self.rowInformation.currentController formRowValueHasChanged:self.rowInformation oldValue:self.rowInformation.value newValue:self.ry_textField.text];
             self.rowInformation.value = self.ry_textField.text;
         }
         self.rowInformation.displayText = self.ry_textField.text;
     } else {
+        [self.rowInformation.currentController formRowValueHasChanged:self.rowInformation oldValue:self.rowInformation.value newValue:nil];
         self.rowInformation.value = nil;
     }
 }

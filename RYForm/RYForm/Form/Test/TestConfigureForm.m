@@ -24,11 +24,13 @@
     
     RYFormRowInformation *row00 = [[RYFormRowInformation alloc] initWithTag:@"" rowType:RYFormRowInformationTypeText title:@"姓名"];
     row00.displayText = @"习大大";
+    row00.value = @"习大大";
     row00.isDisabled  = YES;
     [section0.formRows addObject:row00];
     
     RYFormRowInformation *row01 = [[RYFormRowInformation alloc] initWithTag:@"" rowType:RYFormRowInformationTypeText title:@"身份证号"];
     row01.displayText = @"123456789012345678";
+    row01.value = @"123456789012345678";
     row01.isDisabled  = YES;
     [section0.formRows addObject:row01];
     

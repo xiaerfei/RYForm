@@ -39,8 +39,10 @@
 
 -(void)formInformationCellDidSelectedWithFormController:(RYFormViewController *)controller
 {
+    NSNumber *oldValue = self.rowInformation.value;
     self.rowInformation.value = [NSNumber numberWithBool:![self.rowInformation.value boolValue]];
     [controller updateFormRow:self.rowInformation];
+    [controller formRowValueHasChanged:self.rowInformation oldValue:oldValue newValue:self.rowInformation.value];
 }
 
 @end

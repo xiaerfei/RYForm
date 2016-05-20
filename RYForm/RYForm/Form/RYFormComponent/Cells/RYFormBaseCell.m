@@ -55,6 +55,22 @@
     self.accessoryType = self.rowInformation.accessoryType;
     self.ry_textLabel.text = self.rowInformation.title;
     
+    if (self.rowInformation.isDisabled) {
+        if (self.rowInformation.disabledTitleColor) {
+            self.ry_textLabel.textColor = self.rowInformation.disabledTitleColor;
+        }
+        if (self.rowInformation.disabledValueColor) {
+            self.ry_textLabel.textColor = self.rowInformation.disabledValueColor;
+        }
+    } else {
+        if (self.rowInformation.normalTitleColor) {
+            self.ry_textLabel.textColor = self.rowInformation.normalTitleColor;
+        }
+        if (self.rowInformation.normalValueColor) {
+            self.ry_textLabel.textColor = self.rowInformation.normalValueColor;
+        }
+    }
+    
 }
 
 -(void)highlight

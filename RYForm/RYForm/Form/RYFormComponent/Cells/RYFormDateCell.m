@@ -9,6 +9,7 @@
 #import "RYFormDateCell.h"
 #import "RYFormRowInformation.h"
 #import "UIViewExt.h"
+#import "RYFormViewController.h"
 
 @interface RYFormDateCell ()
 
@@ -82,6 +83,10 @@
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"yyyy-MM-dd"];
     NSString *dateString = [formatter stringFromDate:date];
+    
+    
+    [self.rowInformation.currentController formRowValueHasChanged:self.rowInformation oldValue:self.rowInformation.value newValue:dateString];
+    
     self.rowInformation.value       = dateString;
     self.rowInformation.displayText = dateString;
     self.ry_valueTextLabel.text     = dateString;

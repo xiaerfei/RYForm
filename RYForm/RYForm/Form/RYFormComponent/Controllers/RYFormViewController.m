@@ -69,6 +69,7 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self
                                                     name:UIKeyboardWillHideNotification
                                                   object:nil];
+    
     _formInformation = nil;
     _formTableView   = nil;
 }
@@ -117,6 +118,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     RYFormRowInformation * rowDescriptor = [self.formInformation formRowAtIndex:indexPath];
+    rowDescriptor.currentController = self;
     return [rowDescriptor cellForForm];
 }
 
@@ -228,6 +230,30 @@
     [self configureCell:cell];
     return cell;
 }
+
+- (void)formRowValueHasChanged:(RYFormRowInformation *)formRow oldValue:(id)oldValue newValue:(id)newValue
+{
+    NSLog(@"oldValue = %@ newValue = %@",oldValue,newValue);
+    if ([self.child respondsToSelector:@selector(formRowInformationValueHasChanged:oldValue:newValue:)]) {
+        [self.child formRowInformationValueHasChanged:formRow oldValue:oldValue newValue:newValue];
+    }
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        NSMutableArray *notValidatorArray = [NSMutableArray array];
+        for (RYFormSectionInformation *sections in self.formInformation.formSections) {
+            [sections.formRows enumerateObjectsUsingBlock:^(RYFormRowInformation *formRow, NSUInteger idx, BOOL * _Nonnull stop) {
+                if (formRow.isvalidator == NO && [formRow formRowValidatorValue] == NO) {
+                    [notValidatorArray addObject:formRow];
+                }
+            }];
+        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if ([self.child respondsToSelector:@selector(allFormRowInformationValueNotValidator:)]) {
+                [self.child allFormRowInformationValueNotValidator:notValidatorArray];
+            }
+        });
+    });
+}
+
 
 -(void)configureCell:(RYFormBaseCell *) cell
 {

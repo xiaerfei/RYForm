@@ -18,7 +18,6 @@
 		4E5477911CEC4C890049E1B4 /* RYFormBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54774A1CEC4C890049E1B4 /* RYFormBaseCell.m */; };
 		4E5477921CEC4C890049E1B4 /* RYFormCheckCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54774C1CEC4C890049E1B4 /* RYFormCheckCell.m */; };
 		4E5477931CEC4C890049E1B4 /* RYFormDateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54774E1CEC4C890049E1B4 /* RYFormDateCell.m */; };
-		4E5477941CEC4C890049E1B4 /* RYFormDatePickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5477501CEC4C890049E1B4 /* RYFormDatePickerCell.m */; };
 		4E5477951CEC4C890049E1B4 /* RYFormPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5477521CEC4C890049E1B4 /* RYFormPickerCell.m */; };
 		4E5477961CEC4C890049E1B4 /* RYFormStepCounterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5477541CEC4C890049E1B4 /* RYFormStepCounterCell.m */; };
 		4E5477971CEC4C890049E1B4 /* RYFormSwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5477561CEC4C890049E1B4 /* RYFormSwitchCell.m */; };
@@ -88,8 +87,6 @@
 		4E54774C1CEC4C890049E1B4 /* RYFormCheckCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFormCheckCell.m; sourceTree = "<group>"; };
 		4E54774D1CEC4C890049E1B4 /* RYFormDateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormDateCell.h; sourceTree = "<group>"; };
 		4E54774E1CEC4C890049E1B4 /* RYFormDateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFormDateCell.m; sourceTree = "<group>"; };
-		4E54774F1CEC4C890049E1B4 /* RYFormDatePickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormDatePickerCell.h; sourceTree = "<group>"; };
-		4E5477501CEC4C890049E1B4 /* RYFormDatePickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFormDatePickerCell.m; sourceTree = "<group>"; };
 		4E5477511CEC4C890049E1B4 /* RYFormPickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormPickerCell.h; sourceTree = "<group>"; };
 		4E5477521CEC4C890049E1B4 /* RYFormPickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFormPickerCell.m; sourceTree = "<group>"; };
 		4E5477531CEC4C890049E1B4 /* RYFormStepCounterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormStepCounterCell.h; sourceTree = "<group>"; };
@@ -266,8 +263,6 @@
 				4E54774C1CEC4C890049E1B4 /* RYFormCheckCell.m */,
 				4E54774D1CEC4C890049E1B4 /* RYFormDateCell.h */,
 				4E54774E1CEC4C890049E1B4 /* RYFormDateCell.m */,
-				4E54774F1CEC4C890049E1B4 /* RYFormDatePickerCell.h */,
-				4E5477501CEC4C890049E1B4 /* RYFormDatePickerCell.m */,
 				4E5477511CEC4C890049E1B4 /* RYFormPickerCell.h */,
 				4E5477521CEC4C890049E1B4 /* RYFormPickerCell.m */,
 				4EE84A7C1CED2AC200E1374E /* RYFormActionSheetCell.h */,
@@ -534,7 +529,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E5477941CEC4C890049E1B4 /* RYFormDatePickerCell.m in Sources */,
 				4E54771B1CEC4C310049E1B4 /* ViewController.m in Sources */,
 				4E5477951CEC4C890049E1B4 /* RYFormPickerCell.m in Sources */,
 				4E5477A41CEC4C890049E1B4 /* RYFormSectionInformation.m in Sources */,

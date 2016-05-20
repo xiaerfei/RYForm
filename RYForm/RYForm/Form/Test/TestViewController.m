@@ -32,5 +32,19 @@
     return [[TestConfigureForm alloc] init];
 }
 
+- (void)formRowInformationValueHasChanged:(RYFormRowInformation *)formRow oldValue:(id)oldValue newValue:(id)newValue
+{
+    
+}
+
+
+- (void)allFormRowInformationValueNotValidator:(NSArray *)notValidatorArray
+{
+    NSLog(@"**********************************************************");
+    for (RYFormRowInformation *rowForm in notValidatorArray) {
+        NSLog(@"title = %@",rowForm.title);
+    }
+    NSLog(@"**********************************************************");
+}
 
 @end
