@@ -10,7 +10,7 @@
 
 @class RYFormViewController;
 
-@protocol RYFormInformationCell <NSObject>
+@protocol RYFormInformationCellDelegate <NSObject>
 
 - (void)configure;
 

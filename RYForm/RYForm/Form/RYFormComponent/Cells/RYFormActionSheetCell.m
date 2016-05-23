@@ -49,11 +49,18 @@
 #pragma mark - UIActionSheetDelegate
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
+    
     if (buttonIndex > 0) {
-        [self.rowInformation.currentController formRowValueHasChanged:self.rowInformation oldValue:self.rowInformation.value newValue:@(buttonIndex - 1)];
+        if ([self.rowInformation.currentController respondsToSelector:@selector(formRowValueHasChanged:oldValue:newValue:)]) {
+            [self.rowInformation.currentController formRowValueHasChanged:self.rowInformation oldValue:self.rowInformation.value newValue:@(buttonIndex - 1)];
+        }
         self.rowInformation.value = @(buttonIndex - 1);
         self.rowInformation.displayText = self.rowInformation.actionSheetArray[buttonIndex - 1];
-        self.ry_valueTextLabel.text  = self.rowInformation.displayText;        
+        self.ry_valueTextLabel.text  = self.rowInformation.displayText;
+        if ([self.rowInformation.currentController respondsToSelector:@selector(switchDisPlayValueToCompetentTypeWithFormRow:)]) {
+            id value = [self.rowInformation.currentController switchDisPlayValueToCompetentTypeWithFormRow:self.rowInformation];
+            self.rowInformation.value = (value == nil)?@(buttonIndex - 1):value;
+        }
     }
 }
 

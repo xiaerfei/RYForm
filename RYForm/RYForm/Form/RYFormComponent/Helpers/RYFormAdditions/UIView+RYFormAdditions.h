@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RYFormInformationCell.h"
+#import "RYFormInformationCellDelegate.h"
 
 @interface UIView (RYFormAdditions)
 
 - (UIView *)findFirstResponder;
-- (UITableViewCell<RYFormInformationCell> *)formInformationCell;
+- (UITableViewCell<RYFormInformationCellDelegate> *)formInformationCell;
 @end

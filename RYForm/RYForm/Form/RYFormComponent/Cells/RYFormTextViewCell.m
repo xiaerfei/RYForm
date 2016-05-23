@@ -24,6 +24,7 @@
     [super configure];
     [self setSelectionStyle:UITableViewCellSelectionStyleNone];
     [self.contentView addSubview:self.textView];
+
     [self autoLayoutSubViews];
 }
 
@@ -39,6 +40,13 @@
     [self.textView setEditable:!self.rowInformation.isDisabled];
     self.textView.textColor     = self.rowInformation.isDisabled ? [UIColor grayColor] : [UIColor blackColor];
 }
+#pragma mark - UITextViewDelegate
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
+{
+    /// TODO:字数限制
+    return YES;
+}
+
 
 #pragma mark - private methods
 

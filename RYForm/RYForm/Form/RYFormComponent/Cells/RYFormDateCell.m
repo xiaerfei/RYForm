@@ -84,12 +84,19 @@
     [formatter setDateFormat:@"yyyy-MM-dd"];
     NSString *dateString = [formatter stringFromDate:date];
     
+    if ([self.rowInformation.currentController respondsToSelector:@selector(formRowValueHasChanged:oldValue:newValue:)]) {
+        [self.rowInformation.currentController formRowValueHasChanged:self.rowInformation oldValue:self.rowInformation.value newValue:dateString];
+    }
     
-    [self.rowInformation.currentController formRowValueHasChanged:self.rowInformation oldValue:self.rowInformation.value newValue:dateString];
-    
-    self.rowInformation.value       = dateString;
     self.rowInformation.displayText = dateString;
     self.ry_valueTextLabel.text     = dateString;
+    if ([self.rowInformation.currentController respondsToSelector:@selector(switchDisPlayValueToCompetentTypeWithFormRow:)]) {
+        id value = [self.rowInformation.currentController switchDisPlayValueToCompetentTypeWithFormRow:self.rowInformation];
+        self.rowInformation.value = (value == nil)?dateString:value;
+    } else {
+        self.rowInformation.value = dateString;
+    }
+    
 }
 
 

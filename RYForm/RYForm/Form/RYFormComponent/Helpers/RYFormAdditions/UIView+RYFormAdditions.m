@@ -23,16 +23,16 @@
     return nil;
 }
 
-- (UITableViewCell<RYFormInformationCell> *)formInformationCell
+- (UITableViewCell<RYFormInformationCellDelegate> *)formInformationCell
 {
     if ([self isKindOfClass:[UITableViewCell class]]) {
-        if ([self conformsToProtocol:@protocol(RYFormInformationCell)]){
-            return (UITableViewCell<RYFormInformationCell> *)self;
+        if ([self conformsToProtocol:@protocol(RYFormInformationCellDelegate)]){
+            return (UITableViewCell<RYFormInformationCellDelegate> *)self;
         }
         return nil;
     }
     if (self.superview) {
-        UITableViewCell<RYFormInformationCell> * tableViewCell = [self.superview formInformationCell];
+        UITableViewCell<RYFormInformationCellDelegate> * tableViewCell = [self.superview formInformationCell];
         if (tableViewCell != nil) {
             return tableViewCell;
         }

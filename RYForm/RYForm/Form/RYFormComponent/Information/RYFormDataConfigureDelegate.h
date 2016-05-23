@@ -10,7 +10,7 @@
 #import "RYFormInformation.h"
 #import "RYForm.h"
 
-@protocol RYFormDataConfigure <NSObject>
+@protocol RYFormDataConfigureDelegate <NSObject>
 
 
 - (RYFormInformation *)configureFormInformation;

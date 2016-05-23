@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RYFormDataConfigure.h"
+#import "RYFormDataConfigureDelegate.h"
 
 
 @protocol RYFormViewControllerDelegate <NSObject>
 
 @required
-- (id <RYFormDataConfigure>)configureFormDataClass;
+- (id <RYFormDataConfigureDelegate>)configureFormDataClass;
 
 @optional
 - (void)didSelectFormRow:(RYFormRowInformation *)formRow;
@@ -22,7 +22,7 @@
 
 - (void)allFormRowInformationValueNotValidator:(NSArray *)notValidatorArray;
 
-
+- (id)switchDisPlayValueToCompetentTypeWithFormRow:(RYFormRowInformation *)formRow;
 
 @end
 

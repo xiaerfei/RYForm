@@ -196,10 +196,10 @@
 		4E54776D1CEC4C890049E1B4 /* UIViewExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewExt.m; sourceTree = "<group>"; };
 		4E54776F1CEC4C890049E1B4 /* RYForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYForm.h; sourceTree = "<group>"; };
 		4E5477701CEC4C890049E1B4 /* RYForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYForm.m; sourceTree = "<group>"; };
-		4E5477711CEC4C890049E1B4 /* RYFormDataConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormDataConfigure.h; sourceTree = "<group>"; };
+		4E5477711CEC4C890049E1B4 /* RYFormDataConfigureDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormDataConfigureDelegate.h; sourceTree = "<group>"; };
 		4E5477721CEC4C890049E1B4 /* RYFormInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormInformation.h; sourceTree = "<group>"; };
 		4E5477731CEC4C890049E1B4 /* RYFormInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFormInformation.m; sourceTree = "<group>"; };
-		4E5477741CEC4C890049E1B4 /* RYFormInformationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormInformationCell.h; sourceTree = "<group>"; };
+		4E5477741CEC4C890049E1B4 /* RYFormInformationCellDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormInformationCellDelegate.h; sourceTree = "<group>"; };
 		4E5477751CEC4C890049E1B4 /* RYFormRowInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormRowInformation.h; sourceTree = "<group>"; };
 		4E5477761CEC4C890049E1B4 /* RYFormRowInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFormRowInformation.m; sourceTree = "<group>"; };
 		4E5477771CEC4C890049E1B4 /* RYFormSectionInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormSectionInformation.h; sourceTree = "<group>"; };
@@ -597,8 +597,8 @@
 		4E54776E1CEC4C890049E1B4 /* Information */ = {
 			isa = PBXGroup;
 			children = (
-				4E5477711CEC4C890049E1B4 /* RYFormDataConfigure.h */,
-				4E5477741CEC4C890049E1B4 /* RYFormInformationCell.h */,
+				4E5477711CEC4C890049E1B4 /* RYFormDataConfigureDelegate.h */,
+				4E5477741CEC4C890049E1B4 /* RYFormInformationCellDelegate.h */,
 				4E54776F1CEC4C890049E1B4 /* RYForm.h */,
 				4E5477701CEC4C890049E1B4 /* RYForm.m */,
 				4E5477721CEC4C890049E1B4 /* RYFormInformation.h */,

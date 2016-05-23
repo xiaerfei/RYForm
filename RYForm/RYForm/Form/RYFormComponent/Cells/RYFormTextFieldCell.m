@@ -126,19 +126,31 @@
     if([self.ry_textField.text length] > 0) {
         
         if ([self.rowInformation.rowType isEqualToString:RYFormRowInformationTypeNumber]){
-            [self.rowInformation.currentController formRowValueHasChanged:self.rowInformation oldValue:self.rowInformation.value newValue:@([self.ry_textField.text doubleValue])];
+            if ([self.rowInformation.currentController respondsToSelector:@selector(formRowValueHasChanged:oldValue:newValue:)]) {
+                [self.rowInformation.currentController formRowValueHasChanged:self.rowInformation oldValue:self.rowInformation.value newValue:@([self.ry_textField.text doubleValue])];
+            }
             self.rowInformation.value =  @([self.ry_textField.text doubleValue]);
         } else {
-            [self.rowInformation.currentController formRowValueHasChanged:self.rowInformation oldValue:self.rowInformation.value newValue:self.ry_textField.text];
+            if ([self.rowInformation.currentController respondsToSelector:@selector(formRowValueHasChanged:oldValue:newValue:)]) {
+                [self.rowInformation.currentController formRowValueHasChanged:self.rowInformation oldValue:self.rowInformation.value newValue:self.ry_textField.text];
+            }
             self.rowInformation.value = self.ry_textField.text;
         }
         self.rowInformation.displayText = self.ry_textField.text;
     } else {
-        [self.rowInformation.currentController formRowValueHasChanged:self.rowInformation oldValue:self.rowInformation.value newValue:nil];
+        if ([self.rowInformation.currentController respondsToSelector:@selector(formRowValueHasChanged:oldValue:newValue:)]) {
+            [self.rowInformation.currentController formRowValueHasChanged:self.rowInformation oldValue:self.rowInformation.value newValue:nil];
+        }
         self.rowInformation.value = nil;
     }
+    
+    if ([self.rowInformation.currentController respondsToSelector:@selector(switchDisPlayValueToCompetentTypeWithFormRow:)]) {
+        id value = [self.rowInformation.currentController switchDisPlayValueToCompetentTypeWithFormRow:self.rowInformation];
+        if (value != nil) {
+            self.rowInformation.value = value;
+        }
+    }
 }
-
 
 
 

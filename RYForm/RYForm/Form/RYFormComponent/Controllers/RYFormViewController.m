@@ -80,7 +80,7 @@
 
 - (void)initializeForm
 {
-    id <RYFormDataConfigure> class = [self.child configureFormDataClass];
+    id <RYFormDataConfigureDelegate> class = [self.child configureFormDataClass];
     self.formInformation = [class configureFormInformation];
 }
 
@@ -193,7 +193,7 @@
 -(void)tableViewDidSelectFormRow:(RYFormRowInformation *)formRow
 {
     UIView * firstResponderView = [self.formTableView findFirstResponder];
-    UITableViewCell<RYFormInformationCell> * cell = [firstResponderView formInformationCell];
+    UITableViewCell<RYFormInformationCellDelegate> * cell = [firstResponderView formInformationCell];
     [cell resignFirstResponder];
     if ([[formRow cellForForm] respondsToSelector:@selector(formInformationCellDidSelectedWithFormController:)]){
         [[formRow cellForForm] formInformationCellDidSelectedWithFormController:self];
@@ -208,7 +208,7 @@
 - (void)keyboardWillShow:(NSNotification *)notification
 {
     UIView * firstResponderView = [self.formTableView findFirstResponder];
-    UITableViewCell<RYFormInformationCell> * cell = [firstResponderView formInformationCell];
+    UITableViewCell<RYFormInformationCellDelegate> * cell = [firstResponderView formInformationCell];
     if (cell){
         NSDictionary *keyboardInfo = [notification userInfo];
         _keyboardFrame = [self.formTableView.window convertRect:[keyboardInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue] toView:self.formTableView.superview];
@@ -234,7 +234,7 @@
 - (void)keyboardWillHide:(NSNotification *)notification
 {
     UIView * firstResponderView = [self.formTableView findFirstResponder];
-    UITableViewCell<RYFormInformationCell> * cell = [firstResponderView formInformationCell];
+    UITableViewCell<RYFormInformationCellDelegate> * cell = [firstResponderView formInformationCell];
     if (cell){
         _keyboardFrame = CGRectZero;
         NSDictionary *keyboardInfo = [notification userInfo];

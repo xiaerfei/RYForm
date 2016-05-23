@@ -35,7 +35,7 @@
 
 #pragma mark - RYFormViewControllerDelegate
 
-- (id <RYFormDataConfigure>)configureFormDataClass
+- (id <RYFormDataConfigureDelegate>)configureFormDataClass
 {
     return [[TestConfigureForm alloc] init];
 }

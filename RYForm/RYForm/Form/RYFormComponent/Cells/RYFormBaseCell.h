@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RYFormInformationCell.h"
+#import "RYFormInformationCellDelegate.h"
 #import "RYFormViewController.h"
 
 @class RYFormRowInformation;
 
-@interface RYFormBaseCell : UITableViewCell <RYFormInformationCell>
+@interface RYFormBaseCell : UITableViewCell <RYFormInformationCellDelegate>
 
 @property (nonatomic, weak) RYFormRowInformation * rowInformation;
 

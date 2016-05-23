@@ -40,8 +40,15 @@
 #pragma mark - event responses
 - (void)valueChanged
 {
-    [self.rowInformation.currentController formRowValueHasChanged:self.rowInformation oldValue:self.rowInformation.value newValue:@(self.switchControl.on)];
+    if ([self.rowInformation.currentController respondsToSelector:@selector(formRowValueHasChanged:oldValue:newValue:)]) {
+        [self.rowInformation.currentController formRowValueHasChanged:self.rowInformation oldValue:self.rowInformation.value newValue:@(self.switchControl.on)];
+    }
+    
     self.rowInformation.value = @(self.switchControl.on);
+    if ([self.rowInformation.currentController respondsToSelector:@selector(switchDisPlayValueToCompetentTypeWithFormRow:)]) {
+        id value = [self.rowInformation.currentController switchDisPlayValueToCompetentTypeWithFormRow:self.rowInformation];
+        self.rowInformation.value = (value == nil)?@(self.switchControl.on):value;
+    }
 }
 
 #pragma mark - getters

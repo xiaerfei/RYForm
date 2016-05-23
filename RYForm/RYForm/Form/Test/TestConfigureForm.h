@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "RYFormDataConfigure.h"
+#import "RYFormDataConfigureDelegate.h"
 
-@interface TestConfigureForm : NSObject <RYFormDataConfigure>
+@interface TestConfigureForm : NSObject <RYFormDataConfigureDelegate>
 
 @end
