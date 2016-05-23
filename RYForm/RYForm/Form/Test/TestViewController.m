@@ -17,13 +17,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"生成数据" style:UIBarButtonItemStyleDone target:self action:@selector(generate)];
+    self.navigationItem.rightBarButtonItem = item;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)generate
+{
+    NSLog(@"%@",[self.formInformation generateAllValue]);
+}
+
+
 
 #pragma mark - RYFormViewControllerDelegate
 
@@ -46,5 +54,13 @@
     }
     NSLog(@"**********************************************************");
 }
+
+- (void)didSelectFormRow:(RYFormRowInformation *)formRow
+{
+
+}
+
+
+
 
 @end

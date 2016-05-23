@@ -87,6 +87,23 @@
     
     [self updateAutoLayout];
 }
+
+
+#pragma mark - UITextFieldDelegate
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    if (self.rowInformation.isRealTimeChange == NO) {
+        [self valueChange];
+    }
+}
+
+
+#pragma mark - event responses
+- (void)textFieldDidChange:(UITextField *)textField{
+    if (self.rowInformation.isRealTimeChange) {
+        [self valueChange];
+    }
+}
 #pragma mark - private methods
 
 - (void)autoLayoutSubViews
@@ -104,7 +121,8 @@
     self.ry_textField.frame = CGRectMake(self.ry_textLabel.right + pad, vTop, ([UIScreen mainScreen].bounds.size.width - 20 - self.ry_textLabel.width - pad - 25), 30);
 }
 
-- (void)textFieldDidChange:(UITextField *)textField{
+- (void)valueChange
+{
     if([self.ry_textField.text length] > 0) {
         
         if ([self.rowInformation.rowType isEqualToString:RYFormRowInformationTypeNumber]){
@@ -122,6 +140,8 @@
 }
 
 
+
+
 #pragma mark - getters
 
 
@@ -131,6 +151,7 @@
         _ry_textField = [[UITextField alloc] init];
         _ry_textField.textColor = [UIColor blackColor];
         _ry_textField.font = [UIFont systemFontOfSize:13];
+        _ry_textField.delegate = self;
 //        _ry_textField.backgroundColor = [UIColor lightGrayColor];
     }
     return _ry_textField;

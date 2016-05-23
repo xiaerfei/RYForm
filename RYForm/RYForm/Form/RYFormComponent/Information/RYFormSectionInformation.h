@@ -16,4 +16,9 @@
 
 @property (nonatomic ,copy,readonly, nonnull) NSMutableArray * formRows;
 
+/// default is nil
+@property (nonatomic, strong, nullable) UIView *headerView;
+/// default is nil
+@property (nonatomic, strong, nullable) UIView *footerView;
+
 @end

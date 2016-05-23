@@ -29,22 +29,28 @@ typedef NS_ENUM(NSInteger,RYFormRowValidatorType) {
 @property (nonatomic, readwrite, nullable)      NSString * tag;
 @property (nonatomic, readonly, copy,nullable)  NSString * rowType;
 @property (nonatomic, copy, nullable)           NSString * title;
-@property (nonatomic, copy, nullable)           id value;
-@property (nonatomic, copy, nullable)           NSString *displayText;
-/// default UITextField use
-@property (nonatomic, copy, nullable)           NSString *placeholderText;
+@property (nonatomic, assign, readonly)         CGSize     titleSize;
+@property (nonatomic, copy, nullable)           id         value;
+@property (nonatomic, copy, nullable)           NSString * key;
+@property (nonatomic, copy, nullable)           NSString * displayText;
+
+
 /// default is UITableViewCellStyleDefault
-@property (nonatomic, assign) UITableViewCellStyle cellStyle;
+@property (nonatomic, assign) UITableViewCellStyle            cellStyle;
 // default is UITableViewCellAccessoryNone. use to set standard type
-@property (nonatomic) UITableViewCellAccessoryType    accessoryType;
-/// default is 44
-@property (nonatomic, assign) CGFloat rowHeight;
+@property (nonatomic, assign) UITableViewCellAccessoryType    accessoryType;
 /// default is UITableViewCellSelectionStyleNone.
 @property (nonatomic, assign) UITableViewCellSelectionStyle   selectionStyle;
+/// default is 44
+@property (nonatomic, assign) CGFloat                         rowHeight;
+
+
+/// default UITextField use
+@property (nonatomic, copy, nullable) NSString  *placeholderText;
 /// default is NSLeftTextAlignment
-@property (nonatomic, assign) NSTextAlignment                 titleTextAlignment;
+@property (nonatomic, assign) NSTextAlignment   titleTextAlignment;
 /// default is NSTextAlignmentRight
-@property (nonatomic, assign) NSTextAlignment                 valueTextAlignment;
+@property (nonatomic, assign) NSTextAlignment   valueTextAlignment;
 /// default is blackColor
 @property (nonatomic, strong, nullable) UIColor *normalTitleColor;
 /// default is blackColor
@@ -53,6 +59,9 @@ typedef NS_ENUM(NSInteger,RYFormRowValidatorType) {
 @property (nonatomic, strong, nullable) UIColor *normalValueColor;
 /// default is blackColor
 @property (nonatomic, strong, nullable) UIColor *disabledValueColor;
+/// 获取实时变化的值
+@property (nonatomic, assign) BOOL isRealTimeChange;
+
 
 // default is 0. sends UIControlEventValueChanged. clamped to min/max
 @property(nonatomic, assign) double stepCounterValue;
@@ -70,9 +79,8 @@ typedef NS_ENUM(NSInteger,RYFormRowValidatorType) {
 @property (nonatomic, assign) BOOL isRequired;
 
 @property (nonatomic, assign) BOOL isvalidator;
-
 /// 正则表达式
-@property (nonatomic, copy, nullable) NSString *regularExpression;
+@property (nonatomic, copy, nullable) NSString       *regularExpression;
 /// default is RYFormRowValidatorTypeNotNull
 @property (nonatomic, assign) RYFormRowValidatorType formRowValidatorType;
 

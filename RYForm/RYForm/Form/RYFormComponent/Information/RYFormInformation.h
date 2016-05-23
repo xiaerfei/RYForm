@@ -17,5 +17,7 @@
 @property (nonatomic, assign) UITableViewStyle style;
 
 - (nullable RYFormRowInformation *)formRowAtIndex:(nonnull NSIndexPath *)indexPath;
+- (nullable NSDictionary *)generateAllValue;
+- (nullable RYFormRowInformation *)formRowWithTag:(nonnull NSString *)tag;
 
 @end

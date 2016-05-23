@@ -31,7 +31,17 @@
         _tag     = [tag copy];
         _rowType = [rowType copy];
         _title   = [title copy];
-        self.rowHeight = 44;
+        
+        NSDictionary *attributes = @{NSFontAttributeName:[UIFont systemFontOfSize:15]};
+        CGSize size = [RYForm boundingWith:_title attributes:attributes size:CGSizeMake([UIScreen mainScreen].bounds.size.width/2.0f, MAXFLOAT)];
+        if (size.height > 20) {
+            self.rowHeight = size.height + 22;
+            
+        } else {
+             self.rowHeight = 44;
+        }
+        _titleSize = CGSizeMake(size.width, size.height);
+        
         
         self.cellStyle          = UITableViewCellStyleDefault;
         self.titleTextAlignment = NSTextAlignmentLeft;
@@ -42,6 +52,7 @@
         self.stepCounterMinimumValue = 0;
         self.stepCounterMaximumValue = 100;
         self.formRowValidatorType = RYFormRowValidatorTypeNotNull;
+        self.isRequired = YES;
         
     }
     return self;
@@ -85,7 +96,7 @@
             result = YES;
             break;
         case RYFormRowValidatorTypeNotNull:
-            return ![self valueIsEmpty];
+            result = ![self valueIsEmpty];
             break;
         case RYFormRowValidatorTypeRegex:
         {
@@ -105,9 +116,6 @@
                 result = NO;
             }
         }
-            break;
-        default:
-            result = NO;
             break;
     }
     self.isvalidator = result;

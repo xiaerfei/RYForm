@@ -48,10 +48,8 @@
 
 - (void)update
 {
-    NSDictionary *attributes = @{NSFontAttributeName:[UIFont systemFontOfSize:15]};
-    CGSize size = [RYForm boundingWith:self.rowInformation.title attributes:attributes size:CGSizeMake(MAXFLOAT, 20)];
-    CGFloat tTop = (self.rowInformation.rowHeight - 20)/2.0f;
-    self.ry_textLabel.frame = CGRectMake(15,tTop , size.width, 20);
+    CGFloat tTop = (self.rowInformation.rowHeight - self.rowInformation.titleSize.height)/2.0f;
+    self.ry_textLabel.frame = CGRectMake(15,tTop , self.rowInformation.titleSize.width, self.rowInformation.titleSize.height);
     self.accessoryType = self.rowInformation.accessoryType;
     self.ry_textLabel.text = self.rowInformation.title;
     
@@ -109,6 +107,7 @@
         _ry_textLabel = [[UILabel alloc] init];
         _ry_textLabel.textColor = [UIColor blackColor];
         _ry_textLabel.font = [UIFont systemFontOfSize:15];
+        _ry_textLabel.numberOfLines = 0;
 //        _ry_textLabel.backgroundColor = [UIColor lightGrayColor];
     }
     return _ry_textLabel;
