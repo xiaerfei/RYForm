@@ -18,4 +18,6 @@
 
 @property (nonatomic, readonly, strong) UILabel     *ry_textLabel;
 
+@property (nonatomic, readonly, strong) UILabel     *ry_unitsLabel;
+
 @end

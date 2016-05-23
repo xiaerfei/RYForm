@@ -61,6 +61,8 @@ typedef NS_ENUM(NSInteger,RYFormRowValidatorType) {
 @property (nonatomic, strong, nullable) UIColor *disabledValueColor;
 /// 获取实时变化的值
 @property (nonatomic, assign) BOOL isRealTimeChange;
+/// 单位
+@property (nonatomic, copy, nullable) NSString  *unitsText;
 
 
 // default is 0. sends UIControlEventValueChanged. clamped to min/max

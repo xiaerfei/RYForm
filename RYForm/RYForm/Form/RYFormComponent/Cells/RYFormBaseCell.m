@@ -13,7 +13,7 @@
 @interface RYFormBaseCell ()
 
 @property (nonatomic, readwrite, strong) UILabel     *ry_textLabel;
-
+@property (nonatomic, readwrite, strong) UILabel     *ry_unitsLabel;
 @end
 
 @implementation RYFormBaseCell
@@ -44,14 +44,23 @@
 {
     self.ry_textLabel.frame = CGRectMake(15,(44 - 20)/2.0f , 100, 20);
     [self.contentView addSubview:self.ry_textLabel];
+    self.ry_unitsLabel.frame = CGRectMake([UIScreen mainScreen].bounds.size.width - 20, (44 - 20)/2.0f, 25, 20);
+    [self.contentView addSubview:self.ry_unitsLabel];
 }
 
 - (void)update
 {
     CGFloat tTop = (self.rowInformation.rowHeight - self.rowInformation.titleSize.height)/2.0f;
     self.ry_textLabel.frame = CGRectMake(15,tTop , self.rowInformation.titleSize.width, self.rowInformation.titleSize.height);
-    self.accessoryType = self.rowInformation.accessoryType;
     self.ry_textLabel.text = self.rowInformation.title;
+    self.accessoryType = self.rowInformation.accessoryType;
+    if (self.accessoryType == UITableViewCellAccessoryNone && self.rowInformation.unitsText != nil) {
+        self.ry_unitsLabel.frame = CGRectMake([UIScreen mainScreen].bounds.size.width - 25, (self.rowInformation.rowHeight - 20)/2.0f, 25, 20);
+        self.ry_unitsLabel.hidden = NO;
+        self.ry_unitsLabel.text = self.rowInformation.unitsText;
+    } else {
+        self.ry_unitsLabel.hidden = YES;
+    }
     
     if (self.rowInformation.isDisabled) {
         if (self.rowInformation.disabledTitleColor) {
@@ -100,6 +109,7 @@
 }
 
 
+#pragma mark - getters
 
 - (UILabel *)ry_textLabel
 {
@@ -111,6 +121,18 @@
 //        _ry_textLabel.backgroundColor = [UIColor lightGrayColor];
     }
     return _ry_textLabel;
+}
+
+- (UILabel *)ry_unitsLabel
+{
+    if (_ry_unitsLabel == nil) {
+        _ry_unitsLabel = [[UILabel alloc] init];
+        _ry_unitsLabel.textColor = [UIColor blackColor];
+        _ry_unitsLabel.font = [UIFont systemFontOfSize:10];
+//        _ry_unitsLabel.backgroundColor = [UIColor lightGrayColor];
+        _ry_unitsLabel.hidden = YES;
+    }
+    return _ry_unitsLabel;
 }
 
 

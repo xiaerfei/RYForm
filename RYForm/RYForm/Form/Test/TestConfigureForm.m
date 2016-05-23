@@ -43,9 +43,10 @@
     RYFormRowInformation *row11 = [[RYFormRowInformation alloc] initWithTag:@"" rowType:RYFormRowInformationTypeNumber title:@"在该公司工作几个月"];
     row11.placeholderText = @"请输入";
     row11.key             = @"11";
+    row11.unitsText       = @"月";
     [section1.formRows addObject:row11];
     
-    RYFormRowInformation *row12 = [[RYFormRowInformation alloc] initWithTag:@"" rowType:RYFormRowInformationTypeText title:@"公司注册时间"];
+    RYFormRowInformation *row12 = [[RYFormRowInformation alloc] initWithTag:@"" rowType:RYFormRowInformationTypeDate title:@"公司注册时间"];
     row12.placeholderText = @"请选择";
     row12.accessoryType   = UITableViewCellAccessoryDisclosureIndicator;
     row12.key             = @"12";
@@ -54,11 +55,13 @@
     RYFormRowInformation *row13 = [[RYFormRowInformation alloc] initWithTag:@"" rowType:RYFormRowInformationTypeNumber title:@"当前经营地址使用时间"];
     row13.placeholderText = @"请输入";
     row13.key             = @"13";
+    row13.unitsText       = @"月";
     [section1.formRows addObject:row13];
     
-    RYFormRowInformation *row14 = [[RYFormRowInformation alloc] initWithTag:@"" rowType:RYFormRowInformationTypeNumber title:@"公司近半年含税营业额"];
+    RYFormRowInformation *row14 = [[RYFormRowInformation alloc] initWithTag:@"" rowType:RYFormRowInformationTypeDecimal title:@"公司近半年含税营业额"];
     row14.placeholderText = @"请输入";
     row14.key             = @"14";
+    row14.unitsText       = @"万元";
     [section1.formRows addObject:row14];
 
     RYFormSectionInformation *section2 = [[RYFormSectionInformation alloc] init];
@@ -133,7 +136,7 @@
                               };
     row35.pickerViewDataSourceArray = @[province,city,country];
     [section3.formRows addObject:row35];
-    [formInformation.formSections addObjectsFromArray:@[section0,section1,section2,section3]];
+    [formInformation.formTypeSections addObject:@[section0,section1,section2,section3]];
     
     return formInformation;
 }
