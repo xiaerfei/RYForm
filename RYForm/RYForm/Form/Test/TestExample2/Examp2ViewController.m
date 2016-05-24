@@ -46,18 +46,11 @@
 
 - (void)allFormRowInformationValueNotValidator:(NSArray *)notValidatorArray
 {
-    NSLog(@"**********************************************************");
-    for (RYFormRowInformation *rowForm in notValidatorArray) {
-        NSLog(@"title = %@",rowForm.title);
-    }
-    NSLog(@"**********************************************************");
-    
     if (notValidatorArray.count == 0) {
         [self enableButtonOrNot:YES];
     } else {
         [self enableButtonOrNot:NO];
     }
-    
 }
 
 - (void)didSelectFormRow:(RYFormRowInformation *)formRow

@@ -9,6 +9,7 @@
 #import "RYFormRowInformation.h"
 #import "RYForm.h"
 #import "RYFormBaseCell.h"
+#import "ValidatorForm.h"
 
 @interface RYFormRowInformation ()
 
@@ -97,26 +98,16 @@
             result = YES;
             break;
         case RYFormRowValidatorTypeNotNull:
-            result = ![self valueIsEmpty];
+            result = ![ValidatorForm validateValueIsEmptyWithValue:self.value];
             break;
-        case RYFormRowValidatorTypeRegex:
-        {
-            /// 验证是否为空
-            if ([self valueIsEmpty]) {
-                result = NO;
-                break;
-            }
-            
-            id value = self.value;
-            if ([value isKindOfClass:[NSNumber class]]){
-                value = [value stringValue];
-            }
-            if ([value isKindOfClass:[NSString class]] && [value length] > 0) {
-                result = [[NSPredicate predicateWithFormat:@"SELF MATCHES %@", self.regularExpression] evaluateWithObject:[value stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]];
-            } else {
-                result = NO;
-            }
-        }
+        case RYFormRowValidatorTypeValidateIdentityCardNo:
+            result = [ValidatorForm validateIdentityCardNo:self.value];
+            break;
+        case RYFormRowValidatorTypeValidateEmail:
+            result = [ValidatorForm validateValueIsEmptyWithValue:self.value];
+            break;
+        case RYFormRowValidatorTypeValidateURL:
+            result = [ValidatorForm validateURL:self.value];
             break;
     }
     self.isvalidator = result;

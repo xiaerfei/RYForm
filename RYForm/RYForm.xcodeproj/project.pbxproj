@@ -13,6 +13,9 @@
 		4E07F2681CF41CD6006A65C8 /* Examp2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E07F2671CF41CD6006A65C8 /* Examp2ViewController.m */; };
 		4E07F26B1CF41D2E006A65C8 /* Examp2ConfigureForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E07F26A1CF41D2E006A65C8 /* Examp2ConfigureForm.m */; };
 		4E07F26E1CF41FD6006A65C8 /* tiptype@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E07F26D1CF41FD6006A65C8 /* tiptype@2x.png */; };
+		4E07F2711CF43BD2006A65C8 /* ValidatorForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E07F2701CF43BD2006A65C8 /* ValidatorForm.m */; };
+		4E07F2741CF44803006A65C8 /* Examp3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E07F2731CF44803006A65C8 /* Examp3ViewController.m */; };
+		4E07F2771CF44820006A65C8 /* Example3ConfigureForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E07F2761CF44820006A65C8 /* Example3ConfigureForm.m */; };
 		4E5477151CEC4C310049E1B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5477141CEC4C310049E1B4 /* main.m */; };
 		4E5477181CEC4C310049E1B4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5477171CEC4C310049E1B4 /* AppDelegate.m */; };
 		4E54771B1CEC4C310049E1B4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E54771A1CEC4C310049E1B4 /* ViewController.m */; };
@@ -73,6 +76,12 @@
 		4E07F2691CF41D2E006A65C8 /* Examp2ConfigureForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Examp2ConfigureForm.h; sourceTree = "<group>"; };
 		4E07F26A1CF41D2E006A65C8 /* Examp2ConfigureForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Examp2ConfigureForm.m; sourceTree = "<group>"; };
 		4E07F26D1CF41FD6006A65C8 /* tiptype@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tiptype@2x.png"; sourceTree = "<group>"; };
+		4E07F26F1CF43BD2006A65C8 /* ValidatorForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValidatorForm.h; sourceTree = "<group>"; };
+		4E07F2701CF43BD2006A65C8 /* ValidatorForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValidatorForm.m; sourceTree = "<group>"; };
+		4E07F2721CF44803006A65C8 /* Examp3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Examp3ViewController.h; sourceTree = "<group>"; };
+		4E07F2731CF44803006A65C8 /* Examp3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Examp3ViewController.m; sourceTree = "<group>"; };
+		4E07F2751CF44820006A65C8 /* Example3ConfigureForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Example3ConfigureForm.h; sourceTree = "<group>"; };
+		4E07F2761CF44820006A65C8 /* Example3ConfigureForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Example3ConfigureForm.m; sourceTree = "<group>"; };
 		4E5477101CEC4C310049E1B4 /* RYForm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RYForm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E5477141CEC4C310049E1B4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4E5477161CEC4C310049E1B4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -196,6 +205,10 @@
 		4E07F2631CF41C90006A65C8 /* TestExample3 */ = {
 			isa = PBXGroup;
 			children = (
+				4E07F2751CF44820006A65C8 /* Example3ConfigureForm.h */,
+				4E07F2761CF44820006A65C8 /* Example3ConfigureForm.m */,
+				4E07F2721CF44803006A65C8 /* Examp3ViewController.h */,
+				4E07F2731CF44803006A65C8 /* Examp3ViewController.m */,
 			);
 			path = TestExample3;
 			sourceTree = "<group>";
@@ -383,6 +396,8 @@
 			children = (
 				4E5477711CEC4C890049E1B4 /* RYFormDataConfigureDelegate.h */,
 				4E5477741CEC4C890049E1B4 /* RYFormInformationCellDelegate.h */,
+				4E07F26F1CF43BD2006A65C8 /* ValidatorForm.h */,
+				4E07F2701CF43BD2006A65C8 /* ValidatorForm.m */,
 				4E54776F1CEC4C890049E1B4 /* RYForm.h */,
 				4E5477701CEC4C890049E1B4 /* RYForm.m */,
 				4E5477721CEC4C890049E1B4 /* RYFormInformation.h */,
@@ -536,6 +551,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E54771B1CEC4C310049E1B4 /* ViewController.m in Sources */,
+				4E07F2711CF43BD2006A65C8 /* ValidatorForm.m in Sources */,
 				4E5477951CEC4C890049E1B4 /* RYFormPickerCell.m in Sources */,
 				4E07F2641CF41C90006A65C8 /* TestConfigureForm.m in Sources */,
 				4E5477A41CEC4C890049E1B4 /* RYFormSectionInformation.m in Sources */,
@@ -548,10 +564,12 @@
 				4E5477921CEC4C890049E1B4 /* RYFormCheckCell.m in Sources */,
 				4E54779F1CEC4C890049E1B4 /* UIView+SDAutoLayout.m in Sources */,
 				4E5477981CEC4C890049E1B4 /* RYFormTextFieldCell.m in Sources */,
+				4E07F2741CF44803006A65C8 /* Examp3ViewController.m in Sources */,
 				4E5477A11CEC4C890049E1B4 /* RYForm.m in Sources */,
 				4E5477971CEC4C890049E1B4 /* RYFormSwitchCell.m in Sources */,
 				4E54779C1CEC4C890049E1B4 /* UIView+RYFormAdditions.m in Sources */,
 				4E5477A31CEC4C890049E1B4 /* RYFormRowInformation.m in Sources */,
+				4E07F2771CF44820006A65C8 /* Example3ConfigureForm.m in Sources */,
 				4E5477931CEC4C890049E1B4 /* RYFormDateCell.m in Sources */,
 				4E54779E1CEC4C890049E1B4 /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
 				4E5477911CEC4C890049E1B4 /* RYFormBaseCell.m in Sources */,

@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "TestViewController.h"
 #import "Examp2ViewController.h"
+#import "Examp3ViewController.h"
 
 @interface ViewController () <UITableViewDataSource,UITableViewDelegate>
 
@@ -21,7 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _dataSourceArray = [NSMutableArray arrayWithObjects:[TestViewController class],[Examp2ViewController class], nil];
+    _dataSourceArray = [NSMutableArray arrayWithObjects:[TestViewController class],[Examp2ViewController class],[Examp3ViewController class], nil];
 }
 
 - (void)didReceiveMemoryWarning {

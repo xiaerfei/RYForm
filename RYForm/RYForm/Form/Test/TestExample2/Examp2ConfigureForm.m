@@ -45,8 +45,7 @@
     row01.placeholderText = @"请填写借款人身份证号";
     row01.key             = @"01";
     row01.isRealTimeChange = YES;
-    row01.formRowValidatorType = RYFormRowValidatorTypeRegex;
-    row01.regularExpression = @"^(\\d{14}|\\d{17})(\\d|[xX])$";
+    row01.formRowValidatorType = RYFormRowValidatorTypeValidateIdentityCardNo;
     [section0.formRows addObject:row01];
     
     

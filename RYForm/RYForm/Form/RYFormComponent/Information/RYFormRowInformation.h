@@ -12,11 +12,15 @@
 
 typedef NS_ENUM(NSInteger,RYFormRowValidatorType) {
     /// 不验证
-    RYFormRowValidatorTypeNone    = 1,
+    RYFormRowValidatorTypeNone                   = 1,
     /// 验证不为空
-    RYFormRowValidatorTypeNotNull = 2,
-    /// 正则验证
-    RYFormRowValidatorTypeRegex   = 3,
+    RYFormRowValidatorTypeNotNull                = 2,
+    /// 验证身份证
+    RYFormRowValidatorTypeValidateIdentityCardNo = 3,
+    /// 验证邮箱
+    RYFormRowValidatorTypeValidateEmail          = 4,
+    /// 验证URL
+    RYFormRowValidatorTypeValidateURL            = 5,
 };
 
 
@@ -83,8 +87,6 @@ typedef NS_ENUM(NSInteger,RYFormRowValidatorType) {
 @property (nonatomic, assign) BOOL isRequired;
 
 @property (nonatomic, assign) BOOL isvalidator;
-/// 正则表达式
-@property (nonatomic, copy, nullable) NSString       *regularExpression;
 /// default is RYFormRowValidatorTypeNotNull
 @property (nonatomic, assign) RYFormRowValidatorType formRowValidatorType;
 

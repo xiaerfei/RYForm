@@ -16,84 +16,13 @@
 {
     RYFormInformation *formInformation = [[RYFormInformation alloc] init];
     formInformation.style = UITableViewStyleGrouped;
-    RYFormSectionInformation *section0 = [[RYFormSectionInformation alloc] init];
-    section0.headerHeight = 10;
-    section0.footerHeight = 0.1;
-    
-    RYFormRowInformation *row00 = [[RYFormRowInformation alloc] initWithTag:@"" rowType:RYFormRowInformationTypeText title:@"姓名"];
-    row00.displayText = @"习大大";
-    row00.value       = @"习大大";
-    row00.key         = @"00";
-    row00.isDisabled  = YES;
-    [section0.formRows addObject:row00];
-    
-    RYFormRowInformation *row01 = [[RYFormRowInformation alloc] initWithTag:@"" rowType:RYFormRowInformationTypeText title:@"身份证号"];
-    row01.displayText = @"123456789012345678";
-    row01.value       = @"123456789012345678";
-    row01.isDisabled  = YES;
-    row01.key         = @"01";
-    [section0.formRows addObject:row01];
-    
-    RYFormSectionInformation *section1 = [[RYFormSectionInformation alloc] init];
-    RYFormRowInformation *row10 = [[RYFormRowInformation alloc] initWithTag:@"" rowType:RYFormRowInformationTypeText title:@"公司名称"];
-    row10.placeholderText       = @"请输入";
-    row10.key                   = @"10";
-    [section1.formRows addObject:row10];
-    
-    RYFormRowInformation *row11 = [[RYFormRowInformation alloc] initWithTag:@"" rowType:RYFormRowInformationTypeNumber title:@"在该公司工作几个月"];
-    row11.placeholderText = @"请输入";
-    row11.key             = @"11";
-    row11.unitsText       = @"月";
-    [section1.formRows addObject:row11];
-    
-    RYFormRowInformation *row12 = [[RYFormRowInformation alloc] initWithTag:@"" rowType:RYFormRowInformationTypeDate title:@"公司注册时间"];
-    row12.placeholderText = @"请选择";
-    row12.accessoryType   = UITableViewCellAccessoryDisclosureIndicator;
-    row12.key             = @"12";
-    [section1.formRows addObject:row12];
-    
-    RYFormRowInformation *row13 = [[RYFormRowInformation alloc] initWithTag:@"" rowType:RYFormRowInformationTypeNumber title:@"当前经营地址使用时间"];
-    row13.placeholderText = @"请输入";
-    row13.key             = @"13";
-    row13.unitsText       = @"月";
-    [section1.formRows addObject:row13];
-    
-    RYFormRowInformation *row14 = [[RYFormRowInformation alloc] initWithTag:@"" rowType:RYFormRowInformationTypeDecimal title:@"公司近半年含税营业额"];
-    row14.placeholderText = @"请输入";
-    row14.key             = @"14";
-    row14.unitsText       = @"万元";
-    [section1.formRows addObject:row14];
 
-    RYFormSectionInformation *section2 = [[RYFormSectionInformation alloc] init];
-    section2.headerHeight     = 40;
-    UIView *section2HearView  = [[UIView alloc] init];
-    UILabel *tipsLabel        = [[UILabel alloc] init];
-    tipsLabel.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.2];
-    [section2HearView addSubview:tipsLabel];
-    tipsLabel.text = @"公司最近半年的含税营业额指交了营业税或者增值税部分的营业额，不包含不含税的营业额";
-    tipsLabel.numberOfLines = 0;
-    tipsLabel.font = [UIFont systemFontOfSize:12];
-    tipsLabel.sd_layout.spaceToSuperView(UIEdgeInsetsMake(0, 40, 0, 15));
-    section2.headerView = section2HearView;
-    RYFormRowInformation *row20 = [[RYFormRowInformation alloc] initWithTag:@"" rowType:RYFormRowInformationTypeText title:@"近两年内无逾期记录"];
-    row20.placeholderText = @"请选择";
-    row20.accessoryType   = UITableViewCellAccessoryDisclosureIndicator;
-    row20.key             = @"20";
-    [section2.formRows addObject:row20];
-    
-    RYFormRowInformation *row21 = [[RYFormRowInformation alloc] initWithTag:@"" rowType:RYFormRowInformationTypeText title:@"手机号实名是否超过半年"];
-    row21.placeholderText = @"请选择";
-    row21.accessoryType   = UITableViewCellAccessoryDisclosureIndicator;
-    row21.key             = @"21";
-    [section2.formRows addObject:row21];
-    
-    RYFormRowInformation *row22 = [[RYFormRowInformation alloc] initWithTag:@"" rowType:RYFormRowInformationTypeSelectorActionSheet title:@"测试转换cell"];
-    row22.placeholderText = @"请选择";
-    row22.actionSheetArray = @[@"0",@"1"];
-    row22.accessoryType   = UITableViewCellAccessoryDisclosureIndicator;
-    row22.key             = @"22";
-    [section2.formRows addObject:row22];
     RYFormSectionInformation *section3 = [[RYFormSectionInformation alloc] init];
+    
+    RYFormRowInformation *row300 = [[RYFormRowInformation alloc] initWithTag:@"" rowType:RYFormRowInformationTypeText title:@"测试Text"];
+    row300.placeholderText = @"请输入";
+    row300.key             = @"300";
+    [section3.formRows addObject:row300];
     
     RYFormRowInformation *row30 = [[RYFormRowInformation alloc] initWithTag:@"" rowType:RYFormRowInformationTypeStepCounter title:@"测试计步器"];
     row30.value = @(50);
@@ -151,8 +80,7 @@
     [section3.formRows addObject:row36];
     
     
-    [formInformation.formTypeSections addObject:@[section0,section1,section2,section3]];
-    [formInformation.formTypeSections addObject:@[section0,section1,section2]];
+    [formInformation.formTypeSections addObject:@[section3]];
     return formInformation;
 }
 
