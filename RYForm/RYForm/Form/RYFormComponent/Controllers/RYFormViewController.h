@@ -24,6 +24,8 @@
 
 - (id)switchDisPlayValueToCompetentTypeWithFormRow:(RYFormRowInformation *)formRow;
 
+
+
 @end
 
 @interface RYFormViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
@@ -37,5 +39,7 @@
 - (RYFormBaseCell *)updateFormRow:(RYFormRowInformation *)formRow;
 
 - (void)formRowValueHasChanged:(RYFormRowInformation *)formRow oldValue:(id)oldValue newValue:(id)newValue;
+
+- (void)switchNextDisplayCellsAtIndex:(NSInteger)index;
 
 @end

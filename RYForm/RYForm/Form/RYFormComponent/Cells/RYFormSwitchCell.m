@@ -9,6 +9,7 @@
 #import "RYFormSwitchCell.h"
 #import "RYFormRowInformation.h"
 #import "UIViewExt.h"
+#import "RYFormViewController.h"
 
 @interface RYFormSwitchCell ()
 
@@ -46,7 +47,7 @@
     
     self.rowInformation.value = @(self.switchControl.on);
     if ([self.rowInformation.currentController respondsToSelector:@selector(switchDisPlayValueToCompetentTypeWithFormRow:)]) {
-        id value = [self.rowInformation.currentController switchDisPlayValueToCompetentTypeWithFormRow:self.rowInformation];
+        id value = [self.rowInformation.currentController.child switchDisPlayValueToCompetentTypeWithFormRow:self.rowInformation];
         self.rowInformation.value = (value == nil)?@(self.switchControl.on):value;
     }
 }

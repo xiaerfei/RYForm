@@ -10,15 +10,13 @@
 #import "UIView+RYFormAdditions.h"
 #import "RYFormBaseCell.h"
 #import "UIView+SDAutoLayout.h"
-#import "YYFPSLabel.h"
-#import "YYKit.h"
 
 
 @interface RYFormViewController ()
 
 @property (nonatomic, copy) NSNumber *oldBottomTableContentInset;
+
 @property (nonatomic, assign) CGRect keyboardFrame;
-@property (nonatomic, strong) YYFPSLabel *fpsLabel;
 
 @end
 
@@ -88,12 +86,6 @@
 {
     [self.view addSubview:self.formTableView];
     self.formTableView.sd_layout.spaceToSuperView(UIEdgeInsetsMake(0, 0, 0, 0));
-    
-    _fpsLabel = [YYFPSLabel new];
-    [_fpsLabel sizeToFit];
-    _fpsLabel.frame = CGRectMake(0,64,60,80);
-//    _fpsLabel.alpha = 0;
-    [self.view addSubview:_fpsLabel];
 }
 
 - (void)configData
@@ -142,14 +134,15 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
     RYFormRowInformation * row = [self.formInformation formRowAtIndex:indexPath];
-    [self tableViewDidSelectFormRow:row];
-    
     if (row.isDisabled) {
         return;
     }
     
+    self.formInformation.lastFormRow    = self.formInformation.currentFormRow;
+    self.formInformation.currentFormRow = row;
+    
+    [self tableViewDidSelectFormRow:row];
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -194,7 +187,11 @@
 {
     UIView * firstResponderView = [self.formTableView findFirstResponder];
     UITableViewCell<RYFormInformationCellDelegate> * cell = [firstResponderView formInformationCell];
-    [cell resignFirstResponder];
+    if ([formRow cellForForm] != cell) {
+        [cell resignFirstResponder];
+        [firstResponderView resignFirstResponder];
+    }
+    
     if ([[formRow cellForForm] respondsToSelector:@selector(formInformationCellDidSelectedWithFormController:)]){
         [[formRow cellForForm] formInformationCellDidSelectedWithFormController:self];
     }
@@ -262,10 +259,6 @@
 
 - (void)formRowValueHasChanged:(RYFormRowInformation *)formRow oldValue:(id)oldValue newValue:(id)newValue
 {
-    NSLog(@"oldValue = %@ newValue = %@",oldValue,newValue);
-    if ([self.child respondsToSelector:@selector(formRowInformationValueHasChanged:oldValue:newValue:)]) {
-        [self.child formRowInformationValueHasChanged:formRow oldValue:oldValue newValue:newValue];
-    }
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         NSMutableArray *notValidatorArray = [NSMutableArray array];
         for (RYFormSectionInformation *sections in self.formInformation.formSections) {
@@ -276,27 +269,30 @@
             }];
         }
         dispatch_async(dispatch_get_main_queue(), ^{
-            
-            printf("all:%.2f MB   used:%.2f MB   free:%.2f MB   active:%.2f MB  inactive:%.2f MB  wird:%.2f MB  purgable:%.2f MB\n",
-                   [UIDevice currentDevice].memoryTotal / 1024.0 / 1024.0,
-                   [UIDevice currentDevice].memoryUsed / 1024.0 / 1024.0,
-                   [UIDevice currentDevice].memoryFree / 1024.0 / 1024.0,
-                   [UIDevice currentDevice].memoryActive / 1024.0 / 1024.0,
-                   [UIDevice currentDevice].memoryInactive / 1024.0 / 1024.0,
-                   [UIDevice currentDevice].memoryWired / 1024.0 / 1024.0,
-                   [UIDevice currentDevice].memoryPurgable / 1024.0 / 1024.0);
-            
             if ([self.child respondsToSelector:@selector(allFormRowInformationValueNotValidator:)]) {
                 [self.child allFormRowInformationValueNotValidator:notValidatorArray];
             }
-        });
+            if ([self.child respondsToSelector:@selector(formRowInformationValueHasChanged:oldValue:newValue:)]) {
+                [self.child formRowInformationValueHasChanged:formRow oldValue:oldValue newValue:newValue];
+            }
+        });        
     });
+
 }
 
 -(void)configureCell:(RYFormBaseCell *) cell
 {
     [cell update];
 }
+
+- (void)switchNextDisplayCellsAtIndex:(NSInteger)index
+{
+    if (self.formInformation.currentDisplayTypeSctionIndex != index) {
+        [self.formInformation setCurrentDisplayTypeSctionAtIndex:index];
+        [self.formTableView reloadData];
+    }
+}
+
 
 #pragma mark - getters
 

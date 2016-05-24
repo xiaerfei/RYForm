@@ -21,10 +21,10 @@ typedef NS_ENUM(NSInteger,RYFormRowValidatorType) {
 
 
 @class RYFormBaseCell;
-
+@class RYFormViewController;
 @interface RYFormRowInformation : NSObject
  
-@property (nonatomic, weak,   nullable)         id currentController;
+@property (nonatomic, weak,   nullable)         RYFormViewController *currentController;
 @property (nonatomic, strong, nonnull)          id cellClass;
 @property (nonatomic, readwrite, nullable)      NSString * tag;
 @property (nonatomic, readonly, copy,nullable)  NSString * rowType;
@@ -63,6 +63,8 @@ typedef NS_ENUM(NSInteger,RYFormRowValidatorType) {
 @property (nonatomic, assign) BOOL isRealTimeChange;
 /// 单位
 @property (nonatomic, copy, nullable) NSString  *unitsText;
+/// 输入字数限制 default is 100
+@property (nonatomic, assign) NSInteger wordLengthLimite;
 
 
 // default is 0. sends UIControlEventValueChanged. clamped to min/max

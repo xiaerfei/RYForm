@@ -17,25 +17,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ONA-2F-j5m">
-                                <rect key="frame" x="250" y="280" width="100" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="eWc-2A-TGH"/>
-                                    <constraint firstAttribute="height" constant="40" id="jec-iF-Cq2"/>
-                                </constraints>
-                                <state key="normal" title="Form"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Icx-C9-K6f">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <action selector="formAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="znM-py-aCD"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="O5L-of-Gn7"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="VEL-fO-8XH"/>
                                 </connections>
-                            </button>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ONA-2F-j5m" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="epH-bw-ddL"/>
-                            <constraint firstItem="ONA-2F-j5m" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gfk-7m-9Nf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Icx-C9-K6f" secondAttribute="bottom" id="Hqg-kg-ZM1"/>
+                            <constraint firstAttribute="trailing" secondItem="Icx-C9-K6f" secondAttribute="trailing" id="Osf-7r-YNU"/>
+                            <constraint firstItem="Icx-C9-K6f" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uy4-XE-G1P"/>
+                            <constraint firstItem="Icx-C9-K6f" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="vZ0-x5-Y3i"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="FvA-AZ-k5z"/>
+                    <connections>
+                        <outlet property="tableView" destination="Icx-C9-K6f" id="Pf2-ea-wOb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

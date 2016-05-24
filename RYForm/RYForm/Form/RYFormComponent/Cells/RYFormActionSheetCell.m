@@ -9,12 +9,13 @@
 #import "RYFormActionSheetCell.h"
 #import "RYFormRowInformation.h"
 #import "UIViewExt.h"
-
+#import "RYFormViewController.h"
 
 @interface RYFormActionSheetCell () <UIActionSheetDelegate>
 
-@property (nonatomic, strong) UILabel       *ry_valueTextLabel;
 @property (nonatomic, strong) UIActionSheet *ry_actionSheet;
+
+@property (nonatomic, strong) UITextField *ry_textField;
 
 @end
 
@@ -27,14 +28,15 @@
 {
     [super configure];
     
-    [self.contentView addSubview:self.ry_valueTextLabel];
+    [self.contentView addSubview:self.ry_textField];
 }
 
 - (void)update
 {
     [super update];
     self.ry_textLabel.textColor  = self.rowInformation.isDisabled ? [UIColor grayColor] : [UIColor blackColor];
-    self.ry_valueTextLabel.text  = self.rowInformation.displayText;
+    self.ry_textField.placeholder = self.rowInformation.placeholderText;
+    self.ry_textField.text  = self.rowInformation.displayText;
     [self autoLayoutSubViews];
 }
 #pragma mark - RYFormInformationCell
@@ -56,9 +58,9 @@
         }
         self.rowInformation.value = @(buttonIndex - 1);
         self.rowInformation.displayText = self.rowInformation.actionSheetArray[buttonIndex - 1];
-        self.ry_valueTextLabel.text  = self.rowInformation.displayText;
+        self.ry_textField.text  = self.rowInformation.displayText;
         if ([self.rowInformation.currentController respondsToSelector:@selector(switchDisPlayValueToCompetentTypeWithFormRow:)]) {
-            id value = [self.rowInformation.currentController switchDisPlayValueToCompetentTypeWithFormRow:self.rowInformation];
+            id value = [self.rowInformation.currentController.child switchDisPlayValueToCompetentTypeWithFormRow:self.rowInformation];
             self.rowInformation.value = (value == nil)?@(buttonIndex - 1):value;
         }
     }
@@ -70,20 +72,23 @@
 {
     CGFloat vTop = (self.rowInformation.rowHeight - 20)/2.0f;
     CGFloat pad = 5;
-    self.ry_valueTextLabel.frame = CGRectMake(self.ry_textLabel.right + pad, vTop, ([UIScreen mainScreen].bounds.size.width - 20 - self.ry_textLabel.width - pad - 25), 20);
+    self.ry_textField.frame = CGRectMake(self.ry_textLabel.right + pad, vTop, ([UIScreen mainScreen].bounds.size.width - 20 - self.ry_textLabel.width - pad - 25), 20);
 }
 
 #pragma mark - getters
-- (UILabel *)ry_valueTextLabel
+
+- (UITextField *)ry_textField
 {
-    if (_ry_valueTextLabel == nil) {
-        _ry_valueTextLabel = [[UILabel alloc] init];
-        _ry_valueTextLabel.textColor = [UIColor blackColor];
-        _ry_valueTextLabel.font = [UIFont systemFontOfSize:13];
-        _ry_valueTextLabel.textAlignment = NSTextAlignmentRight;
-        //        _ry_valueTextLabel.backgroundColor = [UIColor lightGrayColor];
+    if (_ry_textField == nil) {
+        _ry_textField = [[UITextField alloc] init];
+        _ry_textField.textColor = [UIColor blackColor];
+        _ry_textField.font = [UIFont systemFontOfSize:13];
+        _ry_textField.textAlignment = NSTextAlignmentRight;
+        _ry_textField.enabled = NO;
+        //        _ry_textField.backgroundColor = [UIColor lightGrayColor];
     }
-    return _ry_valueTextLabel;
+    return _ry_textField;
 }
+
 
 @end

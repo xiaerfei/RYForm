@@ -8,17 +8,20 @@
 
 #import "ViewController.h"
 #import "TestViewController.h"
+#import "Examp2ViewController.h"
 
-@interface ViewController ()
-- (IBAction)formAction:(id)sender;
+@interface ViewController () <UITableViewDataSource,UITableViewDelegate>
 
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property (nonatomic, copy) NSMutableArray *dataSourceArray;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    _dataSourceArray = [NSMutableArray arrayWithObjects:[TestViewController class],[Examp2ViewController class], nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -26,8 +29,40 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)formAction:(id)sender {
-    TestViewController *testView = [[TestViewController alloc] init];
+#pragma mark - UITableViewDataSource,UITableViewDelegate
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.dataSourceArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellid"];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cellid"];
+    }
+    
+    cell.textLabel.text = NSStringFromClass(self.dataSourceArray[indexPath.row]);
+    return cell;
+}
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    Class class = self.dataSourceArray[indexPath.row];
+    UIViewController *testView = [[class alloc] init];
     [self.navigationController pushViewController:testView animated:YES];
 }
+
+
+
+
+
+
+
+
+
+
+
+
 @end

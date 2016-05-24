@@ -17,6 +17,7 @@
 #import "RYFormStepCounterCell.h"
 #import "RYFormActionSheetCell.h"
 
+
 NSString *const RYFormRowInformationTypeText                        = @"text";
 NSString *const RYFormRowInformationTypeName                        = @"name";
 NSString *const RYFormRowInformationTypeURL                         = @"url";
@@ -27,6 +28,7 @@ NSString *const RYFormRowInformationTypePhone                       = @"phone";
 NSString *const RYFormRowInformationTypeImage                       = @"image";
 NSString *const RYFormRowInformationTypeDecimal                     = @"decimal";
 NSString *const RYFormRowInformationTypeTextView                    = @"textView";
+NSString *const RYFormRowInformationTypeNoteTextView                = @"noteTextView";
 NSString *const RYFormRowInformationTypeSelectorActionSheet         = @"selectorActionSheet";
 NSString *const RYFormRowInformationTypeSelectorAlertView           = @"selectorAlertView";
 NSString *const RYFormRowInformationTypeSelectorPickerView          = @"selectorPickerView";
@@ -53,6 +55,7 @@ NSString *const RYFormRowInformationTypeStepCounter                 = @"stepCoun
                                                 RYFormRowInformationTypeNumber:                  [RYFormTextFieldCell class],
                                                 RYFormRowInformationTypeDecimal:                 [RYFormTextFieldCell class],
                                                 RYFormRowInformationTypeTextView:                [RYFormTextViewCell class],
+                                                RYFormRowInformationTypeNoteTextView:            [RYFormTextViewCell class],
                                                 RYFormRowInformationTypeBooleanSwitch :          [RYFormSwitchCell class],
                                                 RYFormRowInformationTypeBooleanCheck :           [RYFormCheckCell class],
                                                 RYFormRowInformationTypeDate:                    [RYFormDateCell class],

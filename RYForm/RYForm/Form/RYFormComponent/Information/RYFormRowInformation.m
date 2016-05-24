@@ -34,6 +34,7 @@
         
         NSDictionary *attributes = @{NSFontAttributeName:[UIFont systemFontOfSize:15]};
         CGSize size = [RYForm boundingWith:_title attributes:attributes size:CGSizeMake([UIScreen mainScreen].bounds.size.width/2.0f, MAXFLOAT)];
+        
         if (size.height > 20) {
             self.rowHeight = size.height + 22;
             
@@ -53,7 +54,7 @@
         self.stepCounterMaximumValue = 100;
         self.formRowValidatorType = RYFormRowValidatorTypeNotNull;
         self.isRequired = YES;
-        
+        self.wordLengthLimite = 100;
     }
     return self;
 }
@@ -122,7 +123,6 @@
     return result;
     
 }
-
 
 
 @end

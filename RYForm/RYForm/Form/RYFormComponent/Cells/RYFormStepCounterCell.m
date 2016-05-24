@@ -76,7 +76,7 @@
     self.rowInformation.value  = @(stepper.value);
     self.currentStepValue.text = [NSString stringWithFormat:@"%.f", stepper.value];
     if ([self.rowInformation.currentController respondsToSelector:@selector(switchDisPlayValueToCompetentTypeWithFormRow:)]) {
-        id value = [self.rowInformation.currentController switchDisPlayValueToCompetentTypeWithFormRow:self.rowInformation];
+        id value = [self.rowInformation.currentController.child switchDisPlayValueToCompetentTypeWithFormRow:self.rowInformation];
         self.rowInformation.value = (value == nil)?@(stepper.value):value;
     }
 }

@@ -10,6 +10,7 @@
 #import "RYForm.h"
 #import "RYFormRowInformation.h"
 #import "UIViewExt.h"
+#import "RYFormViewController.h"
 
 @interface RYFormTextFieldCell ()<UITextFieldDelegate>
 
@@ -90,16 +91,56 @@
 
 
 #pragma mark - UITextFieldDelegate
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    if ([self.rowInformation.currentController.child respondsToSelector:@selector(didSelectFormRow:)]) {
+        [self.rowInformation.currentController.child didSelectFormRow:self.rowInformation];
+    }
+}
+
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
+
+    
     if (self.rowInformation.isRealTimeChange == NO) {
         [self valueChange];
     }
 }
 
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    UITextRange *selectedRange = [textField markedTextRange];
+    //获取高亮部分
+    UITextPosition *pos = [textField positionFromPosition:selectedRange.start offset:0];
+    
+    //如果有高亮且当前字数开始位置小于最大限制时允许输入
+    if (selectedRange && pos) {
+        NSInteger startOffset = [textField offsetFromPosition:textField.beginningOfDocument toPosition:selectedRange.start];
+        NSInteger endOffset = [textField offsetFromPosition:textField.beginningOfDocument toPosition:selectedRange.end];
+        NSRange offsetRange = NSMakeRange(startOffset, endOffset - startOffset);
+        
+        if (offsetRange.location < self.rowInformation.wordLengthLimite) {
+            return YES;
+        } else {
+            return NO;
+        }
+    }
+    return YES;
+}
+
 
 #pragma mark - event responses
 - (void)textFieldDidChange:(UITextField *)textField{
+    
+    UITextRange *selectedRange = [textField markedTextRange];
+    //获取高亮部分
+    UITextPosition *pos = [textField positionFromPosition:selectedRange.start offset:0];
+    
+    //如果在变化中是高亮部分在变，就不要计算字符了
+    if (selectedRange && pos) {
+        return;
+    }
     if (self.rowInformation.isRealTimeChange) {
         [self valueChange];
     }
@@ -123,29 +164,31 @@
 
 - (void)valueChange
 {
+    self.rowInformation.isvalidator = NO;
+    id oldValue = [self.rowInformation.value copy];
     if([self.ry_textField.text length] > 0) {
-        
         if ([self.rowInformation.rowType isEqualToString:RYFormRowInformationTypeNumber]){
-            if ([self.rowInformation.currentController respondsToSelector:@selector(formRowValueHasChanged:oldValue:newValue:)]) {
-                [self.rowInformation.currentController formRowValueHasChanged:self.rowInformation oldValue:self.rowInformation.value newValue:@([self.ry_textField.text doubleValue])];
-            }
             self.rowInformation.value =  @([self.ry_textField.text doubleValue]);
-        } else {
+            
             if ([self.rowInformation.currentController respondsToSelector:@selector(formRowValueHasChanged:oldValue:newValue:)]) {
-                [self.rowInformation.currentController formRowValueHasChanged:self.rowInformation oldValue:self.rowInformation.value newValue:self.ry_textField.text];
+                [self.rowInformation.currentController formRowValueHasChanged:self.rowInformation oldValue:oldValue newValue:@([self.ry_textField.text doubleValue])];
             }
+        } else {
             self.rowInformation.value = self.ry_textField.text;
+            if ([self.rowInformation.currentController respondsToSelector:@selector(formRowValueHasChanged:oldValue:newValue:)]) {
+                [self.rowInformation.currentController formRowValueHasChanged:self.rowInformation oldValue:oldValue newValue:self.ry_textField.text];
+            }
         }
         self.rowInformation.displayText = self.ry_textField.text;
     } else {
-        if ([self.rowInformation.currentController respondsToSelector:@selector(formRowValueHasChanged:oldValue:newValue:)]) {
-            [self.rowInformation.currentController formRowValueHasChanged:self.rowInformation oldValue:self.rowInformation.value newValue:nil];
-        }
         self.rowInformation.value = nil;
+        if ([self.rowInformation.currentController respondsToSelector:@selector(formRowValueHasChanged:oldValue:newValue:)]) {
+            [self.rowInformation.currentController formRowValueHasChanged:self.rowInformation oldValue:oldValue newValue:nil];
+        }
     }
     
     if ([self.rowInformation.currentController respondsToSelector:@selector(switchDisPlayValueToCompetentTypeWithFormRow:)]) {
-        id value = [self.rowInformation.currentController switchDisPlayValueToCompetentTypeWithFormRow:self.rowInformation];
+        id value = [self.rowInformation.currentController.child switchDisPlayValueToCompetentTypeWithFormRow:self.rowInformation];
         if (value != nil) {
             self.rowInformation.value = value;
         }

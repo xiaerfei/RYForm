@@ -19,6 +19,7 @@ extern NSString *const RYFormRowInformationTypePhone;
 extern NSString *const RYFormRowInformationTypeImage;
 extern NSString *const RYFormRowInformationTypeDecimal;
 extern NSString *const RYFormRowInformationTypeTextView;
+extern NSString *const RYFormRowInformationTypeNoteTextView;
 extern NSString *const RYFormRowInformationTypeSelectorActionSheet;
 extern NSString *const RYFormRowInformationTypeSelectorAlertView;
 extern NSString *const RYFormRowInformationTypeSelectorPickerView;

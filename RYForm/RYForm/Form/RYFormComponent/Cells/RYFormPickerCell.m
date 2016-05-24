@@ -98,7 +98,11 @@
 #pragma mark - RYFormInformationCell
 -(void)formInformationCellDidSelectedWithFormController:(RYFormViewController *)controller
 {
-    [self becomeFirstResponder];
+    if (self.isFirstResponder) {
+        [self resignFirstResponder];
+    } else {
+        [self becomeFirstResponder];
+    }
 }
 
 #pragma mark - event responses

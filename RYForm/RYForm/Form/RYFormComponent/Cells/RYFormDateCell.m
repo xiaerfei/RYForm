@@ -54,7 +54,11 @@
 
 -(void)formInformationCellDidSelectedWithFormController:(RYFormViewController *)controller
 {
-    [self becomeFirstResponder];
+    if (self.isFirstResponder) {
+        [self resignFirstResponder];
+    } else {
+        [self becomeFirstResponder];
+    }
 }
 
 
@@ -91,7 +95,7 @@
     self.rowInformation.displayText = dateString;
     self.ry_textField.text     = dateString;
     if ([self.rowInformation.currentController respondsToSelector:@selector(switchDisPlayValueToCompetentTypeWithFormRow:)]) {
-        id value = [self.rowInformation.currentController switchDisPlayValueToCompetentTypeWithFormRow:self.rowInformation];
+        id value = [self.rowInformation.currentController.child switchDisPlayValueToCompetentTypeWithFormRow:self.rowInformation];
         self.rowInformation.value = (value == nil)?dateString:value;
     } else {
         self.rowInformation.value = dateString;

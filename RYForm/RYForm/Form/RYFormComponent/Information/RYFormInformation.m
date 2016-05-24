@@ -8,22 +8,29 @@
 
 #import "RYFormInformation.h"
 
+@interface RYFormInformation ()
+
+@property (nonatomic, assign, readwrite) NSInteger currentDisplayTypeSctionIndex;
+
+@end
+
 @implementation RYFormInformation
 
 - (instancetype)init
 {
     self = [super init];
     if (self) {
-        _formSections = [[NSMutableArray alloc] init];
+        _formTypeSections = [[NSMutableArray alloc] init];
         _style = UITableViewStylePlain;
+        _currentDisplayTypeSctionIndex = 0;
     }
     return self;
 }
 
 - (void)dealloc
 {
-    NSArray *array = self.formSections;
-    _formSections = nil;
+    NSArray *array = self.formTypeSections;
+    _formTypeSections = nil;
     
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         [array class];
@@ -31,6 +38,18 @@
     
     NSLog(@"RYFormInformation--->dealloc");
 }
+
+- (nullable NSArray *)formSections
+{
+    return self.formTypeSections[self.currentDisplayTypeSctionIndex];
+}
+
+- (void)setCurrentDisplayTypeSctionAtIndex:(NSInteger)index
+{
+    self.currentDisplayTypeSctionIndex = index;
+}
+
+
 
 - (nullable RYFormRowInformation *)formRowAtIndex:(nonnull NSIndexPath *)indexPath
 {
