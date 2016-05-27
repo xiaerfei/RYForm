@@ -37,7 +37,7 @@ typedef NS_ENUM(NSInteger,RYFormRowValidatorType) {
 @property (nonatomic, copy, nullable)           id         value;
 @property (nonatomic, copy, nullable)           NSString * key;
 @property (nonatomic, copy, nullable)           NSString * displayText;
-
+@property (nonatomic, copy, nullable)           NSString * contentTips;
 
 /// default is UITableViewCellStyleDefault
 @property (nonatomic, assign) UITableViewCellStyle            cellStyle;
@@ -47,8 +47,8 @@ typedef NS_ENUM(NSInteger,RYFormRowValidatorType) {
 @property (nonatomic, assign) UITableViewCellSelectionStyle   selectionStyle;
 /// default is 44
 @property (nonatomic, assign) CGFloat                         rowHeight;
-
-
+/// 
+@property(nullable, nonatomic,copy)   NSAttributedString *attributedText;
 /// default UITextField use
 @property (nonatomic, copy, nullable) NSString  *placeholderText;
 /// default is NSLeftTextAlignment

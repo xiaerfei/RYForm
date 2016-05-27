@@ -52,8 +52,8 @@
 
 - (void)textViewDidBeginEditing:(UITextView *)textView
 {
-    if ([self.rowInformation.currentController.child respondsToSelector:@selector(didSelectFormRow:)]) {
-        [self.rowInformation.currentController.child didSelectFormRow:self.rowInformation];
+    if ([self.rowInformation.currentController.child respondsToSelector:@selector(didSelectFormRow:isClickCell:)]) {
+        [self.rowInformation.currentController.child didSelectFormRow:self.rowInformation isClickCell:NO];
     }
 }
 

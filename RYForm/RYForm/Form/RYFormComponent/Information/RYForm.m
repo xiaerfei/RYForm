@@ -27,6 +27,7 @@ NSString *const RYFormRowInformationTypeNumber                      = @"number";
 NSString *const RYFormRowInformationTypePhone                       = @"phone";
 NSString *const RYFormRowInformationTypeImage                       = @"image";
 NSString *const RYFormRowInformationTypeDecimal                     = @"decimal";
+NSString *const RYFormRowInformationTypeContentTips                 = @"contentTips";
 NSString *const RYFormRowInformationTypeTextView                    = @"textView";
 NSString *const RYFormRowInformationTypeNoteTextView                = @"noteTextView";
 NSString *const RYFormRowInformationTypeSelectorActionSheet         = @"selectorActionSheet";
@@ -52,6 +53,7 @@ NSString *const RYFormRowInformationTypeStepCounter                 = @"stepCoun
                                                 RYFormRowInformationTypePhone:                   [RYFormTextFieldCell class],
                                                 RYFormRowInformationTypeURL:                     [RYFormTextFieldCell class],
                                                 RYFormRowInformationTypeEmail:                   [RYFormTextFieldCell class],
+                                                RYFormRowInformationTypeContentTips:             [RYFormTextFieldCell class],
                                                 RYFormRowInformationTypeNumber:                  [RYFormTextFieldCell class],
                                                 RYFormRowInformationTypeDecimal:                 [RYFormTextFieldCell class],
                                                 RYFormRowInformationTypeTextView:                [RYFormTextViewCell class],

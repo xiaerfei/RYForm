@@ -16,7 +16,7 @@
 - (id <RYFormDataConfigureDelegate>)configureFormDataClass;
 
 @optional
-- (void)didSelectFormRow:(RYFormRowInformation *)formRow;
+- (void)didSelectFormRow:(RYFormRowInformation *)formRow isClickCell:(BOOL)isClickCell;
 
 - (void)formRowInformationValueHasChanged:(RYFormRowInformation *)formRow oldValue:(id)oldValue newValue:(id)newValue;
 

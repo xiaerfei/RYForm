@@ -15,6 +15,7 @@
 @interface RYFormTextFieldCell ()<UITextFieldDelegate>
 
 @property (nonatomic, readwrite, strong) UITextField *ry_textField;
+@property (nonatomic, strong)            UILabel     *contentTips;
 
 @end
 
@@ -31,7 +32,6 @@
     [super configure];
     [self setSelectionStyle:UITableViewCellSelectionStyleNone];
     [self.contentView addSubview:self.ry_textField];
-//    [self autoLayoutSubViews];
     [self updateAutoLayout];
     [self.ry_textField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
 }
@@ -63,6 +63,10 @@
         self.ry_textField.keyboardType = UIKeyboardTypeNumberPad;
     } else if ([self.rowInformation.rowType isEqualToString:RYFormRowInformationTypeDecimal]) {
         self.ry_textField.keyboardType = UIKeyboardTypeDecimalPad;
+    } else if ([self.rowInformation.rowType isEqualToString:RYFormRowInformationTypeContentTips]) {
+        if (_contentTips == nil) {
+            [self.contentView addSubview:self.contentTips];
+        }
     }
 
     if (self.rowInformation.isRequired) {
@@ -76,6 +80,10 @@
     self.ry_textField.text = self.rowInformation.displayText;
     self.ry_textField.textAlignment = self.rowInformation.valueTextAlignment;
     self.ry_textField.enabled = !self.rowInformation.isDisabled;
+    if (_contentTips != nil) {
+        self.contentTips.text = self.rowInformation.contentTips;
+    }
+    
     if (self.rowInformation.isDisabled) {
         if (self.rowInformation.disabledValueColor) {
             self.ry_textField.textColor = self.rowInformation.disabledValueColor;
@@ -94,15 +102,13 @@
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
-    if ([self.rowInformation.currentController.child respondsToSelector:@selector(didSelectFormRow:)]) {
-        [self.rowInformation.currentController.child didSelectFormRow:self.rowInformation];
+    if ([self.rowInformation.currentController.child respondsToSelector:@selector(didSelectFormRow:isClickCell:)]) {
+        [self.rowInformation.currentController.child didSelectFormRow:self.rowInformation isClickCell:NO];
     }
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
-
-    
     if (self.rowInformation.isRealTimeChange == NO) {
         [self valueChange];
     }
@@ -159,7 +165,19 @@
 {
     CGFloat vTop = (self.rowInformation.rowHeight - 30)/2.0f;
     CGFloat pad = 5;
+    if (_contentTips != nil) {
+        CGFloat tTop = (self.rowInformation.rowHeight - self.rowInformation.titleSize.height - 25)/2.0f;
+        self.ry_textLabel.top = tTop;
+        vTop = (self.rowInformation.rowHeight - 30 - 25)/2.0f;
+    }
+    
     self.ry_textField.frame = CGRectMake(self.ry_textLabel.right + pad, vTop, ([UIScreen mainScreen].bounds.size.width - 20 - self.ry_textLabel.width - pad - 25), 30);
+    
+    if (_contentTips != nil) {
+        self.contentTips.frame = CGRectMake(15, self.ry_textField.bottom, [UIScreen mainScreen].bounds.size.width - 20 - 15, 20);
+    }
+    
+    
 }
 
 - (void)valueChange
@@ -208,6 +226,17 @@
 //        _ry_textField.backgroundColor = [UIColor lightGrayColor];
     }
     return _ry_textField;
+}
+
+- (UILabel *)contentTips
+{
+    if (_contentTips == nil) {
+        _contentTips = [[UILabel alloc] init];
+        _contentTips.font = [UIFont systemFontOfSize:13];
+        _contentTips.textColor = [UIColor colorWithRed:204.0f/255.0f green:204.0f/255.0f blue:204.0f/255.0f alpha:1];
+//        _contentTips.backgroundColor = [UIColor lightGrayColor];
+    }
+    return _contentTips;
 }
 
 @end

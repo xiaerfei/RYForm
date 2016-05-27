@@ -42,6 +42,11 @@
         } else {
              self.rowHeight = 44;
         }
+        
+        if ([rowType isEqualToString:RYFormRowInformationTypeContentTips]) {
+            self.rowHeight += 25;
+        }
+        
         _titleSize = CGSizeMake(size.width, size.height);
         
         
@@ -83,6 +88,33 @@
     
     return _baseCell;
 }
+
+- (void)setAttributedText:(NSAttributedString *)attributedText
+{
+    _attributedText = [attributedText copy];
+    NSStringDrawingOptions options =  NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading;
+    CGRect rect = [attributedText boundingRectWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width/2.0f, CGFLOAT_MAX)
+                                      options:options
+                                      context:nil];
+    
+    CGSize size = CGSizeMake(rect.size.width, rect.size.height);
+    
+    if (size.height > 20) {
+        self.rowHeight = size.height + 22;
+        
+    } else {
+        self.rowHeight = 44;
+    }
+    
+    if ([_rowType isEqualToString:RYFormRowInformationTypeContentTips]) {
+        self.rowHeight += 14;
+    }
+    
+    _titleSize = CGSizeMake(size.width +30, size.height);
+    
+    
+}
+
 
 #pragma mark - validation
 - (BOOL)valueIsEmpty

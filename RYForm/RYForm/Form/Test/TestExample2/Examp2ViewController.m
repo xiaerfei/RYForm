@@ -53,7 +53,7 @@
     }
 }
 
-- (void)didSelectFormRow:(RYFormRowInformation *)formRow
+- (void)didSelectFormRow:(RYFormRowInformation *)formRow isClickCell:(BOOL)isClickCell
 {
     NSLog(@"title = %@",formRow.title);
 }

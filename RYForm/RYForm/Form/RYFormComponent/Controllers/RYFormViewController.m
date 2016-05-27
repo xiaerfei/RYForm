@@ -196,8 +196,8 @@
         [[formRow cellForForm] formInformationCellDidSelectedWithFormController:self];
     }
     
-    if ([self.child respondsToSelector:@selector(didSelectFormRow:)]) {
-        [self.child didSelectFormRow:formRow];
+    if ([self.child respondsToSelector:@selector(didSelectFormRow:isClickCell:)]) {
+        [self.child didSelectFormRow:formRow isClickCell:YES];
     }
 }
 

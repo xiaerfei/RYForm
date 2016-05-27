@@ -13,6 +13,7 @@
 
 - (RYFormInformation *)configureFormInformation
 {
+    
     RYFormInformation *formInformation = [[RYFormInformation alloc] init];
     formInformation.style = UITableViewStyleGrouped;
     RYFormSectionInformation *section0 = [[RYFormSectionInformation alloc] init];

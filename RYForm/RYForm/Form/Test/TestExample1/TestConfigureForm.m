@@ -14,6 +14,7 @@
 
 - (RYFormInformation *)configureFormInformation
 {
+    
     RYFormInformation *formInformation = [[RYFormInformation alloc] init];
     formInformation.style = UITableViewStyleGrouped;
 
@@ -23,6 +24,25 @@
     row300.placeholderText = @"请输入";
     row300.key             = @"300";
     [section3.formRows addObject:row300];
+    
+    RYFormRowInformation *row301 = [[RYFormRowInformation alloc] initWithTag:@"" rowType:RYFormRowInformationTypeContentTips title:@"单张信用卡额度"];
+    row301.contentTips     = @"如果没有信用卡请填写“0”";
+    row301.placeholderText = @"请填写";
+    row301.key             = @"301";
+    NSMutableAttributedString *attri =     [[NSMutableAttributedString alloc] initWithString:@"单张信用卡额度 "];
+    // 添加表情
+    NSTextAttachment *attch = [[NSTextAttachment alloc] init];
+    // 表情图片
+    attch.image = [UIImage imageNamed:@"tiptype"];
+    // 设置图片大小
+    attch.bounds = CGRectMake(0, -20/4, 20, 20);
+    // 创建带有图片的富文本
+    NSAttributedString *string = [NSAttributedString attributedStringWithAttachment:attch];
+    [attri appendAttributedString:string];
+    
+    row301.attributedText = attri;
+    
+    [section3.formRows addObject:row301];
     
     RYFormRowInformation *row30 = [[RYFormRowInformation alloc] initWithTag:@"" rowType:RYFormRowInformationTypeStepCounter title:@"测试计步器"];
     row30.value = @(50);

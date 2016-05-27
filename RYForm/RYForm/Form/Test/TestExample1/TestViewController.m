@@ -19,6 +19,11 @@
     [super viewDidLoad];
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"生成数据" style:UIBarButtonItemStyleDone target:self action:@selector(generate)];
     self.navigationItem.rightBarButtonItem = item;
+    
+
+
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -57,9 +62,9 @@
     NSLog(@"**********************************************************");
 }
 
-- (void)didSelectFormRow:(RYFormRowInformation *)formRow
+- (void)didSelectFormRow:(RYFormRowInformation *)formRow isClickCell:(BOOL)isClickCell
 {
-
+    NSLog(@"%@",isClickCell?@"cell":@"text");
 }
 
 

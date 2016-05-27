@@ -46,13 +46,18 @@
     [self.contentView addSubview:self.ry_textLabel];
     self.ry_unitsLabel.frame = CGRectMake([UIScreen mainScreen].bounds.size.width - 20, (44 - 20)/2.0f, 25, 20);
     [self.contentView addSubview:self.ry_unitsLabel];
+    
 }
 
 - (void)update
 {
     CGFloat tTop = (self.rowInformation.rowHeight - self.rowInformation.titleSize.height)/2.0f;
     self.ry_textLabel.frame = CGRectMake(15,tTop , self.rowInformation.titleSize.width, self.rowInformation.titleSize.height);
-    self.ry_textLabel.text = self.rowInformation.title;
+    if (self.rowInformation.attributedText) {
+        self.ry_textLabel.attributedText = self.rowInformation.attributedText;
+    } else {
+        self.ry_textLabel.text = self.rowInformation.title;
+    }
     self.accessoryType = self.rowInformation.accessoryType;
     if (self.accessoryType == UITableViewCellAccessoryNone && self.rowInformation.unitsText != nil) {
         self.ry_unitsLabel.frame = CGRectMake([UIScreen mainScreen].bounds.size.width - 25, (self.rowInformation.rowHeight - 20)/2.0f, 25, 20);
