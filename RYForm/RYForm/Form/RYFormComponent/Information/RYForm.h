@@ -32,7 +32,7 @@ extern NSString *const RYFormRowInformationTypeSlider;
 extern NSString *const RYFormRowInformationTypeBooleanCheck;
 extern NSString *const RYFormRowInformationTypeBooleanSwitch;
 extern NSString *const RYFormRowInformationTypeStepCounter;
-
+extern NSString *const RYFormRowInformationTypeCustom;
 
 @interface RYForm : NSObject
 

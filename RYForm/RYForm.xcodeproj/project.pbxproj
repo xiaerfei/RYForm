@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		427FF4ED1EE94CA900C56499 /* PassengerInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 427FF4EC1EE94CA900C56499 /* PassengerInfoViewController.m */; };
+		427FF4F01EE94D3200C56499 /* PassengerInfoConfigureForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 427FF4EF1EE94D3200C56499 /* PassengerInfoConfigureForm.m */; };
+		42B39C951EEE51540091EDBB /* DeleteButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B39C941EEE51540091EDBB /* DeleteButtonCell.m */; };
 		4E07F2581CF3F05A006A65C8 /* RYFormTextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E07F2571CF3F05A006A65C8 /* RYFormTextViewCell.m */; };
 		4E07F2641CF41C90006A65C8 /* TestConfigureForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E07F25F1CF41C90006A65C8 /* TestConfigureForm.m */; };
 		4E07F2651CF41C90006A65C8 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E07F2611CF41C90006A65C8 /* TestViewController.m */; };
@@ -65,6 +68,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		427FF4EB1EE94CA900C56499 /* PassengerInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PassengerInfoViewController.h; sourceTree = "<group>"; };
+		427FF4EC1EE94CA900C56499 /* PassengerInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PassengerInfoViewController.m; sourceTree = "<group>"; };
+		427FF4EE1EE94D3200C56499 /* PassengerInfoConfigureForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PassengerInfoConfigureForm.h; sourceTree = "<group>"; };
+		427FF4EF1EE94D3200C56499 /* PassengerInfoConfigureForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PassengerInfoConfigureForm.m; sourceTree = "<group>"; };
+		42B39C931EEE51540091EDBB /* DeleteButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeleteButtonCell.h; sourceTree = "<group>"; };
+		42B39C941EEE51540091EDBB /* DeleteButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeleteButtonCell.m; sourceTree = "<group>"; };
 		4E07F2561CF3F05A006A65C8 /* RYFormTextViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYFormTextViewCell.h; sourceTree = "<group>"; };
 		4E07F2571CF3F05A006A65C8 /* RYFormTextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYFormTextViewCell.m; sourceTree = "<group>"; };
 		4E07F25E1CF41C90006A65C8 /* TestConfigureForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestConfigureForm.h; sourceTree = "<group>"; };
@@ -168,9 +177,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		427FF4EA1EE94C7500C56499 /* PassengerInfo */ = {
+			isa = PBXGroup;
+			children = (
+				427FF4EB1EE94CA900C56499 /* PassengerInfoViewController.h */,
+				427FF4EC1EE94CA900C56499 /* PassengerInfoViewController.m */,
+				427FF4EE1EE94D3200C56499 /* PassengerInfoConfigureForm.h */,
+				427FF4EF1EE94D3200C56499 /* PassengerInfoConfigureForm.m */,
+				42B39C931EEE51540091EDBB /* DeleteButtonCell.h */,
+				42B39C941EEE51540091EDBB /* DeleteButtonCell.m */,
+			);
+			path = PassengerInfo;
+			sourceTree = "<group>";
+		};
 		4E07F25C1CF41C90006A65C8 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				427FF4EA1EE94C7500C56499 /* PassengerInfo */,
 				4E07F26C1CF41FD6006A65C8 /* Images */,
 				4E07F25D1CF41C90006A65C8 /* TestExample1 */,
 				4E07F2621CF41C90006A65C8 /* TestExample2 */,
@@ -558,6 +581,7 @@
 				4E5477A21CEC4C890049E1B4 /* RYFormInformation.m in Sources */,
 				4E54779A1CEC4C890049E1B4 /* RYFormViewController.m in Sources */,
 				4E5477A01CEC4C890049E1B4 /* UIViewExt.m in Sources */,
+				427FF4F01EE94D3200C56499 /* PassengerInfoConfigureForm.m in Sources */,
 				4E07F2651CF41C90006A65C8 /* TestViewController.m in Sources */,
 				4E07F26B1CF41D2E006A65C8 /* Examp2ConfigureForm.m in Sources */,
 				4E07F2681CF41CD6006A65C8 /* Examp2ViewController.m in Sources */,
@@ -565,6 +589,7 @@
 				4E54779F1CEC4C890049E1B4 /* UIView+SDAutoLayout.m in Sources */,
 				4E5477981CEC4C890049E1B4 /* RYFormTextFieldCell.m in Sources */,
 				4E07F2741CF44803006A65C8 /* Examp3ViewController.m in Sources */,
+				427FF4ED1EE94CA900C56499 /* PassengerInfoViewController.m in Sources */,
 				4E5477A11CEC4C890049E1B4 /* RYForm.m in Sources */,
 				4E5477971CEC4C890049E1B4 /* RYFormSwitchCell.m in Sources */,
 				4E54779C1CEC4C890049E1B4 /* UIView+RYFormAdditions.m in Sources */,
@@ -576,6 +601,7 @@
 				4E07F2581CF3F05A006A65C8 /* RYFormTextViewCell.m in Sources */,
 				4E5477961CEC4C890049E1B4 /* RYFormStepCounterCell.m in Sources */,
 				4E54779D1CEC4C890049E1B4 /* RYFormTextView.m in Sources */,
+				42B39C951EEE51540091EDBB /* DeleteButtonCell.m in Sources */,
 				4EE84A7E1CED2AC200E1374E /* RYFormActionSheetCell.m in Sources */,
 				4E5477181CEC4C310049E1B4 /* AppDelegate.m in Sources */,
 				4E5477151CEC4C310049E1B4 /* main.m in Sources */,

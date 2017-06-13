@@ -90,6 +90,8 @@ typedef NS_ENUM(NSInteger,RYFormRowValidatorType) {
 /// default is RYFormRowValidatorTypeNotNull
 @property (nonatomic, assign) RYFormRowValidatorType formRowValidatorType;
 
+@property (nonatomic, assign) NSInteger              eventID;
+
 -(nonnull instancetype)initWithTag:(nullable NSString *)tag rowType:(nonnull NSString *)rowType title:(nullable NSString *)title;
 
 -(nonnull RYFormBaseCell *)cellForForm;

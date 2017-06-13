@@ -85,7 +85,6 @@
         _ry_textField.font = [UIFont systemFontOfSize:13];
         _ry_textField.textAlignment = NSTextAlignmentRight;
         _ry_textField.enabled = NO;
-        //        _ry_textField.backgroundColor = [UIColor lightGrayColor];
     }
     return _ry_textField;
 }

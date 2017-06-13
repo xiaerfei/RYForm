@@ -39,6 +39,7 @@ NSString *const RYFormRowInformationTypeSlider                      = @"slider";
 NSString *const RYFormRowInformationTypeBooleanCheck                = @"booleanCheck";
 NSString *const RYFormRowInformationTypeBooleanSwitch               = @"booleanSwitch";
 NSString *const RYFormRowInformationTypeStepCounter                 = @"stepCounter";
+NSString *const RYFormRowInformationTypeCustom                      = @"Custom";
 
 @implementation RYForm
 

@@ -80,10 +80,15 @@
 - (nonnull RYFormBaseCell *)cellForForm
 {
     if (_baseCell == nil) {
-        id cellClass = [RYForm cellClassesForRowInformationTypes][self.rowType];
-        
+        id cellClass = nil;
+        if ([self.rowType isEqualToString:RYFormRowInformationTypeCustom]) {
+            cellClass = self.cellClass;
+        } else {
+            
+            cellClass = [RYForm cellClassesForRowInformationTypes][self.rowType];
+        }
         _baseCell = [[cellClass alloc] initWithStyle:self.cellStyle reuseIdentifier:nil];
-        _baseCell.rowInformation = self;        
+        _baseCell.rowInformation = self;
     }
     
     return _baseCell;
